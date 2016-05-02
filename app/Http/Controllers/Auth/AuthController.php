@@ -68,4 +68,10 @@ class AuthController extends Controller
 
         return view('auth.login', compact('logo'));
     }
+
+    public function loginUsername()
+    {
+        return property_exists($this, 'name') ? $this->username : 'name';
+    }
+
 }
