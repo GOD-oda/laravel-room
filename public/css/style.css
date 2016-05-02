@@ -1,0 +1,87 @@
+/* html */
+html {
+  font-family: "游ゴシック","ヒラギノ角ゴ Pro W3","メイリオ";
+}
+
+/* body */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* main */
+main {
+  flex: 1 0 auto;
+}
+
+/* nav */
+nav {
+  box-shadow: none;
+}
+nav .container .nav-wrapper a {
+  color: #bdbdbd;
+}
+
+/* top page */
+.top-discription {
+  font-size: 2em;
+}
+
+/* parallax */
+.parallax-container {
+  margin-bottom: 20px;
+}
+.parallax-container .container h1 {
+  font-family: 'Amatic SC', 'Condiment', cursive;
+  font-size: 122px;
+  font-weight: 800;
+}
+.parallax-container .container .btn-ghost {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid;
+  border-color: #fff;
+}
+
+/* img */
+.img-cover {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.img-contain {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+/* tabs */
+.tabs {
+  overflow-x: hidden;
+}
+
+/* highlight */
+pre {
+  background-color: #fff;
+  padding: 0;
+  border: none;
+}
+
+/* textarea */
+.custom-textarea {
+  background-color:transparent;
+  border:none;
+  border-bottom:1px solid #9e9e9e;
+  border-radius:0;
+  outline:none;
+  height:3rem;
+  width:100%;
+  font-size:1rem;
+  margin:0 0 15px 0;padding:0;
+  box-shadow:none;
+  box-sizing:content-box;
+  /* transition:all .3s */
+}
+
+
+/*# sourceMappingURL=style.css.map */

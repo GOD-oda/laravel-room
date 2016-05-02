@@ -1,0 +1,25 @@
+/*
+ * Author: t-oda
+ *
+ * Discription:
+ *   this is css of portfolio web site
+ */
+
+/* body */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* main */
+main {
+  flex: 1 0 auto;
+}
+
+/* custom divider */
+.content-divider {
+  height: 3px;
+  overflow: hidden;
+  background-color: #e0e0e0;
+}
