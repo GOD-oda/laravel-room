@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Payment;
 use App\Http\Requests;
 use App\Http\Requests\PaymentRequest;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class PaymentController extends Controller
@@ -16,8 +18,9 @@ class PaymentController extends Controller
     public function index()
     {
         $logo = 'Payment Manager';
+        $records = Payment::all();
 
-        return view('admin.payment.index', compact('logo'));
+        return view('admin.payment.index', compact('records', 'logo'));
     }
 
     public function search(Request $requests)
@@ -34,7 +37,12 @@ class PaymentController extends Controller
 
     public function store(PaymentRequest $requests)
     {
-        dd($requests);
+        $input = $requests->all();
+
+        Payment::create($input);
+
+        return redirect()->route('payment.index');
+
     }
 
 }

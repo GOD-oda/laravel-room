@@ -41,13 +41,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>水道代</td>
-          <td>6,800円</td>
-          <td>2016.05.03</td>
-          <td><a href="#"><i class="material-icons left">edit</i>編集</a></td>
-        </tr>
+        @foreach ($records as $key => $value)
+          <tr>
+            <td>{{ $value->id }}</td>
+            <td>{{ $value->processPaymentType($value->type) }}</td>
+            <td>{{ $value->utility_charges }}円</td>
+            <td>{{ $value->pay_day }}</td>
+            <td><a href="#"><i class="material-icons left">edit</i>編集</a></td>
+          </tr>
+        @endforeach
       </tbody>
     </table>
   </div>
