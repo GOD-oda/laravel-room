@@ -17,7 +17,7 @@ class BlogController extends Controller
 
     public function index()
     {
-        $logo = '管理画面';
+        $logo = 'Blog Manager';
         $articles = Article::all();
 
         return view('admin.index', compact('articles', 'logo'));
@@ -25,14 +25,14 @@ class BlogController extends Controller
 
     public function show(Article $article)
     {
-        $logo = '詳細画面';
+        $logo = 'Article Detail';
 
         return view('admin.show', compact('article', 'logo'));
     }
 
     public function create()
     {
-        $logo = '新規作成画面';
+        $logo = 'Create New Article';
 
         return view('admin.create', compact('logo'));
     }
@@ -49,7 +49,7 @@ class BlogController extends Controller
 
     public function edit(Article $article)
     {
-        $logo = '編集画面';
+        $logo = 'Article Edit';
 
         return view('admin.edit', compact('article', 'logo'));
     }

@@ -1,7 +1,6 @@
 @extends('layouts.admin_master')
 
 @section('content')
-
 <br>
 
 <div class="row">
@@ -54,7 +53,8 @@
   <div class="col s4">更新日時</div>
   <div class="col s7">{{ $article->updated_at }}</div>
 </div>
+@endsection
 
-@include('elements.action_button')
-
-@stop
+@section('action_button')
+  @include('admin.blog.elements.show_action_button')
+@endsection

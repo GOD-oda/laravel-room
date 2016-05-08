@@ -4,6 +4,12 @@ $(document).ready(function() {
 
     // タブ
     $('ul.tabs').tabs();
+
+    // セレクトボックス
+    $('select').material_select();
+
+    // サイドナビゲーション
+    $(".button-collapse").sideNav();
 });
 
 

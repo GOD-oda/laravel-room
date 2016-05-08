@@ -26,9 +26,10 @@
       @include('elements.form', ['submitButtonName' => '更新', 'icon' => 'update'])
 
     {!! Form::close() !!}
-
-    @include('elements.action_button')
-
+  </div>
 </div>
+@endsection
 
-@stop
+@section('action_button')
+  @include('admin.blog.elements.edit_action_button')
+@endsection

@@ -10,9 +10,19 @@ body {
   flex-direction: column;
 }
 
+/* header */
+header {
+  /* padding-left: 200px; */
+}
+
 /* main */
 main {
   flex: 1 0 auto;
+  /* padding-left: 200px; */
+}
+
+footer {
+  /* padding-left: 200px; */
 }
 
 /* nav */

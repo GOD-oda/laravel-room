@@ -14,12 +14,14 @@ class PaymentController extends Controller
 
     public function index()
     {
+        $logo = 'Payment Manager';
 
+        return view('admin.payment.index', compact('logo'));
     }
 
-    public function show()
+    public function search(Request $requests)
     {
-
+        dd($requests);
     }
 
     public function create()
@@ -31,16 +33,5 @@ class PaymentController extends Controller
     {
 
     }
-
-    public function edit()
-    {
-
-    }
-
-    public function update()
-    {
-
-    }
-
 
 }
