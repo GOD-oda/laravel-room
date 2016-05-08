@@ -12,7 +12,7 @@ class AuthController extends Controller
 {
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
-    protected $redirectTo = '/admin';
+    protected $redirectTo = '/blog';
     protected $redirectAfterLogout = '/login';
 
     /**
