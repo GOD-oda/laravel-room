@@ -2,18 +2,19 @@
 
 Route::group(['middleware' => 'web'], function () {
     // blog
+    // 使う予定なし
     /*Route::group(['domain' => 'blog.t-oda.tech'], function() {
         Route::auth();
         Route::resource('/admin', 'AdminController');
         Route::controller('/', 'ArticlesController');
     });*/
 
-        Route::auth();
-        Route::resource('/blog', 'BlogController');
-        Route::resource('/payment', 'PaymentController');
+    /*Route::auth();
+    Route::resource('/blog', 'BlogController');
+    Route::resource('/payment', 'PaymentController');*/
 
 
-    // admin
+    // 管理
     Route::group(['dmain' => 'admin.t-oda.tech'], function() {
         Route::auth();
         Route::resource('/blog', 'BlogController');
@@ -26,11 +27,12 @@ Route::group(['middleware' => 'web'], function () {
     });
 
     // tool
-    Route::group(['domain' => 'tool.t-oda.tech'], function() {
+    // 使う予定なし
+    /*Route::group(['domain' => 'tool.t-oda.tech'], function() {
         Route::get('/', function() {
             return 1;
         });
-    });
+    });*/
 
     // portfolio
     Route::get('/', function() {
