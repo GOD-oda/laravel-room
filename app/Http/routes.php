@@ -25,6 +25,13 @@ Route::group(['middleware' => 'web'], function () {
         Route::controller('/', 'ArticlesController');
     });
 
+    // tool
+    Route::group(['domain' => 'tool.t-oda.tech'], function() {
+        Route::get('/', function() {
+            return 1;
+        });
+    });
+
     // portfolio
     Route::get('/', function() {
         abort(503);
