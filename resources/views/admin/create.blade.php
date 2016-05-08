@@ -18,7 +18,7 @@
 @endif
 
 <div class="row">
-  {!! Form::open(['route' => 'admin.store']) !!}
+  {!! Form::open(['route' => 'blog.store']) !!}
     {!! Form::hidden('user_id', 1, ['class' => 'input-field']) !!}
 
     @include('elements.form', ['submitButtonName' => '新規作成', 'icon' => 'fiber_new'])
