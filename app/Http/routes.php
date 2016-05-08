@@ -16,7 +16,9 @@ Route::group(['middleware' => 'web'], function () {
     });
 
     // blog
-    Route::controller('/', 'ArticlesController');
+    Route::group(['domain' => 'blog.t-oda.tech'], function() {
+        Route::controller('/', 'ArticlesController');
+    });
 
     // portfolio
     Route::get('/', function() {
