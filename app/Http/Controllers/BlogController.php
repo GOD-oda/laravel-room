@@ -44,7 +44,7 @@ class BlogController extends Controller
 
         Article::create($input);
 
-        return redirect('admin');
+        return redirect('blog');
     }
 
     public function edit(Article $article)
@@ -60,7 +60,7 @@ class BlogController extends Controller
 
         $article->update($requests->all());
 
-        return redirect()->route('admin.index');
+        return redirect()->route('blog.index');
     }
 
 }

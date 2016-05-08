@@ -8,6 +8,11 @@ Route::group(['middleware' => 'web'], function () {
         Route::controller('/', 'ArticlesController');
     });*/
 
+        Route::auth();
+        Route::resource('/blog', 'BlogController');
+        Route::resource('/payment', 'PaymentController');
+
+
     // admin
     Route::group(['dmain' => 'admin.t-oda.tech'], function() {
         Route::auth();
