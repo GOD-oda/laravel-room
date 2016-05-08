@@ -9,12 +9,12 @@ Route::group(['middleware' => 'web'], function () {
         Route::controller('/', 'ArticlesController');
     });*/
 
-    Route::auth();
+/*    Route::auth();
     Route::resource('/blog', 'BlogController');
     Route::post(
         '/payment/search', ['uses' => 'PaymentController@search', 'as' => 'payment.search']
     );
-    Route::resource('/payment', 'PaymentController');
+    Route::resource('/payment', 'PaymentController');*/
 
 
     // 管理系
