@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Requests\ArticleRequest;
 use App\Article;
 use Carbon\Carbon;
+use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class BlogController extends Controller
 {
     public function __construct()
     {
