@@ -11,13 +11,15 @@ Route::group(['middleware' => 'web'], function () {
     // tool
     Route::group(['domain' => 'tool.t-oda.tech'], function() {
         Route::get('/', function() {
-            return 1;
+            abort(503);
+            //return view('tool.index');
         });
     });
 
     // portfolio
     Route::get('/', function() {
-        return view('portfolio.index');
+        abort(503);
+        //return view('portfolio.index');
     });
 
 });
