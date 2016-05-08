@@ -14,7 +14,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::resource('/payment', 'PaymentController');*/
 
 
-    // 管理
+    // 管理系
     Route::group(['dmain' => 'admin.t-oda.tech'], function() {
         Route::auth();
         Route::resource('/blog', 'BlogController');
