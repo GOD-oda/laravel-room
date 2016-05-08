@@ -20,21 +20,21 @@ class BlogController extends Controller
         $logo = 'Blog Manager';
         $articles = Article::all();
 
-        return view('admin.index', compact('articles', 'logo'));
+        return view('admin.blog.index', compact('articles', 'logo'));
     }
 
     public function show(Article $article)
     {
         $logo = 'Article Detail';
 
-        return view('admin.show', compact('article', 'logo'));
+        return view('admin.blog.show', compact('article', 'logo'));
     }
 
     public function create()
     {
         $logo = 'Create New Article';
 
-        return view('admin.create', compact('logo'));
+        return view('admin.blog.create', compact('logo'));
     }
 
     public function store(ArticleRequest $requests)
@@ -51,7 +51,7 @@ class BlogController extends Controller
     {
         $logo = 'Article Edit';
 
-        return view('admin.edit', compact('article', 'logo'));
+        return view('admin.blog.edit', compact('article', 'logo'));
     }
 
     public function update(ArticleRequest $requests)

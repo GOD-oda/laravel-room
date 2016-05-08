@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\Http\Requests\PaymentRequest;
 use Illuminate\Http\Request;
 
 class PaymentController extends Controller
@@ -26,12 +27,14 @@ class PaymentController extends Controller
 
     public function create()
     {
+        $logo = 'Create New Record';
 
+        return view('admin.payment.create', compact('logo'));
     }
 
-    public function store()
+    public function store(PaymentRequest $requests)
     {
-
+        dd($requests);
     }
 
 }

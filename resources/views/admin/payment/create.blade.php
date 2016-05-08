@@ -1,9 +1,7 @@
 @extends('layouts.admin_master')
 
 @section('content')
-<br>
 
-<div class="container">
   @if ($errors->has())
     <div class="row">
       <div class="col s6 offset-s3">
@@ -19,17 +17,15 @@
   @endif
 
   <div class="row">
-    {!! Form::model($article, ['method' => 'PATCH', 'action' => ['BlogController@update', $article->id]]) !!}
-      {!! Form::hidden('id', $article->id, ['class' => 'input-field']) !!}
+    {!! Form::open(['route' => 'payment.store']) !!}
       {!! Form::hidden('user_id', 1, ['class' => 'input-field']) !!}
 
-      @include('elements.form', ['submitButtonName' => '更新', 'icon' => 'update'])
+      @include('admin.payment.elements.form', ['submitButtonName' => '新規作成', 'icon' => 'fiber_new'])
 
     {!! Form::close() !!}
   </div>
-</div>
 @endsection
 
 @section('action_button')
-  @include('admin.blog.elements.edit_action_button')
+  @include('admin.payment.elements.create_action_button')
 @endsection

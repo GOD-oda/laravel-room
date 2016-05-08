@@ -14,7 +14,8 @@ class ComposerServiceProvider extends ServiceProvider
     public function boot()
     {
         view()->composer(
-            'admin.payment.index', 'App\Http\ViewComposers\PaymentTypeComposer'
+            ['admin.payment.index', 'admin.payment.create'],
+            'App\Http\ViewComposers\PaymentTypeComposer'
         );
     }
 

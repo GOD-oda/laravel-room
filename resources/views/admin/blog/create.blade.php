@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 @if ($errors->has())
   <div class="row">
     <div class="col s6 offset-s3">
@@ -21,11 +20,12 @@
   {!! Form::open(['route' => 'blog.store']) !!}
     {!! Form::hidden('user_id', 1, ['class' => 'input-field']) !!}
 
-    @include('elements.form', ['submitButtonName' => '新規作成', 'icon' => 'fiber_new'])
+    @include('admin.blog.elements.form', ['submitButtonName' => '新規作成', 'icon' => 'fiber_new'])
 
   {!! Form::close() !!}
-
-  @include('elements.action_button')
 </div>
+@endsection
 
-@stop
+@section('action_button')
+    @include('admin.blog.elements.create_action_button')
+@endsection
