@@ -18,8 +18,9 @@ class BlogController extends Controller
     public function index()
     {
         $logo = 'Blog Manager';
-        $articles = Article::all();
-
+//        \DB::enableQueryLog();
+        $articles = Article::latest('published_at')->published()->get();
+//        dd(\DB::getQueryLog());
         return view('admin.blog.index', compact('articles', 'logo'));
     }
 
@@ -40,7 +41,8 @@ class BlogController extends Controller
     public function store(ArticleRequest $requests)
     {
         $input = $requests->all();
-        $input['published_at'] = Carbon::now();
+        $input['published_at'] =
+            $input['published_at'] .' '. Carbon::now()->toTimeString();
 
         Article::create($input);
 

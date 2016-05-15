@@ -52,24 +52,16 @@ $delivery->send('to', 'message');
 $delivery->echoMessage('test');
 exit;
 */
-Route::controller('/', 'TwilioController');
+//Route::controller('/', 'TwilioController');
 
 Route::group(['middleware' => 'web'], function () {
-    // blog
-    // 使う予定なし
-    /*Route::group(['domain' => 'blog.t-oda.tech'], function() {
-        Route::auth();
-        Route::resource('/admin', 'AdminController');
-        Route::controller('/', 'ArticlesController');
-    });*/
-
     Route::auth();
     Route::resource('/blog', 'BlogController');
     Route::post(
         '/payment/search', ['uses' => 'PaymentController@search', 'as' => 'payment.search']
     );
     Route::resource('/payment', 'PaymentController');
-
+    Route::controller('/', 'ArticlesController');
 
     // 管理系
     Route::group(['dmain' => 'admin.t-oda.tech'], function() {
@@ -94,7 +86,7 @@ Route::group(['middleware' => 'web'], function () {
         });
     });*/
 
-    // portfolio
+      // portfolio
     /*Route::get('/', function() {
         return view('typed');
         abort(503);
