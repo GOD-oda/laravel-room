@@ -29,10 +29,11 @@ class Article extends Model
     {
         return Article::title($requests->title)
             ->published($requests->published_at)
+            ->latest('published_at')
             ->get();
     }
 
-    public function scopePublished($query, $value)
+    public function scopePublished($query, $value='')
     {
         if (! empty($value)) {
             $query->where('published_at', '<=', $value);

@@ -17,7 +17,7 @@ class Payment extends Model
         'pay_day'
     ];
 
-    public function search($requests)
+    public static function search($requests)
     {
         return Payment::paymentType($requests->type)
             ->payDay($requests->from_date, $requests->to_date)

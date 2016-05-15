@@ -37,16 +37,20 @@
         </tr>
       </thead>
       <tbody>
-        @foreach ($articles as $article)
-        <tr>
-          <td>{{ $article->id }}</td>
-          <td>{{ $article->title }}</td>
-          <td>{{ date('Y/m/d H:i:s', strtotime($article->published_at)) }}</td>
-          <td><a href="{{ action('BlogController@show', [$article->id]) }}"><i class="material-icons left">details</i>詳細</a></td>
-          <td><a href="{{ action('BlogController@edit', [$article->id]) }}"><i class="material-icons left">edit</i>編集</a></td>
-          <td><i class="material-icons left">delete</i>削除</td>
-        </tr>
-        @endforeach
+        @forelse ($articles as $article)
+          <tr>
+            <td>{{ $article->id }}</td>
+            <td>{{ $article->title }}</td>
+            <td>{{ date('Y/m/d H:i:s', strtotime($article->published_at)) }}</td>
+            <td><a href="{{ action('BlogController@show', [$article->id]) }}"><i class="material-icons left">details</i>詳細</a></td>
+            <td><a href="{{ action('BlogController@edit', [$article->id]) }}"><i class="material-icons left">edit</i>編集</a></td>
+            <td><i class="material-icons left">delete</i>削除</td>
+          </tr>
+        @empty
+          <tr>
+            <td>検索結果は0件です</td>
+          </tr>
+        @endforelse
       </tbody>
     </table>
   </div>

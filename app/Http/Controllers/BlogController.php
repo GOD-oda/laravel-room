@@ -18,7 +18,9 @@ class BlogController extends Controller
     public function index()
     {
         $logo = 'Blog Manager';
-        $articles = Article::latest('published_at')->get();
+        $articles = Article::latest('published_at')
+            ->published()
+            ->get();
 
         return view('admin.blog.index', compact('articles', 'logo'));
     }
@@ -41,7 +43,7 @@ class BlogController extends Controller
     {
         $input = $requests->all();
         $input['published_at'] =
-            $input['published_at'] .' '. Carbon::now()->toTimeString();
+            $input['published_at'] . ' ' . Carbon::now()->toTimeString();
 
         Article::create($input);
 
