@@ -17,18 +17,33 @@ class Payment extends Model
         'pay_day'
     ];
 
-    public function processPaymentType($no)
+    public static function search($requests)
     {
-        if ($no == 1) {
-            return '家賃';
-        } elseif ($no == 2) {
-            return '水道代';
-        } elseif ($no == 3) {
-            return '電気代';
-        } elseif ($no == 4) {
-            return 'ガス代';
-        } else {
-            return '不正な値が登録されています';
-        }
+        return Payment::paymentType($requests->type)
+            ->payDay($requests->from_date, $requests->to_date)
+            ->get();
     }
+
+    public function scopePaymentType($query, $type)
+    {
+        if (! empty($type)) {
+            return $query->where('type', '=', $type);
+        }
+
+        return $query;
+    }
+
+    public function scopePayDay($query, $from, $to)
+    {
+        if (! empty($from) && ! empty($to)) {
+            return $query->whereBetween('pay_day', [$from, $to]);
+        } elseif (! empty($from)) {
+            return $query->where('pay_day', '>=', $from);
+        } elseif (! empty($to)) {
+            return $query->where('pay_day', '<=', $to);
+        }
+
+        return $query;
+    }
+
 }

@@ -18,7 +18,9 @@ class BlogController extends Controller
     public function index()
     {
         $logo = 'Blog Manager';
-        $articles = Article::all();
+        $articles = Article::latest('published_at')
+            ->published()
+            ->get();
 
         return view('admin.blog.index', compact('articles', 'logo'));
     }
@@ -40,7 +42,8 @@ class BlogController extends Controller
     public function store(ArticleRequest $requests)
     {
         $input = $requests->all();
-        $input['published_at'] = Carbon::now();
+        $input['published_at'] =
+            $input['published_at'] . ' ' . Carbon::now()->toTimeString();
 
         Article::create($input);
 
@@ -61,6 +64,14 @@ class BlogController extends Controller
         $article->update($requests->all());
 
         return redirect()->route('blog.index');
+    }
+
+    public function search(Request $requests)
+    {
+        $logo = 'Blog Manager';
+        $articles = Article::search($requests);
+
+        return view('admin.blog.index', compact('logo', 'articles'));
     }
 
 }

@@ -41,15 +41,19 @@
         </tr>
       </thead>
       <tbody>
-        @foreach ($records as $key => $value)
+        @forelse ($records as $key => $value)
           <tr>
             <td>{{ $value->id }}</td>
-            <td>{{ $value->processPaymentType($value->type) }}</td>
+            <td>{{ processPaymentType($value->type) }}</td>
             <td>{{ $value->utility_charges }}円</td>
             <td>{{ $value->pay_day }}</td>
             <td><a href="#"><i class="material-icons left">edit</i>編集</a></td>
           </tr>
-        @endforeach
+        @empty
+          <tr>
+            <td>検索結果は0件です</td>
+          </tr>
+        @endforelse
       </tbody>
     </table>
   </div>

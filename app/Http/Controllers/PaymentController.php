@@ -25,7 +25,10 @@ class PaymentController extends Controller
 
     public function search(Request $requests)
     {
-        dd($requests);
+        $logo = 'Payment Manager';
+        $records = Payment::search($requests);
+
+        return view('admin.payment.index', compact('records', 'logo'));
     }
 
     public function create()
