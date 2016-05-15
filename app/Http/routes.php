@@ -9,7 +9,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::controller('/', 'ArticlesController');*/
 
     // 管理系
-    Route::group(['dmain' => 'admin.t-oda.tech'], function() {
+    Route::group(['domain' => 'admin.t-oda.tech'], function() {
         Route::auth();
         Route::post('/blog/search', 'BlogController@search');
         Route::resource('/blog', 'BlogController');
