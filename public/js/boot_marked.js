@@ -15,16 +15,16 @@ $(function() {
     });
   });
   // textarea自動調整
-  //$("#editor").height(100);
-  //$("#editor").css("lineHeight","20px");
-  $("#editor").on("input",function(evt){
-    if(evt.target.scrollHeight > evt.target.offsetHeight){
+  $("#editor").height(100);
+  $("#editor").css("lineHeight","20px");
+  $("#editor").on("input", function(evt) {
+    if (evt.target.scrollHeight > evt.target.offsetHeight) {
       $(evt.target).height(evt.target.scrollHeight);
-    }else{
+    } else {
       var lineHeight = Number($(evt.target).css("lineHeight").split("px")[0]);
-      while (true){
+      while (true) {
         $(evt.target).height($(evt.target).height() - lineHeight);
-        if(evt.target.scrollHeight > evt.target.offsetHeight){
+        if (evt.target.scrollHeight > evt.target.offsetHeight) {
           $(evt.target).height(evt.target.scrollHeight);
           break;
         }
