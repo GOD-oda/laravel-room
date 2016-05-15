@@ -56,20 +56,18 @@ exit;
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
+    Route::post('/blog/search', 'BlogController@search');
     Route::resource('/blog', 'BlogController');
-    Route::post(
-        '/payment/search', ['uses' => 'PaymentController@search', 'as' => 'payment.search']
-    );
+    Route::post('/payment/search', 'PaymentController@search');
     Route::resource('/payment', 'PaymentController');
     Route::controller('/', 'ArticlesController');
 
     // 管理系
     Route::group(['dmain' => 'admin.t-oda.tech'], function() {
         Route::auth();
+        Route::post('/blog/search', 'BlogController@search');
         Route::resource('/blog', 'BlogController');
-        Route::post(
-            '/payment/search', ['uses' => 'PaymentController@search', 'as' => 'payment.search']
-        );
+        Route::post('/payment/search', 'PaymentController@search');
         Route::resource('/payment', 'PaymentController');
     });
 

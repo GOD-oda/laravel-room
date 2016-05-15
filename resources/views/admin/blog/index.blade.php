@@ -6,14 +6,19 @@
 
 @section('content')
 {{-- 検索 --}}
-<form method="GET">
+{!! Form::open(['method' => 'post', 'url' => 'blog/search']) !!}
   <div class="row">
-    <div class="input-field col s8 offset-s2">
+    <div class="input-field col s6">
       <i class="material-icons prefix">search</i>
-      <input type="text" name="search" placeholder="記事名で検索"/>
+      <input type="text" name="title" placeholder="記事名で検索"/>
     </div>
+    <div class="input-field col s4">
+      <i class="material-icons prefix">search</i>
+      <input type="text" name="published_at" class="datepicker" placeholder="公開日で検索"/>
+    </div>
+    {!! Form::submit('検索', ['class' => 'input-field btn waves-effect waves-light']) !!}
   </div>
-</form>
+{!! Form::close() !!}
 
 <div class="row">
   <!-- 追加実装する予定

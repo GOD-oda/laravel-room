@@ -25,9 +25,29 @@ class Article extends Model
         'deleted_at'
     ];
 
-    public function scopePublished($query)
+    public static function search($requests)
     {
-        $query->where('published_at', '<=', Carbon::now());
+        return Article::title($requests->title)
+            ->published($requests->published_at)
+            ->get();
     }
+
+    public function scopePublished($query, $value)
+    {
+        if (! empty($value)) {
+            $query->where('published_at', '<=', $value);
+        }
+
+        return $query->where('published_at', '<=', Carbon::now());
+    }
+
+    public function scopeTitle($query, $value)
+    {
+        if (! empty($value)) {
+            return $query->where('title', 'like', "%{$value}%");
+        }
+        return $query;
+    }
+
 
 }

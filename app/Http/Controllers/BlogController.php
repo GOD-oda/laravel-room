@@ -18,9 +18,8 @@ class BlogController extends Controller
     public function index()
     {
         $logo = 'Blog Manager';
-//        \DB::enableQueryLog();
-        $articles = Article::latest('published_at')->published()->get();
-//        dd(\DB::getQueryLog());
+        $articles = Article::latest('published_at')->get();
+
         return view('admin.blog.index', compact('articles', 'logo'));
     }
 
@@ -63,6 +62,14 @@ class BlogController extends Controller
         $article->update($requests->all());
 
         return redirect()->route('blog.index');
+    }
+
+    public function search(Request $requests)
+    {
+        $logo = 'Blog Manager';
+        $articles = Article::search($requests);
+
+        return view('admin.blog.index', compact('logo', 'articles'));
     }
 
 }
