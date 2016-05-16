@@ -1,5 +1,5 @@
 <?php
-
+//dd(env('DB_HOST'));
 Route::group(['middleware' => 'web'], function () {
     Route::group(['domain' => 'admin.localhost'], function() {
         Route::auth();
@@ -20,6 +20,9 @@ Route::group(['middleware' => 'web'], function () {
         Route::resource('/blog', 'BlogController');
         Route::post('/payment/search', 'PaymentController@search');
         Route::resource('/payment', 'PaymentController');
+        Route::get('/', function() {
+            return redirect('login');
+        });
     });
 
     // blog
