@@ -1,5 +1,5 @@
 <?php
-//dd(env('DB_HOST'));
+
 Route::group(['middleware' => 'web'], function () {
     Route::group(['domain' => 'admin.localhost'], function() {
         Route::auth();
@@ -31,7 +31,10 @@ Route::group(['middleware' => 'web'], function () {
     });
 
     // portfolio
-    Route::resource('/', 'TestController');
+    //Route::resource('/', 'TestController');
+    Route::get('/', function() {
+        return view('typed');
+    });
     /*Route::get('/', function() {
         //return view('typed');
         abort(503);
