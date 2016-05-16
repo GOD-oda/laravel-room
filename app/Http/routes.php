@@ -31,11 +31,12 @@ Route::group(['middleware' => 'web'], function () {
     });
 
     // portfolio
-    Route::get('/', function() {
+    Route::resource('/', 'TestController');
+    /*Route::get('/', function() {
         //return view('typed');
         abort(503);
         //return view('portfolio.index');
-    });
+    });*/
 
 });
 

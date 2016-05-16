@@ -9,7 +9,8 @@
         "laravel/framework": "5.2.*",
         "laravelcollective/html": "5.2.*",
         "barryvdh/laravel-debugbar": "2.*@dev",
-        "twilio/sdk": "^4.10"
+        "twilio/sdk": "^4.10",
+        "predis/predis": "~1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
