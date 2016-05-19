@@ -35,6 +35,13 @@ nav .container .nav-wrapper a {
   color: #bdbdbd;
 }
 
+/* 記事内容の中タイトル */
+.article-show h5 {
+  border-left: 10px solid #cc528b;
+  border-bottom: 3px solid #e2b2c0;
+  padding-left: 13px;
+}
+
 /* top page */
 .top-discription {
   font-size: 2em;

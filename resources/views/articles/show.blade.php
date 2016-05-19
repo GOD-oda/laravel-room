@@ -4,11 +4,13 @@
 {{-- @include('elements.tabs') --}}
 
 <div class="container">
-  <h3>{{ $article->title }}</h3>
+  <div class="article-show">
+    <h4>{{ $article->title }}</h4>
 
-  <hr>
+    <hr>
 
-  {!! nl2br($article->body) !!}
+    {!! nl2br($article->body) !!}
+  </div>
 </div>
 
 @stop

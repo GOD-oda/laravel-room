@@ -10,6 +10,7 @@
 <body>
 <div class="container">
   <img src="{{ asset('img/test.png') }}" alt="">
+  <br>
   <div id="typed-strings" style="visibility:hidden;">
     <p>
       キングスライムが現れた！<br>
