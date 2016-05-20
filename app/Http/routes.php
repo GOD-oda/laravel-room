@@ -73,7 +73,8 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/', function() {
         // $number = app('FixedRandomNumber');
         // dd($number);
-        return view('typed');
+        abort(503);
+        //return view('typed');
     });
     /*Route::get('/', function() {
         //return view('typed');

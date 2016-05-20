@@ -30,7 +30,7 @@
 
 <div class="row">
   <div class="col s4">記事概要</div>
-  <div class="col s7">{{ $article->discription }}</div>
+  <div class="col s7">{!! nl2br($article->discription) !!}</div>
 </div>
 
 <hr>
