@@ -35,6 +35,14 @@ nav .container .nav-wrapper a {
   color: #bdbdbd;
 }
 
+/* 削除ボタン */
+.delete-btn {
+  background-color: #ef9a9a;
+}
+.delete-btn:hover {
+  background: #ef9a9a;
+}
+
 /* 分割線 */
 .divider {
   height: 2px;

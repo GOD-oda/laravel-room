@@ -68,5 +68,6 @@
   <script src="{{ asset('js/materialize.min.js') }}"></script>
   <script src="{{ asset('js/boot_materialize.js') }}"></script>
   <script src="{{ asset('js/boot_marked.js') }}"></script>
+  <script src="{{ asset('js/submit.js') }}"></script>
 </body>
 </html>

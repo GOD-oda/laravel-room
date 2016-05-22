@@ -68,9 +68,9 @@ class BlogController extends Controller
         return redirect()->route('blog.index');
     }
 
-    public function destroy($id)
+    public function destroy(Article $article)
     {
-        Article::destroy($id);
+        $article->delete();
 
         \Session::flash('message', '削除に成功しました');
 
