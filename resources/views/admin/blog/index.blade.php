@@ -46,7 +46,7 @@
             <td><a href="{{ action('BlogController@edit', [$article->id]) }}"><i class="material-icons left">edit</i>編集</a></td>
             <td>
               {!! Form::open(['method' => 'DELETE', 'action' => ['BlogController@destroy', $article->id]]) !!}
-                <i class="material-icons left">delete</i><input type="submit" class="btn delete-btn" value="削除">
+                <i class="material-icons left">delete</i><button class="btn delete-btn">削除</button>>
               {!! Form::close() !!}
             </td>
           </tr>
