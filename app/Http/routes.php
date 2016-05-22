@@ -78,6 +78,7 @@ Route::group(['middleware' => 'web'], function () {
         abort(503);
         //return view('typed');
     });
+
     /*Route::get('/', function() {
         //return view('typed');
         abort(503);
