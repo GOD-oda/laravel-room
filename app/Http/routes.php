@@ -43,9 +43,9 @@ Route::group(['middleware' => 'web'], function () {
         Route::auth();
         Route::post('/blog/search', 'BlogController@search');
         Route::resource('/blog', 'BlogController');
-        Route::post('/payment/search', 'PaymentController@search');
-        Route::resource('/payment', 'PaymentController');
-        Route::controller('/', 'ArticlesController');
+        //Route::post('/payment/search', 'PaymentController@search');
+        //Route::resource('/payment', 'PaymentController');
+        //Route::controller('/', 'ArticlesController');
     });
     Route::group(['domain' => 'blog.localhost'], function() {
         Route::controller('/', 'ArticlesController');

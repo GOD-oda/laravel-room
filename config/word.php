@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'ODA labo about Laravel5',
+    'title' => 'ララベル尾田のつぶやき部屋',
 
     // META
     'meta' => [
@@ -9,6 +9,6 @@ return [
     ],
 
     // FOOTER
-    'copyright' => 'Copyright © 2016 ODA labo about Laravel5 All rights reserved.',
+    'copyright' => 'Copyright © 2016 ラベル尾田のつぶやき部屋 All rights reserved.',
     'content' => 'このサイトは、プログラミングやITなどの技術系の情報の備忘録や周知を目的としています。また、Larave5とMaterializeCSSを使用しています。'
 ];

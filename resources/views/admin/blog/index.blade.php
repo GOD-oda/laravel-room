@@ -5,6 +5,12 @@
 @endsection
 
 @section('content')
+@if (Session::has('message'))
+  <div class="col s12 alert">
+    {{ session('message') }}
+  </div>
+@endif
+
 {{-- 検索 --}}
 {!! Form::open(['method' => 'post', 'url' => 'blog/search']) !!}
   <div class="row">
@@ -21,12 +27,6 @@
 {!! Form::close() !!}
 
 <div class="row">
-  <!-- 追加実装する予定
-  <div class="col s3">
-    left navigation
-  </div>
-  -->
-
   <div class="col s12">
     <table>
       <thead>
@@ -44,7 +44,7 @@
             <td>{{ date('Y/m/d H:i:s', strtotime($article->published_at)) }}</td>
             <td><a href="{{ action('BlogController@show', [$article->id]) }}"><i class="material-icons left">details</i>詳細</a></td>
             <td><a href="{{ action('BlogController@edit', [$article->id]) }}"><i class="material-icons left">edit</i>編集</a></td>
-            <td><i class="material-icons left">delete</i>削除</td>
+            <td><a href="{{ action('BlogController@destroy', [$article->id]) }}"><i class="material-icons left">delete</i>削除</a></td>
           </tr>
         @empty
           <tr>
@@ -55,6 +55,10 @@
     </table>
   </div>
 </div>
+
+<script>
+  $('div.alert').delay(3000).sileUp(300);
+</script>
 @endsection
 
 @section('action_button')

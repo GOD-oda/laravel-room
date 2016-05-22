@@ -7,7 +7,7 @@
   <div class="article-show">
     <h4>{{ $article->title }}</h4>
 
-    <hr>
+    <div class="divider"></div>
 
     {!! nl2br($article->body) !!}
   </div>

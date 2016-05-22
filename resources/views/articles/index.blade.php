@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     @foreach ($articles as $key => $article)
-      <div class="col s12 m6">
+      <div class="col s12 m6 hoverable">
         <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator img-cover" src="{{ asset('img/laravel5.jpg') }}">

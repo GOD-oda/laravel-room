@@ -19,8 +19,8 @@ class BlogController extends Controller
     {
         $logo = 'Blog Manager';
         $articles = Article::latest('published_at')
-            ->published()
-            ->get();
+                        ->published()
+                        ->get();
 
         return view('admin.blog.index', compact('articles', 'logo'));
     }
@@ -47,6 +47,8 @@ class BlogController extends Controller
 
         Article::create($input);
 
+        \Session::flash('message', '登録に成功しました');
+
         return redirect('blog');
     }
 
@@ -62,6 +64,15 @@ class BlogController extends Controller
         $article = Article::findOrfail($requests->id);
 
         $article->update($requests->all());
+
+        return redirect()->route('blog.index');
+    }
+
+    public function destroy(Article $article)
+    {
+        $article->delete();
+
+        \Session::flash('message', '削除に成功しました');
 
         return redirect()->route('blog.index');
     }
