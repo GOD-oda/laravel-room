@@ -70,6 +70,7 @@ class BlogController extends Controller
 
     public function destroy($id)
     {
+        dd($id);
         Article::destroy($id);
 
         \Session::flash('message', '削除に成功しました');

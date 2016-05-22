@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b88c84d9e76fbd2349506cbae174c681",
+    "hash": "c8a53f1ac00290fcfe4c6d33dd7ab445",
     "content-hash": "768ff2829124c8e7ef6c15b1e7a67db6",
     "packages": [
         {
@@ -13,17 +13,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-debugbar.git",
-                "reference": "c291e58d0a13953e0f68d99182ee77ebc693edc0"
+                "reference": "92556ec0fb2e1b206f3e0cfabb72830f679ed836"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/92556ec0fb2e1b206f3e0cfabb72830f679ed836",
-                "reference": "c291e58d0a13953e0f68d99182ee77ebc693edc0",
+                "reference": "92556ec0fb2e1b206f3e0cfabb72830f679ed836",
                 "shasum": ""
             },
             "require": {
                 "illuminate/support": "5.1.*|5.2.*",
-                "maximebf/debugbar": "~1.11.0",
+                "maximebf/debugbar": "~1.11.0|~1.12.0",
                 "php": ">=5.5.9",
                 "symfony/finder": "~2.7|~3.0"
             },
@@ -59,7 +59,7 @@
                 "profiler",
                 "webprofiler"
             ],
-            "time": "2016-05-11 13:54:43"
+            "time": "2016-05-15 13:12:44"
         },
         {
             "name": "classpreloader/classpreloader",
