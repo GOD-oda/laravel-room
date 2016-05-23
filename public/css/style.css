@@ -1,6 +1,7 @@
+@charset "UTF-8";
 /* html */
 html {
-  font-size: 62.5%;
+  font-size: 62.5% !important;
 }
 
 /* body */
@@ -51,15 +52,15 @@ nav .container .nav-wrapper a {
 
 /* 記事詳細画面のスタイル */
 .article-show h1 {
-  font-size: 3em;
+  font-size: 1.7em;
 }
 .article-show h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   border-left: 10px solid #424242;
   border-bottom: 3px solid #424242;
   padding-left: 13px;
   padding-bottom: 3px;
-  margin-bottom: 3px;
+  margin-top: 1.3em;
 }
 
 /* top page */
@@ -73,7 +74,7 @@ nav .container .nav-wrapper a {
 }
 .parallax-container .container h1 {
   font-family: 'Amatic SC', 'Condiment', cursive;
-  font-size: 122px;
+  font-size: 5em;
   font-weight: 800;
 }
 .parallax-container .container .btn-ghost {
