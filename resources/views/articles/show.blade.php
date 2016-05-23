@@ -5,7 +5,7 @@
 
 <div class="container">
   <div class="article-show">
-    <h4>{{ $article->title }}</h4>
+    <h1>{{ $article->title }}</h1>
 
     <div class="divider"></div>
 

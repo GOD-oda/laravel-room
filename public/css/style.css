@@ -1,12 +1,12 @@
 /* html */
 html {
-  /* font-family: "游ゴシック","ヒラギノ角ゴ Pro W3","メイリオ"; */
+  font-size: 62.5%;
 }
 
 /* body */
 body {
   font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-  font-size: 20px;
+  font-size: 2em;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -49,12 +49,17 @@ nav .container .nav-wrapper a {
   background-color: #9e9e9e;
 }
 
-/* 記事内容の中タイトル */
-.article-show h5 {
+/* 記事詳細画面のスタイル */
+.article-show h1 {
+  font-size: 3em;
+}
+.article-show h2 {
+  font-size: 2em;
   border-left: 10px solid #424242;
   border-bottom: 3px solid #424242;
   padding-left: 13px;
   padding-bottom: 3px;
+  margin-bottom: 3px;
 }
 
 /* top page */
