@@ -9,7 +9,7 @@
 
     <div class="divider"></div>
 
-    {!! nl2br($article->body) !!}
+    {!! $article->body !!}
   </div>
 </div>
 
