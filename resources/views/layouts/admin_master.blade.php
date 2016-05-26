@@ -11,9 +11,7 @@
 
   <title>{{ Config::get('word.title') }}</title>
 
-  <link rel="shortcut icon" href="assets/img/favicon.png">
-
-  <!-- Compiled and minified CSS -->
+  <!-- Compiled and minified CSS -->X
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
 
