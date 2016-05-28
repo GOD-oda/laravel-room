@@ -11,7 +11,7 @@
 
   <title>{{ Config::get('word.title') }}</title>
 
-  <!-- Compiled and minified CSS -->X
+  <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
 
