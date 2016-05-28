@@ -1,5 +1,10 @@
 @extends('layouts.admin_master')
 
+@section('navbar')
+  @include('admin.elements.navbar', ['logo' => 'Payment Manager'])
+@endsection
+
+{{-- 今のところ、実装予定はない --}}
 @section('sidebar')
   @include('admin.payment.sidebar')
 @endsection
@@ -41,12 +46,12 @@
         </tr>
       </thead>
       <tbody>
-        @forelse ($records as $key => $value)
+        @forelse ($payments as $key => $payment)
           <tr>
-            <td>{{ $value->id }}</td>
-            <td>{{ processPaymentType($value->type) }}</td>
-            <td>{{ $value->utility_charges }}円</td>
-            <td>{{ $value->pay_day }}</td>
+            <td>{{ $payment->id }}</td>
+            <td>{{ $payment->processPaymentType($payment->type) }}</td>
+            <td>{{ $payment->utility_charges }}円</td>
+            <td>{{ $payment->pay_day }}</td>
             <td><a href="#"><i class="material-icons left">edit</i>編集</a></td>
           </tr>
         @empty
@@ -61,5 +66,5 @@
 @endsection
 
 @section('action_button')
-  @include('elements.action_button')
+  @include('admin.payment.elements.index_action_button')
 @endsection

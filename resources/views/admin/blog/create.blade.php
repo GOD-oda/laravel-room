@@ -1,7 +1,10 @@
 @extends('layouts.admin_master')
 
-@section('content')
+@section('navbar')
+  @include('admin.elements.navbar', ['logo' => 'Create New Article'])
+@endsection
 
+@section('content')
 @if ($errors->has())
   <div class="row">
     <div class="col s6 offset-s3">

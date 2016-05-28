@@ -39,8 +39,12 @@
 // });
 
 Route::group(['middleware' => 'web'], function () {
-    //Route::auth();
-    //Route::resource('blog', 'BlogController');
+    // Route::auth();
+    // Route::post('/blog/search', 'BlogController@search');
+    // Route::resource('blog', 'BlogController');
+    // Route::post('/payment/search', 'PaymentController@search');
+    // Route::resource('/payment', 'PaymentController');
+
     // Route::group(['domain' => 'admin.localhost'], function() {
     //     Route::auth();
     //     Route::post('/blog/search', 'BlogController@search');

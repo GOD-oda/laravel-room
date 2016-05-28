@@ -1,4 +1,8 @@
-@extends('layouts.login_master')
+@extends('layouts.admin_master')
+
+@section('navbar')
+  @include('auth.elements.navbar')
+@endsection
 
 @section('content')
 <div class="container">
@@ -18,13 +22,13 @@
   @endif
 
 
-  <form method="post" class="col s12 center">
+  <form method="post" class="col s12 center mt30">
     {!! csrf_field() !!}
 
     <div class="row">
       <div class="input-field col s6 offset-s3">
         <i class="material-icons prefix">account_circle</i>
-        <input id="icon_prefix" class="validate" type="text" name="name">
+        <input id="icon_prefix" class="validate input-filed" type="text" name="name">
           <label for="icon-prefix">Name</label>
       </div>
     </div>

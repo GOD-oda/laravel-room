@@ -1,6 +1,6 @@
 <?php
 
-if (! function_exists('processPaymentType')) {
+/*if (! function_exists('processPaymentType')) {
     function processPaymentType($type)
     {
         if ($type == 1) {
@@ -15,4 +15,4 @@ if (! function_exists('processPaymentType')) {
             return '不正な値が登録されています';
         }
     }
-}
+}*/

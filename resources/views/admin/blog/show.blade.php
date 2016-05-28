@@ -1,5 +1,9 @@
 @extends('layouts.admin_master')
 
+@section('navbar')
+  @include('admin.elements.navbar', ['logo' => 'Article Detail'])
+@endsection
+
 @section('content')
 <br>
 

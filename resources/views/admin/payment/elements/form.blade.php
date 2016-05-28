@@ -20,7 +20,7 @@
     支払日
   </div>
   <div class="input-field col s3">
-    {!! Form::text('pay_day', null) !!}
+    {!! Form::text('pay_day', null, ['class' => 'datepicker']) !!}
   </div>
 </div>
 <div class="row">

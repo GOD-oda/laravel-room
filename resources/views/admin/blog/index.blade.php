@@ -1,5 +1,10 @@
 @extends('layouts.admin_master')
 
+@section('navbar')
+  @include('admin.elements.navbar', ['logo' => 'Blog Manager'])
+@endsection
+
+{{-- sidebarは実装予定はない --}}
 @section('sidebar')
   @include('admin.blog.sidebar')
 @endsection
@@ -21,7 +26,7 @@
   <div class="row">
     <div class="input-field col s6">
       <i class="material-icons prefix">search</i>
-      <input type="text" name="title" placeholder="記事名で検索"/>
+      <input type="text" name="title" placeholder="記事名で検索" />
     </div>
     <div class="input-field col s4">
       <i class="material-icons prefix">search</i>

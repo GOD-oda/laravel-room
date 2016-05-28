@@ -17,25 +17,21 @@ class PaymentController extends Controller
 
     public function index()
     {
-        $logo = 'Payment Manager';
-        $records = Payment::all();
+        $payments = Payment::all();
 
-        return view('admin.payment.index', compact('records', 'logo'));
+        return view('admin.payment.index', compact('payments'));
     }
 
     public function search(Request $requests)
     {
-        $logo = 'Payment Manager';
-        $records = Payment::search($requests);
+        $payments = Payment::search($requests);
 
-        return view('admin.payment.index', compact('records', 'logo'));
+        return view('admin.payment.index', compact('payments'));
     }
 
     public function create()
     {
-        $logo = 'Create New Record';
-
-        return view('admin.payment.create', compact('logo'));
+        return view('admin.payment.create');
     }
 
     public function store(PaymentRequest $requests)

@@ -17,26 +17,21 @@ class BlogController extends Controller
 
     public function index()
     {
-        $logo = 'Blog Manager';
         $articles = Article::latest('published_at')
                         ->published()
                         ->get();
 
-        return view('admin.blog.index', compact('articles', 'logo'));
+        return view('admin.blog.index', compact('articles'));
     }
 
     public function show(Article $article)
     {
-        $logo = 'Article Detail';
-
-        return view('admin.blog.show', compact('article', 'logo'));
+        return view('admin.blog.show', compact('article'));
     }
 
     public function create()
     {
-        $logo = 'Create New Article';
-
-        return view('admin.blog.create', compact('logo'));
+        return view('admin.blog.create');
     }
 
     public function store(ArticleRequest $requests)
@@ -54,9 +49,7 @@ class BlogController extends Controller
 
     public function edit(Article $article)
     {
-        $logo = 'Article Edit';
-
-        return view('admin.blog.edit', compact('article', 'logo'));
+        return view('admin.blog.edit', compact('article'));
     }
 
     public function update(ArticleRequest $requests)
@@ -79,10 +72,9 @@ class BlogController extends Controller
 
     public function search(Request $requests)
     {
-        $logo = 'Blog Manager';
         $articles = Article::search($requests);
 
-        return view('admin.blog.index', compact('logo', 'articles'));
+        return view('admin.blog.index', compact('articles'));
     }
 
 }

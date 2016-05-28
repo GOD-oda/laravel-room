@@ -28,10 +28,10 @@ $(document).ready(function() {
         clear: "クリア",
         close: "閉じる",
         format: 'yyyy-mm-dd',
-        //closeOnselect: true,
-        onSet: function() {
+        closeOnselect: true
+        /*onSet: function() {
             this.close();
-        }
+        }*/
     });
 
 });
