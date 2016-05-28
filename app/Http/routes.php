@@ -44,6 +44,7 @@ Route::group(['middleware' => 'web'], function () {
     // Route::resource('blog', 'BlogController');
     // Route::post('/payment/search', 'PaymentController@search');
     // Route::resource('/payment', 'PaymentController');
+    // Route::resource('/', 'ArticlesController');
 
     // Route::group(['domain' => 'admin.localhost'], function() {
     //     Route::auth();
@@ -76,12 +77,12 @@ Route::group(['middleware' => 'web'], function () {
 
     // portfolio
     //Route::resource('/', 'TestController');
-    Route::get('/', function() {
-        // $number = app('FixedRandomNumber');
-        // dd($number);
-        abort(503);
-        //return view('typed');
-    });
+    // Route::get('/', function() {
+    //     // $number = app('FixedRandomNumber');
+    //     // dd($number);
+    //     abort(503);
+    //     //return view('typed');
+    // });
 
     /*Route::get('/', function() {
         //return view('typed');
