@@ -44,7 +44,7 @@ Route::group(['middleware' => 'web'], function () {
     // Route::resource('blog', 'BlogController');
     // Route::post('/payment/search', 'PaymentController@search');
     // Route::resource('/payment', 'PaymentController');
-    // Route::resource('/', 'ArticlesController');
+    // Route::controller('/', 'ArticlesController');
 
     // Route::group(['domain' => 'admin.localhost'], function() {
     //     Route::auth();
@@ -72,7 +72,7 @@ Route::group(['middleware' => 'web'], function () {
 
     // blog
     Route::group(['domain' => 'blog.t-oda.tech'], function() {
-        Route::resource('/', 'ArticlesController');
+        Route::controller('/', 'ArticlesController');
     });
 
     // portfolio

@@ -11,7 +11,7 @@
           </div>
           <div class="card-content">
             <h5 class="card-title activator grey-text text-darken-4">{{ $article->title }}<i class="material-icons right">more_vert</i></h5>
-            <p><a href="{{ action('ArticlesController@show', ['id' => $article->id]) }}">詳細はこちら</a></p>
+            <p><a href="{{ action('ArticlesController@getShow', ['id' => $article->id]) }}">詳細はこちらa</a></p>
           </div>
           <div class="card-reveal">
             <span class="card-title grey-text text-darken-4">{{ $article->title }}<i class="material-icons right">close</i></span>

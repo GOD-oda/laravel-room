@@ -9,14 +9,14 @@ use App\User;
 
 class ArticlesController extends Controller
 {
-    public function index()
+    public function getIndex()
     {
         $articles = Article::latest()->get();
 
         return view('articles.index', compact('articles'));
     }
 
-    public function show($id)
+    public function getShow($id)
     {
         $article = Article::findOrFail($id);
 
