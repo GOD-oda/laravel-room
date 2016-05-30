@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+/*
+ * @author t-oda
+ *
+ * this  is css of blog.
+ */
+
 /* html */
 html {
   font-size: 62.5% !important;
@@ -29,7 +35,9 @@ footer {
   /* padding-left: 200px; */
 }
 
-/* nav */
+/*
+ * navbar系
+ */
 nav {
   box-shadow: none;
 }
@@ -47,7 +55,7 @@ nav .brand-logo {
 }
 
 /*
- | margin系
+ * margin系
  */
 /* margin */
 .m0 { margin: 0 }
@@ -75,7 +83,7 @@ nav .brand-logo {
 .mb30 { margin-bottom: 30px }
 
 /*
- | padding系
+ * padding系
  */
 /* padding */
 .p0 { padding: 0 }
@@ -134,8 +142,7 @@ nav .brand-logo {
 }
 
 /*
- | 記事詳細画面のスタイル
- |
+ * 記事詳細画面のスタイル
  */
 /* 記事タイトル */
 .article-show h1 {
@@ -150,7 +157,13 @@ nav .brand-logo {
   padding-bottom: 3px;
   margin-top: 1.3em;
 }
-/* リスト */
+/*
+ * リスト系
+ */
+.article-show ul {
+  padding: 3px 10px;
+  border: solid 2px #607d8b;
+}
 .article-show, .article-show li{
   padding:0px;
   margin:0px;
