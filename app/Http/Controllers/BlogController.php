@@ -17,7 +17,7 @@ class BlogController extends Controller
 
     public function index()
     {
-        $articles = Article::latest('published_at')
+        $articles = Article::latest()
                         ->published()
                         ->get();
 
