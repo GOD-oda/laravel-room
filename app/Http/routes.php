@@ -56,8 +56,7 @@ Route::group(['middleware' => 'web'], function () {
     // });
     // Route::group(['domain' => 'blog.localhost'], function() {
     //     Route::controller('/', 'ArticlesController');
-    // });
-
+    // })
     // 管理系
     Route::group(['domain' => 'admin.t-oda.tech'], function() {
         Route::auth();
