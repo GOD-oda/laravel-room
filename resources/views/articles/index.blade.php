@@ -3,6 +3,9 @@
 @section('content')
 <div class="container">
   <div class="row">
+    @include('articles.elements.notice')
+  </div>
+  <div class="row">
     @foreach ($articles as $key => $article)
       <div class="col s12 m6">
         <div class="card">
@@ -22,5 +25,4 @@
     @endforeach
   </div>
 </div><!-- /.container -->
-
 @stop
