@@ -11,19 +11,6 @@
       {!! $article->body !!}
     </div>
   </div>
-
-  <div class="divider"></div>
-
-  <div class="section">
-  <div class="article-comment">
-    <div class="row">
-      <div class="col s12">
-        test
-      </div>
-    </div>
-    <!-- @include('articles.elements.comment_form') -->
-  </div>
-  </div>
 </div>
 
 @stop
