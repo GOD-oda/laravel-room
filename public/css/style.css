@@ -144,6 +144,10 @@ nav .brand-logo {
 /*-----------------------------------------------
  * 記事詳細画面のスタイル
  *-----------------------------------------------
+/*  */
+.article-show {
+
+}
 /* 記事タイトル */
 .article-show h1 {
   font-size: 1.7em;
@@ -164,7 +168,7 @@ nav .brand-logo {
   padding: 3px 10px;
   border: solid 2px #607d8b;
 }
-.article-show, .article-show li{
+.article-show li{
   padding:0px;
   margin:0px;
 }
@@ -197,9 +201,21 @@ nav .brand-logo {
   -webkit-transform:rotate(-45deg);
   -o-transform:rotate(-45deg);
 }
-.article-show code {
-  padding: 10px;
+.article-show pre {
+  padding-left: 10px;
   border: solid 2px #607d8b;
+}
+.article-show code {
+  /* margin-bottom: 10px;
+  padding: 10px;
+  border: solid 2px #607d8b; */
+}
+.article-comment {
+  /* margin: 15px auto; */
+  border: solid 2px #607d8b;
+}
+.article-comment.comment-area {
+
 }
 /*------------------------------------------*/
 
