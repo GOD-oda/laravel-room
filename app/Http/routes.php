@@ -44,7 +44,10 @@ Route::group(['middleware' => 'web'], function () {
     Route::resource('blog', 'BlogController');
     Route::post('/payment/search', 'PaymentController@search');
     Route::resource('/payment', 'PaymentController');
-    Route::controller('/', 'ArticlesController');
+    Route::get('/', function () {
+        return redirect('/article');
+    });
+    Route::resource('/article', 'ArticlesController');
 
     // Route::group(['domain' => 'admin.localhost'], function() {
     //     Route::auth();

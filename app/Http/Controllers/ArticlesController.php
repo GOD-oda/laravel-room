@@ -10,28 +10,20 @@ use Carbon\Carbon;
 
 class ArticlesController extends Controller
 {
-    private $now;
-
     public function __construct()
     {
-        $this->now = Carbon::now();
+        $this->middleware('exists.article:entry', ['only' => ['show']]);
     }
 
-    public function getIndex()
+    public function index()
     {
         $articles = Article::latest()->published()->get();
 
         return view('articles.index', compact('articles'));
     }
 
-    public function getShow($id)
+    public function show($id)
     {
-        $article = Article::findOrFail($id);
-
-        if ($article->published_at > $this->now) {
-            return abort(503);
-        }
-
         return view('articles.show', compact('article'));
     }
 }
