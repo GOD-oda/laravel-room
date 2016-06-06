@@ -36,7 +36,7 @@ class Article extends Model
     public function scopePublished($query, $value='')
     {
         if (! empty($value)) {
-            $query->where('published_at', '<=', $value);
+            return $query->where('published_at', '<=', $value);
         }
 
         return $query->where('published_at', '<=', Carbon::now());

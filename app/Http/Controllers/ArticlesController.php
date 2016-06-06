@@ -3,19 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests;
+use App\Services\ArticleService;
 use App\Article;
-use App\User;
-use Carbon\Carbon;
 
 class ArticlesController extends Controller
 {
-    public function __construct()
+    protected $article;
+
+    public function __construct(ArticleService $article)
     {
-        $this->middleware('exists.article:entry', ['only' => ['show']]);
+        $this->article = $article;
+        $this->middleware('exists.article:id', ['only' => ['show']]);
     }
 
-    public function index()
+    /**
+     * Requestインスタンスはページャーで使う
+     * 今は必要ない。
+     */
+    public function index(Request $request)
     {
         $articles = Article::latest()->published()->get();
 
@@ -24,6 +29,8 @@ class ArticlesController extends Controller
 
     public function show($id)
     {
+        $article = $this->article->getArticle($id);
+        dd($article);
         return view('articles.show', compact('article'));
     }
 }
