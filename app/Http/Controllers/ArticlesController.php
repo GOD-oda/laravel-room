@@ -13,16 +13,14 @@ class ArticlesController extends Controller
     public function __construct(ArticleService $article)
     {
         $this->article = $article;
-        $this->middleware('exists.article:id', ['only' => ['show']]);
+        //$this->middleware('exists.article:id', ['only' => ['show']]);
     }
 
-    /**
-     * Requestインスタンスはページャーで使う
-     * 今は必要ない。
-     */
     public function index(Request $request)
     {
-        $articles = Article::latest()->published()->get();
+        $articles = $this->article
+            ->getPage($request->get('page', 1), 20)
+            ->setPath($request->getBasePath());
 
         return view('articles.index', compact('articles'));
     }
@@ -30,7 +28,7 @@ class ArticlesController extends Controller
     public function show($id)
     {
         $article = $this->article->getArticle($id);
-        dd($article);
+
         return view('articles.show', compact('article'));
     }
 }

@@ -2,16 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests;
-use App\Http\Requests\ArticleRequest;
 use App\Article;
 use Carbon\Carbon;
+use App\Http\Requests;
 use Illuminate\Http\Request;
+use App\Http\Requests\ArticleRequest;
+use Illuminate\Contracts\Auth\Guard;
 
 class BlogController extends Controller
 {
-    public function __construct()
+    public function __construct(ArticleService $article, Guard $guard)
     {
+        $this->article = $article;
+        $this->guard = $guard;
         $this->middleware('auth');
     }
 
@@ -38,7 +41,9 @@ class BlogController extends Controller
         $input['published_at'] =
             $input['published_at'] . ' ' . Carbon::now()->toTimeString();
 
-        Article::create($input);
+        $input['user_id'] = $this->guard->user()->id;
+        $this->article->addEntry($input); // Article::create($input);と同じことをやっている
+        //Article::create($input);
 
         \Session::flash('message', '登録に成功しました');
 

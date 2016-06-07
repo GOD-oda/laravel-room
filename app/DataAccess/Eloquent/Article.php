@@ -18,5 +18,14 @@ class Article extends Model
         'discription',
     ];
 
+    public function byPage($limit, $page)
+    {
+        return $this->query()
+            ->orderBy('created_at', 'desc')
+            ->skip($limit * ($page - 1))
+            ->take($limit)
+            ->get();
+    }
+
 
 }

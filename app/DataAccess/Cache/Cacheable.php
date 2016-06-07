@@ -10,9 +10,14 @@ interface Cacheable
 
     public function has($key);
 
-    public function flash();
+    public function flush();
 
-    /**
-     * putPaginateCache()
-     */
+    public function  putPaginateCache(
+        $currentPgae,
+        $perPage,
+        $totla,
+        $items,
+        $key,
+        $minutes = 10
+    );
 }

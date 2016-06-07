@@ -1,8 +1,9 @@
 <?php
 
-namespace App\DataAccess;
+namespace App\DataAccess\Cache;
 
-use Illuminate\Cache\Cache<amager;
+use App\DataAccess\Cache\Cacheable;
+use Illuminate\Cache\CacheManager;
 
 class DataCache implements Cacheable
 {
@@ -15,6 +16,11 @@ class DataCache implements Cacheable
         $this->cache = $cache;
         $this->cacheKey = $cacheKey;
         $this->minutes = $minutes;
+    }
+
+    public function get($key)
+    {
+        return $this->cache->tags($this->cacheKey)->get($key);
     }
 
     public function put($key, $value, $minutes = null)
@@ -41,13 +47,20 @@ class DataCache implements Cacheable
         $this->cache->tags($this->cacheKey)->flush();
     }
 
-    /**
-     * ページごとにキャッシュするのは後で実装
-     * putPaginateCache()
-     */
-
-
-
-
-
+    public function putPaginateCache(
+        $currentPage,
+        $perPage,
+        $total,
+        $items,
+        $key,
+        $minutes = 10
+    ) {
+        $cached = new \StdClass;
+        $cached->currentPage = $currentPage;
+        $cached->items = $items;
+        $cached->total = $total;
+        $cached->perPage = $perPage;
+        $this->put($key, $cached, $minutes);
+        return $cached;
+    }
 }

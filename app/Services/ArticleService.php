@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Repositories\ArticleRepositoryInterface;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class ArticleService
 {
@@ -23,13 +24,6 @@ class ArticleService
         return $this->article->find($id);
     }
 
-    /**
-     * まだ実装しない
-     * @param  integer $page  [description]
-     * @param  integer $limit [description]
-     * @return [type]         [description]
-     */
-    /*
     public function getPage($page = 1, $limit = 20)
     {
         $result = $this->article->byPage($page, $limit);
@@ -38,7 +32,6 @@ class ArticleService
             $result->items, $result->total, $result->perPage, $result->currentPage
         );
     }
-    */
 
 
 }

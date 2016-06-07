@@ -2,7 +2,7 @@
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
     Route::post('/blog/search', 'BlogController@search');
-    Route::resource('blog', 'BlogController');
+    Route::resource('blog', 'BlogController', ['except' => ['destroy', 'show']]);
     Route::post('/payment/search', 'PaymentController@search');
     Route::resource('/payment', 'PaymentController');
     Route::get('/', function () {
