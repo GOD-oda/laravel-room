@@ -65,6 +65,13 @@ nav .brand-logo {
 .m15 { margin: 15px }
 .m20 { margin: 20px }
 .m30 { margin: 30px }
+/* margin right left auto */
+.mtb0 { margin: 0 auto;}
+.mtb3 { margin: 3px auto;}
+.mtb5 { margin: 5px auto;}
+.mtb10 { margin: 10px auto;}
+.mtb15 { margin: 15px auto;}
+.mtb20 { margin: 20px auto;}
 /* margin-top */
 .mt0 { margin-top: 0 }
 .mt3 { margin-top: 3px }
