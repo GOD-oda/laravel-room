@@ -16,6 +16,9 @@ Route::group(['middleware' => 'web'], function () {
     // ブログ
     Route::group(['domain' => 'blog.localhost'], function () {
         Route::resource('/article', 'ArticlesController', ['only' => ['index', 'show']]);
+        Route::get('/', function () {
+            return redirect()->action('ArticlesController@index');
+        });
     });
     // ポートフォリオ
     Route::get('/', function () {

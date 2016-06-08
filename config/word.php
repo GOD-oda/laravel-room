@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'LaraveRoom',
+    'title' => 'Laravel Room',
 
     // META
     'meta' => [
@@ -10,10 +10,10 @@ return [
 
     // parallax text
     'parallax' => [
-        'title' => 'LaraveRoom'
+        'title' => 'Laravel Room'
     ],
 
     // FOOTER
-    'copyright' => 'Copyright © 2016 LaraveRoom All rights reserved.',
-    'content' => 'このサイトは、プログラミングやITなどの技術系の情報の備忘録や周知を目的としています。また、Larave5とMaterializeCSSを使用しています。'
+    'copyright' => 'Copyright © 2016 Laravel Room All rights reserved.',
+    'content' => 'このサイトは、プログラミングやITなどの技術系の情報の備忘録や周知を目的としています。また、このサイトはLarave5.2とMaterializeCSSで構築されています。'
 ];
