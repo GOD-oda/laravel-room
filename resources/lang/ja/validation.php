@@ -62,7 +62,7 @@ return [
     ],
     'string'               => 'The :attribute must be a string.',
     'timezone'             => 'The :attribute must be a valid zone.',
-    'unique'               => 'The :attribute has already been taken.',
+    'unique'               => ':attribute は既に登録されています。',
     'url'                  => 'The :attribute format is invalid.',
 
     /*

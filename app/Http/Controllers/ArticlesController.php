@@ -13,7 +13,7 @@ class ArticlesController extends Controller
     public function __construct(ArticleService $article)
     {
         $this->article = $article;
-        //$this->middleware('exists.article:id', ['only' => ['show']]);
+        $this->middleware('exists.article:entry', ['only' => ['show']]);
     }
 
     public function index(Request $request)

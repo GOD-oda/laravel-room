@@ -8,6 +8,10 @@
     <div class="article-show">
       <h1>{{ $article->title }}</h1>
       <div class="divider"></div>
+      <div class="right mt5">
+        <i class="material-icons">build</i> {{ date('Y.m.d', strtotime($article->created_at)) }}
+        <i class="material-icons">autorenew</i> {{ date('Y.m.d', strtotime($article->updated_at)) }}
+      </div>
       {!! $article->body !!}
     </div>
   </div>

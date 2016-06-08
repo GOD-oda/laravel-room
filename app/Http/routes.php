@@ -1,14 +1,27 @@
 <?php
 Route::group(['middleware' => 'web'], function () {
-    Route::auth();
-    Route::post('/blog/search', 'BlogController@search');
-    Route::resource('blog', 'BlogController', ['except' => ['destroy', 'show']]);
-    Route::post('/payment/search', 'PaymentController@search');
-    Route::resource('/payment', 'PaymentController');
-    Route::get('/', function () {
-        return redirect('/article');
+    // 管理系
+    Route::group(['domain' => 'admin.localhost'], function () {
+        Route::auth();
+        Route::group(['middleware' => 'auth'], function () {
+            Route::post('/blog/search', 'Admin\BlogController@search');
+            Route::resource('blog', 'Admin\BlogController');
+            Route::post('/payment/search', 'PaymentController@search');
+            Route::resource('/payment', 'PaymentController');
+        });
+        Route::get('/', function () {
+            return redirect()->action('Auth\AuthController@login');
+        });
     });
-    Route::resource('/article', 'ArticlesController', ['only' => ['index', 'show']]);
+    // ブログ
+    Route::group(['domain' => 'blog.localhost'], function () {
+        Route::resource('/article', 'ArticlesController', ['only' => ['index', 'show']]);
+    });
+    // ポートフォリオ
+    Route::get('/', function () {
+        return 'ポートフォリオ製作中';
+    });
+
 
     // Route::group(['domain' => 'admin.localhost'], function() {
     //     Route::auth();

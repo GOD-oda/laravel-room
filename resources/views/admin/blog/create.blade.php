@@ -21,10 +21,7 @@
 
 <div class="row">
   {!! Form::open(['route' => 'blog.store']) !!}
-    {!! Form::hidden('user_id', 1, ['class' => 'input-field']) !!}
-
     @include('admin.blog.elements.form', ['submitButtonName' => '新規作成', 'icon' => 'fiber_new'])
-
   {!! Form::close() !!}
 </div>
 @endsection

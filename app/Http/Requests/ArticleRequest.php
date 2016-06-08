@@ -3,18 +3,23 @@
 namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
+use Illuminate\Contracts\Auth\Guard;
 
 class ArticleRequest extends Request
 {
-    public function authorize()
+    public function authorize(Guard $auth)
     {
-        return true;
+        if ($auth->user()) {
+            return true;
+        }
+
+        return false;
     }
 
     public function rules()
     {
         return [
-            'title'        => 'required',
+            'title'        => 'required|max:255|unique:articles',
             'body'         => 'required',
             'discription'  => 'required',
             'published_at' => 'required'

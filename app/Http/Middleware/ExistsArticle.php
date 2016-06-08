@@ -3,32 +3,35 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use App\Article;
 use Carbon\Carbon;
+use App\Services\ArticleService;
 
 class ExistsArticle
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
-     * @return mixed
-     */
-    public function handle($request, Closure $next)
+    protected $article;
+    protected $redirectToAdmin = '/blog';
+    protected $redirectTo = '/article';
+    protected $parameterName = 'blog';
+
+    public function __construct(ArticleService $article)
     {
-        $article = Article::find($request->route()->getParameter('article'));
+        $this->article = $article;
+    }
 
-        if (! $article) {
-            dd('not exists...');
+    public function handle($request, Closure $next, $for = 'admin')
+    {
+        if ($for !== 'admin') {
+            $this->parameterName = 'article';
         }
 
-        if ($article->published_at > Carbon::now()) {
-            dd('cant publish');
+        if (! $this->article->getArticle($request->route()->getParameter($this->parameterName))) {
+            $uri = $this->redirectToAdmin;
+            if ($for !== 'admin') {
+                $uri = $this->redirectTo;
+            }
+
+            return redirect($uri);
         }
-
-        dd('exists!');
-
 
         return $next($request);
     }
