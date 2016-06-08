@@ -38,7 +38,7 @@
 
 <div class="row">
   <div class="col s12">
-    <table class="responsive-table">
+    <table class="responsive-table highlight">
       <thead>
         <tr>
           <th data-field="id">No</th>
