@@ -50,15 +50,13 @@ class BlogController extends Controller
         $input = $request->all();
         $input['published_at'] =
             $input['published_at'] . ' ' . Carbon::now()->toTimeString();
-
         $input['user_id'] = $this->guard->user()->id;
 
-        $this->article->addArticle($input); // Article::create($input);と同じことをやっている
-        //Article::create($input);
+        $this->article->addArticle($input);
 
         \Session::flash('message', '登録に成功しました');
 
-        return redirect('blog');
+        return redirect()->route('admin.blog.index');
     }
 
     public function edit($id)
@@ -75,16 +73,16 @@ class BlogController extends Controller
         $input['id'] = $id;
         $this->article->addArticle($input);
 
-        return redirect()->route('blog.index');
+        return redirect()->route('admin.blog.index');
     }
 
-    public function destroy(Article $article)
+    public function destroy($id)
     {
-        $article->delete();
+        $this->article->destroyArticle($id);
 
         \Session::flash('message', '削除に成功しました');
 
-        return redirect()->route('blog.index');
+        return redirect()->route('admin.blog.index');
     }
 
     public function search(Request $requests)

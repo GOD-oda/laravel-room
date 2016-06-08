@@ -13,13 +13,13 @@ class ArticleService
     public function __construct(ArticleRepositoryInterface $article, Gate $gate)
     {
         $this->article = $article;
-        $this->gete = $gate;
+        $this->gate = $gate;
     }
 
     public function addArticle(array $params)
     {
         if (isset($params['id'])) {
-            if (! $this->getArticleAbility($params['id'])) {
+            if (! $this->getArticleUpdateAbility($params['id'])) {
                 return false;
             }
         }
@@ -42,10 +42,23 @@ class ArticleService
         );
     }
 
-    public function getArticleAbility($id)
+    public function getArticleUpdateAbility($id)
     {
-        return $this->gete->check('update', $this->getArticle($id));
+        return $this->gate->check('update', $this->getArticle($id));
     }
 
+    public function destroyArticle($id)
+    {
+        if (! $this->getArticleDestroyAbility($id)) {
+            return false;
+        }
+
+        return $this->article->destroy($id);
+    }
+
+    public function getArticleDestroyAbility($id)
+    {
+        return $this->gate->check('destroy', $this->getArticle($id));
+    }
 
 }

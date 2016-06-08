@@ -28,6 +28,17 @@ class ArticleRepository implements ArticleRepositoryInterface
         return $result;
     }
 
+    public function destroy($id)
+    {
+        $article = $this->eloquent->find($id);
+        $result = $article->delete();
+        if ($result) {
+            $this->cache->flush();
+        }
+
+        return $result;
+    }
+
     public function find($id)
     {
         $cacheKey = "article:{$id}";

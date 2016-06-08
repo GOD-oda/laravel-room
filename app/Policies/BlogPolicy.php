@@ -24,4 +24,9 @@ class BlogPolicy
     {
         return $user->id === (int)$article->user_id;
     }
+
+    public function destroy(User $user, Article $article)
+    {
+        return $user->id === (int)$article->user_id;
+    }
 }
