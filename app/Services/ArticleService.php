@@ -18,8 +18,8 @@ class ArticleService
 
     public function addArticle(array $params)
     {
-        if (isset($params['user_id'])) {
-            if (! $this->getArticleAbility($params['user_id'])) {
+        if (isset($params['id'])) {
+            if (! $this->getArticleAbility($params['id'])) {
                 return false;
             }
         }
@@ -32,9 +32,10 @@ class ArticleService
         return $this->article->find($id);
     }
 
-    public function getPage($page = 1, $limit = 20)
+    public function getPage($page = 1, $limit = 20, $isLogin=false)
     {
-        $result = $this->article->byPage($page, $limit);
+
+        $result = $this->article->byPage($page, $limit, $isLogin);
 
         return new LengthAwarePaginator(
             $result->items, $result->total, $result->perPage, $result->currentPage
@@ -45,5 +46,6 @@ class ArticleService
     {
         return $this->gete->check('update', $this->getArticle($id));
     }
+
 
 }

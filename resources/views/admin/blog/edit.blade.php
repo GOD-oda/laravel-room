@@ -20,7 +20,7 @@
 @endif
 
 <div class="row">
-  {!! Form::model($article, ['method' => 'PATCH', 'action' => ['BlogController@update', $article->id]]) !!}
+  {!! Form::model($article, ['method' => 'PATCH', 'action' => ['Admin\BlogController@update', $article->id]]) !!}
     {!! Form::hidden('id', $article->id, ['class' => 'input-field']) !!}
     {!! Form::hidden('user_id', 1, ['class' => 'input-field']) !!}
 

@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Policies\BlogPolicy;
+use App\DataAccess\Eloquent\Article;
 use Illuminate\Contracts\Auth\Access\Gate as GateContract;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
@@ -13,7 +15,8 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'App\Model' => 'App\Policies\ModelPolicy',
+        //'App\Model' => 'App\Policies\ModelPolicy',
+        Article::class => BlogPolicy::class,
     ];
 
     /**

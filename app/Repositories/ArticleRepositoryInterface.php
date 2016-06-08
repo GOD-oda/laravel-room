@@ -8,11 +8,8 @@ interface ArticleRepositoryInterface
 
     public function find($id);
 
-    /**
-     * count()
-     */
+    public function count();
 
-    /**
-     * byPage($page = 1, $limit = 20)
-     */
+    public function byPage($page = 1, $limit = 20);
+
 }

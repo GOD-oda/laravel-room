@@ -19,10 +19,10 @@ class ArticleRepository implements ArticleRepositoryInterface
     public function save(array $params)
     {
         $attributes = [];
-        $attributes[$id] = (isset($params['id'])) ? $params['id'] : null;
+        $attributes['id'] = (isset($params['id'])) ? $params['id'] : null;
         $result = $this->eloquent->updateOrCreate($attributes, $params);
         if ($result) {
-            $this->cache->flaush();
+            $this->cache->flush();
         }
 
         return $result;
@@ -52,13 +52,13 @@ class ArticleRepository implements ArticleRepositoryInterface
         return $result;
     }
 
-    public function byPage($page = 1, $limit = 20)
+    public function byPage($page = 1, $limit = 20, $isLogin=false)
     {
         $key = "article_page:{$page}:{$limit}";
         if ($this->cache->has($key)) {
             return $this->cache->get($key);
         }
-        $articles = $this->eloquent->byPage($limit, $page);
+        $articles = $this->eloquent->byPage($limit, $page, $isLogin);
 
         return $this->cache->putPaginateCache(
             $page, $limit, $this->count(), $articles, $key

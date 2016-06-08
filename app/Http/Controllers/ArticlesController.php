@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use Illuminate\Http\Request;
 use App\Services\ArticleService;
-use App\Article;
 
 class ArticlesController extends Controller
 {

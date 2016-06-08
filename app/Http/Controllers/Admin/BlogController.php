@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 use App\Services\ArticleService;
 use Illuminate\Contracts\Auth\Guard;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\ArticleRequest;
+use App\Http\Requests\ArticleStoreRequest;
+use App\Http\Requests\ArticleUpdateRequest;
 
 class BlogController extends Controller
 {
@@ -25,9 +26,8 @@ class BlogController extends Controller
 
     public function index(Request $request)
     {
-//        $articles = Article::latest()->get();
         $articles = $this->article
-            ->getPage($request->get('page', 1), 20)
+            ->getPage($request->get('page', 1), 20, true)
             ->setPath($request->getBasePath());
 
         return view('admin.blog.index', compact('articles'));
@@ -45,9 +45,9 @@ class BlogController extends Controller
         return view('admin.blog.create');
     }
 
-    public function store(ArticleRequest $requests)
+    public function store(ArticleStoreRequest $request)
     {
-        $input = $requests->all();
+        $input = $request->all();
         $input['published_at'] =
             $input['published_at'] . ' ' . Carbon::now()->toTimeString();
 
@@ -63,16 +63,17 @@ class BlogController extends Controller
 
     public function edit($id)
     {
-        $articles = $this->article->getArticle($id);
+        $article = $this->article->getArticle($id);
 
         return view('admin.blog.edit', compact('article'));
     }
 
-    public function update(ArticleRequest $requests)
+    public function update($id, ArticleUpdateRequest $request)
     {
-        $article = Article::findOrfail($requests->id);
-
-        $article->update($requests->all());
+        $input = $request->all();
+        $input['user_id'] = $this->guard->user()->id;
+        $input['id'] = $id;
+        $this->article->addArticle($input);
 
         return redirect()->route('blog.index');
     }
