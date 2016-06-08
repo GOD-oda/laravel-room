@@ -1,8 +1,10 @@
 <?php
 
 use App\User;
-use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
+use App\DataAccess\Eloquent\Article;
+use Illuminate\Database\Eloquent\Model;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,7 +17,8 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        $this->call(UserTableSeeder::class);
+        //$this->call(UserTableSeeder::class);
+        $this->call(ArticleTableSeeder::class);
     }
 }
 
@@ -29,5 +32,20 @@ class UserTableSeeder extends Seeder
             'user_id' => 1
         ]);
     }
+}
 
+class ArticleTableSeeder extends Seeder
+{
+    public function run()
+    {
+        for ($i = 1; $i < 22; $i++) {
+            Article::create([
+                'title' => 'test-title'.$i,
+                'body' => 'test-body'.$i,
+                'discription' => 'test-discription'.$i,
+                'published_at' => Carbon::now(),
+                'user_id' => 1
+            ]);
+        }
+    }
 }
