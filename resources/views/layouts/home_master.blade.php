@@ -11,7 +11,7 @@
 
   <title>{{ Config::get('word.title') }}</title>
 
-  <link rel="shortcut icon" href="{{ asset('laravel.ico') }}" />
+  <link rel="shortcut icon" href="{{ asset('img/laravel.ico') }}" />
 
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
