@@ -20,12 +20,10 @@
 @endif
 
 <div class="row">
-  {!! Form::model($article, ['method' => 'PATCH', 'action' => ['Admin\BlogController@update', $article->id]]) !!}
+  {!! Form::model($article, ['method' => 'PATCH', 'action' => ['Admin\BlogController@update', $article->uri]]) !!}
     {!! Form::hidden('id', $article->id, ['class' => 'input-field']) !!}
-    {!! Form::hidden('user_id', 1, ['class' => 'input-field']) !!}
 
     @include('admin.blog.elements.form', ['submitButtonName' => '更新', 'icon' => 'update'])
-
   {!! Form::close() !!}
 </div>
 @endsection

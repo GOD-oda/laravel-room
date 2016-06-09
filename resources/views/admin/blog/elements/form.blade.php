@@ -7,6 +7,13 @@
 </div>
 <div class="row">
   <div class="input-field col s6 m12 l12">
+    <i class="material-icons prefix">http</i>
+    {!! Form::text('uri', null, ['class' => 'input-field']) !!}
+    {!! Form::label('uri', '記事のパス', ['for' => 'icon-prefix']) !!}
+  </div>
+</div>
+<div class="row">
+  <div class="input-field col s6 m12 l12">
     <i class="material-icons prefix">label_outline</i>
     {!! Form::textarea('discription', null, ['class' => 'materialize-textarea', 'cols' => 50]) !!}
     {!! Form::label('discription', '記事概要', ['for' => 'icon-prefix']) !!}

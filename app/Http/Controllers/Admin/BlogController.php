@@ -33,9 +33,9 @@ class BlogController extends Controller
         return view('admin.blog.index', compact('articles'));
     }
 
-    public function show($id)
+    public function show($entry)
     {
-        $article = $this->article->getArticle($id);
+        $article = $this->article->getArticle($entry);
 
         return view('admin.blog.show', compact('article'));
     }
@@ -59,18 +59,19 @@ class BlogController extends Controller
         return redirect()->route('admin.blog.index');
     }
 
-    public function edit($id)
+    public function edit($entry)
     {
-        $article = $this->article->getArticle($id);
+        $article = $this->article->getArticle($entry);
+        $article['published_at'] = Carbon::parse($article['published_at'])->format('Y-d-m');
 
         return view('admin.blog.edit', compact('article'));
     }
 
-    public function update($id, ArticleUpdateRequest $request)
+    public function update(ArticleUpdateRequest $request)
     {
         $input = $request->all();
         $input['user_id'] = $this->guard->user()->id;
-        $input['id'] = $id;
+
         $this->article->addArticle($input);
 
         return redirect()->route('admin.blog.index');

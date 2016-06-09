@@ -11,7 +11,7 @@ class ExistsArticle
     protected $article;
     protected $redirectToAdmin = '/blog';
     protected $redirectTo = '/';
-    protected $parameterName = 'entry';
+    protected $parameterName = 'blog';
 
     public function __construct(ArticleService $article)
     {
