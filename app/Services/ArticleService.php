@@ -32,6 +32,11 @@ class ArticleService
         return $this->article->find($entry);
     }
 
+    public function getArticleById($id)
+    {
+        return $this->article->findById($id);
+    }
+
     public function getPage($page = 1, $limit = 20, $isLogin=false)
     {
 
@@ -44,7 +49,7 @@ class ArticleService
 
     public function getArticleUpdateAbility($id)
     {
-        return $this->gate->check('update', $this->getArticle($id));
+        return $this->gate->check('update', $this->getArticleById($id));
     }
 
     public function destroyArticle($id)

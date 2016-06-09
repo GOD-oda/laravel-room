@@ -29,8 +29,8 @@ class ArticleUpdateRequest extends Request
     public function rules()
     {
         return [
-            //'title' => 'required|max:255|unique:articles, title,' . Request::get('id'),
-            //'uri' => 'required|max:255|unique:articles, uri,' . Request::get('id'),
+            'title' => 'required|max:255|unique:articles,title,' . Request::get('id'),
+            'uri' => 'required|max:255|unique:articles,uri,' . Request::get('id'),
             'body' => 'required',
             'discription' => 'required',
             'published_at' => 'required'

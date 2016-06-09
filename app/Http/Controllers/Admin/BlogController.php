@@ -62,7 +62,7 @@ class BlogController extends Controller
     public function edit($entry)
     {
         $article = $this->article->getArticle($entry);
-        $article['published_at'] = Carbon::parse($article['published_at'])->format('Y-d-m');
+        $article['published_at'] = Carbon::parse($article['published_at'])->format('Y-m-d');
 
         return view('admin.blog.edit', compact('article'));
     }
@@ -71,6 +71,8 @@ class BlogController extends Controller
     {
         $input = $request->all();
         $input['user_id'] = $this->guard->user()->id;
+        $input['published_at'] =
+            $input['published_at'] . ' ' . Carbon::now()->toTimeString();
 
         $this->article->addArticle($input);
 

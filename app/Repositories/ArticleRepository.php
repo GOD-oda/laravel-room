@@ -52,6 +52,14 @@ class ArticleRepository implements ArticleRepositoryInterface
         return $result;
     }
 
+    public function findById($id)
+    {
+
+        $result = $this->eloquent->find($id);
+
+        return $result;
+    }
+
     public function count()
     {
         $key = 'article_count';
