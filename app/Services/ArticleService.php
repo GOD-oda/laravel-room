@@ -27,9 +27,9 @@ class ArticleService
         return $this->article->save($params);
     }
 
-    public function getArticle($id)
+    public function getArticle($entry)
     {
-        return $this->article->find($id);
+        return $this->article->find($entry);
     }
 
     public function getPage($page = 1, $limit = 20, $isLogin=false)

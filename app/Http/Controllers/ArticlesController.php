@@ -25,9 +25,9 @@ class ArticlesController extends Controller
         return view('articles.index', compact('articles'));
     }
 
-    public function show($id)
+    public function show($entry)
     {
-        $article = $this->article->getArticle($id);
+        $article = $this->article->getArticle($entry);
 
         return view('articles.show', compact('article'));
     }

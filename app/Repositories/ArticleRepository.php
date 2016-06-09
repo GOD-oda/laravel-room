@@ -39,13 +39,14 @@ class ArticleRepository implements ArticleRepositoryInterface
         return $result;
     }
 
-    public function find($id)
+    public function find($entry)
     {
-        $cacheKey = "article:{$id}";
+        $cacheKey = "article:{$entry}";
         if ($this->cache->has($cacheKey)) {
             return $this->cache->get($cacheKey);
         }
-        $result = $this->eloquent->find($id);
+        $result = $this->eloquent->where('uri', '=', $entry)->first();
+
         $this->cache->put($cacheKey, $result);
 
         return $result;

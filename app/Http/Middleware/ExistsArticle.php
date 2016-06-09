@@ -10,8 +10,8 @@ class ExistsArticle
 {
     protected $article;
     protected $redirectToAdmin = '/blog';
-    protected $redirectTo = '/article';
-    protected $parameterName = 'blog';
+    protected $redirectTo = '/';
+    protected $parameterName = 'entry';
 
     public function __construct(ArticleService $article)
     {
@@ -21,7 +21,7 @@ class ExistsArticle
     public function handle($request, Closure $next, $for = 'admin')
     {
         if ($for !== 'admin') {
-            $this->parameterName = 'article';
+            $this->parameterName = 'entry';
         }
 
         if (! $this->article->getArticle($request->route()->getParameter($this->parameterName))) {
