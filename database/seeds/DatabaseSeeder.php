@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        //$this->call(UserTableSeeder::class);
+        $this->call(UserTableSeeder::class);
         $this->call(ArticleTableSeeder::class);
     }
 }
@@ -44,7 +44,8 @@ class ArticleTableSeeder extends Seeder
                 'body' => 'test-body'.$i,
                 'discription' => 'test-discription'.$i,
                 'published_at' => Carbon::now(),
-                'user_id' => 1
+                'user_id' => 1,
+                'uri' => 'test-uri-'.$i
             ]);
         }
     }

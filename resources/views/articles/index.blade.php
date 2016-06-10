@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+  {!! $articles->render() !!}
   <div class="row">
     @foreach ($articles as $key => $article)
       <div class="col s12 m6 l6">
@@ -21,5 +22,6 @@
       </div>
     @endforeach
   </div>
+  {!! $articles->render() !!}
 </div><!-- /.container -->
 @stop

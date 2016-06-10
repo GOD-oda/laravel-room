@@ -39,7 +39,6 @@ class ArticleService
 
     public function getPage($page = 1, $limit = 20, $isLogin=false)
     {
-
         $result = $this->article->byPage($page, $limit, $isLogin);
 
         return new LengthAwarePaginator(

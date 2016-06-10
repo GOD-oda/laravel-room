@@ -1,11 +1,14 @@
 <?php
 
 return [
+
+    // title
     'title' => 'Laravel Room',
 
     // META
     'meta' => [
-        'discription' => 'このサイトは、日々奮闘する下っ端プログラマのt-OdaがLaravelの情報を提供し、運営するサイトです。'
+        'author' => 't-oda',
+        'discription' => 'このサイトは、日々奮闘する下っ端プログラマのt-odaがLaravelの情報を提供し、運営するサイトです。',
     ],
 
     // parallax text

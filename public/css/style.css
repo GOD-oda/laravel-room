@@ -231,6 +231,11 @@ nav .brand-logo {
   font-size: 2em;
 }
 
+.pagination li.active {
+  color: #f5f5f5;
+  background-color: #009688;
+}
+
 /* parallax */
 .parallax-container {
   margin-bottom: 20px;

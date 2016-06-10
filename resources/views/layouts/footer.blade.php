@@ -6,7 +6,7 @@
           このサイトについて
         </h5>
         <p class="grey-text text-lighten-4">
-          {{ Config::get('word.content') }}
+          {{ Config::get('laravel-room.content') }}
         </p>
       </div>
       <!--
@@ -23,7 +23,7 @@
   </div>
   <div class="footer-copyright">
     <div class="container">
-      {{ Config::get('word.copyright') }}
+      {{ Config::get('laravel-room.copyright') }}
     </div>
   </div>
 </footer>

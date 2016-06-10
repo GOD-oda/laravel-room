@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="{{ Config::get('word.meta.discription') }}">
-  <meta name="author" content="ODA">
+  <meta name="description" content="{{ Config::get('laravel-room.meta.discription') }}">
+  <meta name="author" content="{{ Config::get('laravel-room.meta.author') }}">
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>{{ Config::get('word.title') }}</title>
+  <title>{{ Config::get('laravel-room.title') }}</title>
 
   <link rel="shortcut icon" href="{{ asset('img/laravel.ico') }}" />
 
