@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Article;
 use Illuminate\Http\Request;
 use App\Services\ArticleService;
+use App\Http\Requests\ContactRequest;
 
 class ArticlesController extends Controller
 {

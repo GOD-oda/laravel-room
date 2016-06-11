@@ -13,7 +13,14 @@ Route::group(['middleware' => 'web'], function () {
             });
         });
     });
-    // ブログ
-    Route::get('/', 'ArticlesController@index');
+    /**
+     * ブログ
+     */
+    // お問い合わせフォーム
+    Route::get('contact', 'ContactController@index');
+    Route::post('contact', 'ContactController@contact');
+    // 記事詳細ページ
     Route::get('/{entry}', 'ArticlesController@show');
+    // 記事一覧ページ
+    Route::get('/', 'ArticlesController@index');
 });
