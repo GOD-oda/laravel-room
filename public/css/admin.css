@@ -2,3 +2,15 @@ nav {
   box-shadow: none;
   background-color: transparent;
 }
+nav .container .nav-wrapper a {
+  color: #bdbdbd;
+}
+nav ul a {
+  font-size: 1.2em;
+}
+nav i.material-icons {
+  font-size: 1.2em;
+}
+nav .brand-logo {
+  font-size: 1.5em;
+}

@@ -17,6 +17,7 @@
 
   <!-- Custom styles for this template -->
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 
   <!-- Fonts from Google Fonts -->
   @include('elements.fonts')

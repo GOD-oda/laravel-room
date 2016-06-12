@@ -48,8 +48,14 @@ nav .brand-logo {
 /*
  *お問い合わせページ
  */
-.input-field label {
+#contact-form input {
     font-size: 1em;
+}
+#contact-form textarea {
+    font-size: 1em;
+}
+.input-field label {
+    font-size: 0.85em;
 }
 
 
