@@ -32,7 +32,7 @@
       <div class="input-field col s12 m6">
         <i class="material-icons prefix">account_circle</i>
         {!! Form::text('name', old('name'), ['class' => 'input-field']) !!}
-        {!! Form::label('name', 'お名前', ['for' => 'icon-prefix']) !!}
+        {!! Form::label('name', 'お名前（必須項目）', ['for' => 'icon-prefix']) !!}
       </div>
     </div>
     @if ($errors->has('email'))
@@ -46,7 +46,7 @@
       <div class="input-field col s12 m6">
         <i class="material-icons prefix">email</i>
         {!! Form::email('email', old('email'), ['class' => 'input-field validate']) !!}
-        {!! Form::label('email', 'メールアドレス', ['for' => 'icon-prefix', 'data-error' => 'NG', 'data-success' => 'OK']) !!}
+        {!! Form::label('email', 'メールアドレス（必須項目）', ['for' => 'icon-prefix', 'data-error' => 'NG', 'data-success' => 'OK']) !!}
       </div>
     </div>
     <div class="row">
