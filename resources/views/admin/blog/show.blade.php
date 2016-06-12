@@ -44,7 +44,9 @@
 
   <div class="row">
     <div class="col s4">記事内容</div>
-    <div class="col s7">{!! $article->body !!}</div>
+  </div>
+  <div class="row">
+    <div class="col s12">{!! $article->body !!}</div>
   </div>
 
   <hr>
