@@ -14,5 +14,5 @@ $(function() {
   /**
    * 送信完了した時のメッセージを自動で消す
    */
-  $('.mail_success').delay(3000).slideUp(300);
+  $('.mail_success').delay(5000).slideUp(500);
 });

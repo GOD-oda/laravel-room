@@ -3,14 +3,14 @@
     <h1 class="center">
       <a href="{{ url('/article') }}" class="grey-text text-lighten-1">{{ Config::get('laravel-room.parallax.title') }}</a>
     </h1>
-    {{--
+
     <!-- お問い合わせフォームのリンク -->
     <div class="row">
       <div class="col offset-m8 m4">
         <a href="{{ action('ContactController@index') }}" class="waves-effect waves-light btn btn-ghost">お問い合わせ</a>
       </div>
     </div>
-    --}}
+
     <!-- <div class="row">
       <div class="col s12 m4">
         <a class="waves-effect waves-light btn btn-ghost" href="#" onclick="alert('ポートフォリオ');">ポートフォリオ</a>
