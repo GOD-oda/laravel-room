@@ -13,10 +13,8 @@
 <hr>
 
 <div class="row">
-  <div class="row">
-    <div class="col s4">パス</div>
-    <div class="col s7">{{ $article->uri }}</div>
-  </div>
+  <div class="col s4">パス</div>
+  <div class="col s7">{{ $article->uri }}</div>
 </div>
 
 <hr>
@@ -35,11 +33,10 @@
 
 <hr>
 
+
 <div class="row">
-  <div class="row">
-    <div class="col s4">公開日</div>
-    <div class="col s7">{{ $article->publidhed_at }}</div>
-  </div>
+  <div class="col s4">公開日</div>
+  <div class="col s7">{{ $article->published_at }}</div>
 </div>
 
 <hr>
