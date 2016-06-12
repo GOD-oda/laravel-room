@@ -5,8 +5,6 @@
 @endsection
 
 @section('content')
-<br>
-
 <div class="row">
   <div class="col s4">id</div>
   <div class="col s7">{{ $article->id }}</div>
@@ -14,16 +12,14 @@
 
 <hr>
 
-<!-- そのうち実装する予定。
 <div class="row">
-  <div class="input-field col s6">
-    {!! Form::text('published_at', null, ['class' => 'input-field']) !!}
-    {!! Form::label('published_at', '公開日', ['for' => 'icon-prefix']) !!}
+  <div class="row">
+    <div class="col s4">パス</div>
+    <div class="col s7">{{ $article->uri }}</div>
   </div>
 </div>
 
 <hr>
--->
 
 <div class="row">
   <div class="col s4">タイトル</div>
@@ -35,6 +31,15 @@
 <div class="row">
   <div class="col s4">記事概要</div>
   <div class="col s7">{!! $article->discription !!}</div>
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="row">
+    <div class="col s4">公開日</div>
+    <div class="col s7">{{ $article->publidhed_at }}</div>
+  </div>
 </div>
 
 <hr>

@@ -45,6 +45,83 @@ nav .brand-logo {
   border-color: #fff;
 }
 
+/*-----------------------------------------------
+ * 記事詳細画面のスタイル
+ *-----------------------------------------------
+/*  */
+.article-show {
+
+}
+/* 記事タイトル */
+.article-show h1 {
+  font-size: 1.7em;
+}
+/* 見出し */
+.article-show h2 {
+  font-size: 1.5em;
+  border-left: 10px solid #424242;
+  border-bottom: 3px solid #424242;
+  padding-left: 13px;
+  padding-bottom: 3px;
+  margin-top: 1.3em;
+}
+/*
+ * リスト系
+ */
+.article-show ul {
+  padding: 3px 10px;
+  border: solid 2px #607d8b;
+}
+.article-show li{
+  padding:0px;
+  margin:0px;
+}
+.article-show li{
+  list-style-type:none !important;
+  list-style-image:none !important;
+  margin: 10px 0px 5px 0px !important;
+  position:relative;
+  padding-left:25px;
+}
+.article-show li:after, .article-show li:before{
+  content:'';
+  display:block;
+  position:absolute;
+  top:4px;
+  left:8px;
+  height:11px;
+  width:4px;
+  background:#aaa;
+  border-radius:10px;
+  transform:rotate(45deg);
+  -webkit-transform:rotate(45deg);
+  -o-transform:rotate(45deg);
+}
+.article-show li:before{
+  top:8px;
+  left:3px;
+  height:8px;
+  transform:rotate(-45deg);
+  -webkit-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+}
+.article-show pre {
+  padding-left: 10px;
+  border: solid 2px #607d8b;
+}
+.article-show code {
+  /* margin-bottom: 10px;*/
+  padding: 10px;
+  border: solid 2px #607d8b;
+}
+.article-comment {
+  /* margin: 15px auto; */
+  border: solid 2px #607d8b;
+}
+.article-comment.comment-area {
+
+}
+
 /*
  *お問い合わせページ
  */
@@ -54,7 +131,7 @@ nav .brand-logo {
 #contact-form textarea {
     font-size: 1em;
 }
-.input-field label {
+#contact-form .input-field label {
     font-size: 0.85em;
 }
 
