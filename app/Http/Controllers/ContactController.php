@@ -20,6 +20,7 @@ class ContactController extends Controller
     {
         Mail::send('contact.mail', ['request' => $request], function (Message $message) {
             $message->to('takahiro.tech.oda@gmail.com')
+            //$message->to('laravel-room@conpw3.sakura.ne.jp')
                 ->subject('Laravel Roomのお問い合わせ');
         });
 
