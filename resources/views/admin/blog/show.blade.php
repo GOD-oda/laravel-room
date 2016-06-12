@@ -5,59 +5,61 @@
 @endsection
 
 @section('content')
-<div class="row">
-  <div class="col s4">id</div>
-  <div class="col s7">{{ $article->id }}</div>
-</div>
+<div class="article-show">
+  <div class="row">
+    <div class="col s4">id</div>
+    <div class="col s7">{{ $article->id }}</div>
+  </div>
 
-<hr>
+  <hr>
 
-<div class="row">
-  <div class="col s4">パス</div>
-  <div class="col s7">{{ $article->uri }}</div>
-</div>
+  <div class="row">
+    <div class="col s4">パス</div>
+    <div class="col s7">{{ $article->uri }}</div>
+  </div>
 
-<hr>
+  <hr>
 
-<div class="row">
-  <div class="col s4">タイトル</div>
-  <div class="col s7">{{ $article->title }}</div>
-</div>
+  <div class="row">
+    <div class="col s4">タイトル</div>
+    <div class="col s7">{{ $article->title }}</div>
+  </div>
 
-<hr>
+  <hr>
 
-<div class="row">
-  <div class="col s4">記事概要</div>
-  <div class="col s7">{!! $article->discription !!}</div>
-</div>
+  <div class="row">
+    <div class="col s4">記事概要</div>
+    <div class="col s7">{!! $article->discription !!}</div>
+  </div>
 
-<hr>
+  <hr>
 
 
-<div class="row">
-  <div class="col s4">公開日</div>
-  <div class="col s7">{{ $article->published_at }}</div>
-</div>
+  <div class="row">
+    <div class="col s4">公開日</div>
+    <div class="col s7">{{ $article->published_at }}</div>
+  </div>
 
-<hr>
+  <hr>
 
-<div class="row">
-  <div class="col s4">記事内容</div>
-  <div class="col s7">{!! $article->body !!}</div>
-</div>
+  <div class="row">
+    <div class="col s4">記事内容</div>
+    <div class="col s7">{!! $article->body !!}</div>
+  </div>
 
-<hr>
+  <hr>
 
-<div class="row">
-  <div class="col s4">登録日時</div>
-  <div class="col s7">{{ $article->created_at }}</div>
-</div>
+  <div class="row">
+    <div class="col s4">登録日時</div>
+    <div class="col s7">{{ $article->created_at }}</div>
+  </div>
 
-<hr>
+  <hr>
 
-<div class="row">
-  <div class="col s4">更新日時</div>
-  <div class="col s7">{{ $article->updated_at }}</div>
+  <div class="row">
+    <div class="col s4">更新日時</div>
+    <div class="col s7">{{ $article->updated_at }}</div>
+  </div>
 </div>
 @endsection
 
