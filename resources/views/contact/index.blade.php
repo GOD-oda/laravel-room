@@ -3,12 +3,12 @@
 @section('content')
 <div class="container">
   @if (Session::has('mail_success'))
-    <div class="row">
+    <div class="row" id="mail-success">
       <div class="col s12">
-        <div class="card-panel teal mail_success">
+        <div class="card-panel teal p15">
           <span class="white-text">
             お問い合わせありがとうございました。<br />
-            これからも、当ブログを宜しくお願いします。
+            これからも当ブログを宜しくお願いします。
           </span>
         </div>
       </div>

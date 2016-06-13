@@ -171,12 +171,17 @@ nav .brand-logo {
 #contact-form .input-field label {
     font-size: 0.85em;
 }
+
 @media screen and (max-width: 480px) {
   #contact-form .input-field label {
     font-size: 1em;
   }
   #contact-form #confirm-check-label {
     font-size: 0.8em;
+  }
+  #mail-success {
+    font-size: 0.95em;
+    line-height: 2em;
   }
 }
 
