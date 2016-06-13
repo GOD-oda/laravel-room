@@ -14,16 +14,16 @@
       </div>
     </div>
   @endif
-  <div class="row">
+  <div class="row" id="contact-form">
     <h1>
       お問い合わせフォーム
     </h1>
     <p>どうぞお気軽にご連絡ください。</p>
 
-    {!! Form::open(['method' => 'post', 'id' => 'contact-form']) !!}
+    {!! Form::open(['method' => 'post']) !!}
     @if ($errors->has('name'))
       <div class="row">
-        <div class="pink-text text-lighten-3">
+        <div class="pink-text text-lighten-3 pl35">
           <span>{{ $errors->first('name') }}</span>
         </div>
       </div>
@@ -37,7 +37,7 @@
     </div>
     @if ($errors->has('email'))
       <div class="row">
-        <div class="pink-text text-lighten-3">
+        <div class="pink-text text-lighten-3 pl35">
           <span>{{ $errors->first('email') }}</span>
         </div>
       </div>
@@ -73,7 +73,7 @@
     <div class="row">
       <div class="input-field">
         {!! Form::checkbox('confirm', null, null, ['id' => 'confirm-check']) !!}
-        {!! Form::label('confirm-check', '上記の内容でよろしければ、チェックを入れてください。') !!}
+        {!! Form::label('confirm-check', '上記の内容でよろしければ、チェックを入れてください', ['id' => 'confirm-check-label']) !!}
       </div>
     </div>
     <div class="row">

@@ -8,7 +8,7 @@
 
 /* html */
 html {
-  font-size: 62.5% !important;
+  font-size: 62.5% !important; /* 10px */
 }
 
 /* body */
@@ -18,6 +18,12 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 1.5em;
+  }
 }
 
 /* header */
@@ -122,6 +128,7 @@ nav {
 .pl15 { padding-left: 15px }
 .pl20 { padding-left: 20px }
 .pl30 { padding-left: 30px }
+.pl35 { padding-left: 35px }
 
 /* 分割線 */
 .divider {

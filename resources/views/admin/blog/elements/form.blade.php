@@ -39,6 +39,6 @@
 <div class="row">
   <div class="input-field col s6">
     <i class="material-icons left">{{ $icon }}</i>
-    {!! Form::submit($submitButtonName, ['class' => 'btn waves-effect waves-light']) !!}
+    {!! Form::submit($submitButtonNameLink, ['class' => 'btn waves-effect waves-light']) !!}
   </div>
 </div>
