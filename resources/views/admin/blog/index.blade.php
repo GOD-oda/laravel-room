@@ -36,6 +36,7 @@
   </div>
 {!! Form::close() !!}
 
+{!! $articles->render() !!}
 <div class="row">
   <div class="col s12">
     <table class="responsive-table bordered">

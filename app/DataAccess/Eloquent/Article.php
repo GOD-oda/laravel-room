@@ -22,25 +22,20 @@ class Article extends Model
 
     public function byPage($limit, $page, $isLogin=false)
     {
-        if ($isLogin === true) {
-            return $this->query()
-                ->orderBy('created_at', 'desc')
-                ->skip($limit * ($page - 1))
-                ->take($limit)
-                ->get();
-        }
-
         return $this->query()
-            ->published()
-            ->orderBy('created_at', 'desc')
+            ->published($isLogin)
             ->skip($limit * ($page - 1))
             ->take($limit)
             ->get();
     }
 
-    public function scopePublished($query)
+    public function scopePublished($query, $isLogin=false)
     {
-        return $query->where('published_at', '<=', Carbon::now());
+        if (! $isLogin) {
+            return $query->where('published_at', '<=', Carbon::now());
+        }
+
+        return $query;
     }
 
 }
