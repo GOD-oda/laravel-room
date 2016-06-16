@@ -14,10 +14,12 @@
           </div>
         </div>
       </div>
-      {!! $article->body !!}
+      <div class="article-body">
+        {!! $article->body !!}
+      </div>
     </div>
   </div>
-  <div class="divider"></div>
+  <!-- <div class="divider"></div>
   <div class="section">
     <a class="twitter-share-button" href="https://twitter.com/share" data-dnt="true">Tweet</a>
     <div class="fb-like" data-href="{{ url($article->uri) }}" data-layout="button_count" data-action="like" data-show-faces="true"></div>
@@ -38,6 +40,6 @@
     <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async">
       {lang: "ja"}
     </script>
-  </div>
+  </div> -->
 </div>
 @stop
