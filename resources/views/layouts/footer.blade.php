@@ -9,16 +9,15 @@
           {{ Config::get('laravel-room.content') }}
         </p>
       </div>
-      <!--
-      <div class="col l4 offset-12 s12">
+      <!-- <div class="col l4 offset-12 s12">
         <h5 class="white-text">
-          Links
+          author
         </h5>
-        <ul>
-          <li><a href="{{ url('login') }}" class="grey-text text-lighten-3">LOGIN</a></li>
-        </ul>
-      </div>
-      -->
+        <div class="chip">
+          <img src="{{ asset('img/laravel5.jpg') }}" alt="">
+          Tag
+        </div>
+      </div> -->
     </div>
   </div>
   <div class="footer-copyright">

@@ -142,6 +142,11 @@ nav {
   height: 200px;
   object-fit: cover;
 }
+.like-eye-catch {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
 .img-contain {
   width: 100%;
   height: 200px;
