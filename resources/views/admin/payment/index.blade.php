@@ -11,7 +11,7 @@
 
 @section('content')
 {{-- 検索 --}}
-{!! Form::open(['action' => 'PaymentController@search']) !!}
+{!! Form::model($requests, ['action' => 'PaymentController@index', 'method' => 'get']) !!}
   <div class="row">
     <div class="input-field col s2">
       {!! Form::select('type', $type) !!}

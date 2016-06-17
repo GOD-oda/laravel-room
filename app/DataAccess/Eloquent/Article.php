@@ -26,6 +26,7 @@ class Article extends Model
             ->published($isLogin)
             ->skip($limit * ($page - 1))
             ->take($limit)
+            ->orderBy('id', 'desc')
             ->get();
     }
 

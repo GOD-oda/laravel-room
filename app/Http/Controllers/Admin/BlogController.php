@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Services\ArticleService;
 use Illuminate\Contracts\Auth\Guard;
 use App\Http\Controllers\Controller;
+use App\DataAccess\Eloquent\Article;
 use App\Http\Requests\ArticleStoreRequest;
 use App\Http\Requests\ArticleUpdateRequest;
 

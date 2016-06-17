@@ -22,7 +22,7 @@
 @endif
 
 {{-- 検索 --}}
-{!! Form::open(['method' => 'post', 'url' => 'blog/search']) !!}
+{!! Form::open(['method' => 'post', 'url' => 'admin/blog/search']) !!}
   <div class="row">
     <div class="input-field col s6">
       <i class="material-icons prefix">search</i>

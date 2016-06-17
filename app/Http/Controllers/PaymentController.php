@@ -15,18 +15,18 @@ class PaymentController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
+    public function index(Request $requests)
     {
-        $payments = Payment::all();
+        $payments = Payment::search($requests);
 
-        return view('admin.payment.index', compact('payments'));
+        return view('admin.payment.index', compact('payments', 'requests'));
     }
 
     public function search(Request $requests)
     {
         $payments = Payment::search($requests);
 
-        return view('admin.payment.index', compact('payments'));
+        return view('admin.payment.index', compact('payments', 'requests'));
     }
 
     public function create()
@@ -42,6 +42,11 @@ class PaymentController extends Controller
 
         return redirect()->route('payment.index');
 
+    }
+
+    public function show()
+    {
+        dd(1);
     }
 
 }
