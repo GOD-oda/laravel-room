@@ -21,6 +21,9 @@
     </div>
   @endif
 
+  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+  </fb:login-button>
+  <div id="status"></div>
 
   <form method="post" class="col s12 center mt30">
     {!! csrf_field() !!}
