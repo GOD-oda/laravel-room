@@ -1,6 +1,6 @@
 <?php
 Route::group(['middleware' => 'web'], function () {
-    // ブログ管理
+    // ブログ管琁E    
     Route::group(['prefix' => 'admin'], function () {
         Route::auth();
         Route::group(['middleware' => 'auth'], function () {
@@ -16,11 +16,11 @@ Route::group(['middleware' => 'web'], function () {
     /**
      * ブログ
      */
-    // お問い合わせフォーム
+    // お問ぁE��わせフォーム
     Route::get('contact', 'ContactController@index');
     Route::post('contact', 'ContactController@contact');
-    // 記事詳細ページ
+    // 記事詳細ペ�Eジ
     Route::get('/{entry}', 'ArticlesController@show');
-    // 記事一覧ページ
+    // 記事一覧ペ�Eジ
     Route::get('/', 'ArticlesController@index');
 });
