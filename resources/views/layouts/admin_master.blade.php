@@ -32,9 +32,15 @@
   <![endif]-->
 </head>
 <body class="blue-grey lighten-5">
+  <script src="{{ asset('js/facebook.js') }}"></script>
   <header>
     @yield('navbar')
   </header>
+
+  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+  </fb:login-button>
+  <div id="sattus"></div>
+
   <main>
     <div class="container mt10">
       @yield('content')
@@ -54,5 +60,6 @@
   <script src="{{ asset('js/boot_materialize.js') }}"></script>
   <script src="{{ asset('js/boot_marked.js') }}"></script>
   <script src="{{ asset('js/submit.js') }}"></script>
+  <script src="http://connect.facebook.net/jp_JP/all.js"></script>
 </body>
 </html>
