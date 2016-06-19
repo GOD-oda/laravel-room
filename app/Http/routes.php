@@ -1,4 +1,5 @@
 <?php
+
 Route::group(['middleware' => 'web'], function () {
     // 管理
     Route::group(['prefix' => 'admin'], function () {
@@ -13,15 +14,14 @@ Route::group(['middleware' => 'web'], function () {
             });
         });
     });
+    // Route::get('youtube', function () {
+    //     return view('youtube');
+    // });
     /**
      * ブログ
-     */ 
+     */
     Route::get('contact', 'ContactController@index');
     Route::post('contact', 'ContactController@contact');
     Route::get('/{entry}', 'ArticlesController@show');
     Route::get('/', 'ArticlesController@index');
-
-    Route::get('/youtube', function () {
-        return view('youtube');
-    });
 });
