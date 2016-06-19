@@ -9,7 +9,9 @@ function statusChangeCallback(response) {
     if (response.status === 'connected') {
         // Logged into your app and Facebook.
         testAPI();
-        //location.href = 'laravel-room.com/admin/blog';
+        //alert(location.hostname);
+        //exit;
+        //location.href = 'http://laravel-room.com/admin/blog';
     } else if (response.status === 'not_authorized') {
         // The person is logged into Facebook, but not your app.
         document.getElementById('status').innerHTML = 'Please log '+'into this app.';
@@ -67,7 +69,7 @@ function statusChangeCallback(response) {
 // Here we run a very simple test of the Graph API after login is
 // successful.  See statusChangeCallback() for when this call is made.
 function testAPI() {
-    FB.api('/me', function(requponse) {
+    FB.api('/me', function(response) {
         console.log(JSON.stringify(response));
     });
 }
