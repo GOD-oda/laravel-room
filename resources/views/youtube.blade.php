@@ -6,5 +6,6 @@
 </head>
 <body>
   <div id="player"></div>
+  <script src="{{ asset('js/youtube.js') }}"></script>
 </body>
 </html>
