@@ -23,4 +23,8 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/{entry}', 'ArticlesController@show');
     // 記事一覧ペ�Eジ
     Route::get('/', 'ArticlesController@index');
+
+    Route::get('/youtube', function () {
+        return view('youtube');
+    });
 });
