@@ -14,6 +14,12 @@
           </div>
         </div>
       </div>
+      <div>
+        <p class="pink-text text-accennt-1">
+          ※githubアカウントがロボット認定されたのでgistを見れる状態ではない可能性があります。<br>
+          ただいま問い合わせていますので申し訳ありませんが今しばらくお待ちください。
+        </p>
+      </div>
       <div class="article-body">
         <!-- <img src="{{ asset('img/laravel5.jpg') }}" alt="" class="like-eye-catch"> -->
         {!! $article->body !!}

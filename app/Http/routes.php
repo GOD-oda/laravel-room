@@ -1,8 +1,6 @@
 <?php
-
-
 Route::group(['middleware' => 'web'], function () {
-    // ブログ管理
+    // 管理
     Route::group(['prefix' => 'admin'], function () {
         Route::auth();
         Route::group(['middleware' => 'auth'], function () {
@@ -15,14 +13,15 @@ Route::group(['middleware' => 'web'], function () {
             });
         });
     });
+    // Route::get('youtube', function () {
+    //     return view('youtube');
+    // });
     /**
      * ブログ
     */
-    // お問い合わせフォーム
+
     Route::get('contact', 'ContactController@index');
     Route::post('contact', 'ContactController@contact');
-    // 記事詳細ページ
     Route::get('/{entry}', 'ArticlesController@show');
-    // 記事一覧ページ
     Route::get('/', 'ArticlesController@index');
 });

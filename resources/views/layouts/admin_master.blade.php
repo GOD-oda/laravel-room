@@ -32,9 +32,11 @@
   <![endif]-->
 </head>
 <body class="blue-grey lighten-5">
+  <script src="{{ asset('js/facebook.js') }}"></script>
   <header>
     @yield('navbar')
   </header>
+
   <main>
     <div class="container mt10">
       @yield('content')
@@ -54,5 +56,6 @@
   <script src="{{ asset('js/boot_materialize.js') }}"></script>
   <script src="{{ asset('js/boot_marked.js') }}"></script>
   <script src="{{ asset('js/submit.js') }}"></script>
+  <script src="http://connect.facebook.net/jp_JP/all.js"></script>
 </body>
 </html>
