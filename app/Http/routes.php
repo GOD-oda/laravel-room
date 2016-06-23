@@ -1,4 +1,6 @@
 <?php
+
+
 Route::group(['middleware' => 'web'], function () {
     // ブログ管理
     Route::group(['prefix' => 'admin'], function () {
@@ -15,7 +17,7 @@ Route::group(['middleware' => 'web'], function () {
     });
     /**
      * ブログ
-     */
+    */
     // お問い合わせフォーム
     Route::get('contact', 'ContactController@index');
     Route::post('contact', 'ContactController@contact');
