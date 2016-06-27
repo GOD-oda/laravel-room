@@ -14,17 +14,17 @@
   <link rel="shortcut icon" href="{{ asset('img/laravel.ico') }}" />
 
   <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
 
   <!-- Custom styles for this template -->
-  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 
   <!-- Fonts from Google Fonts -->
   @include('elements.fonts')
 
   <!--Import Google Icon Font-->
-  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -40,9 +40,9 @@
   </header>
 
   <main>
-    @include('elements.parallax')
-
     @yield('content')
+
+    @include('articles.elements.action_button')
   </main>
 
   @include('layouts.footer')

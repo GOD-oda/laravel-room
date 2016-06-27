@@ -21,7 +21,16 @@ nav .brand-logo {
 /* SideNav系 */
 .side-nav a {
   font-size: 1em;
+  color: #fff;
   border-bottom: solid 1px #fff;
+  background-color: transparent;
+}
+.side-nav a.btn {
+  width: 100%;
+  margin: 0;
+}
+.side-nav li {
+  padding: 0;
 }
 
 /*

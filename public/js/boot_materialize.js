@@ -9,7 +9,8 @@ $(document).ready(function() {
     $('select').material_select();
 
     // side navigation
-    $(".button-collapse").sideNav();
+    $(".button-collapse").sideNav({
+    });
 
     // datepicker
     $('.datepicker').pickadate({
@@ -43,6 +44,24 @@ $(document).ready(function() {
       //ready: function() { alert('Ready'); }, // Callback for Modal open
       //complete: function() { alert('Closed'); } // Callback for Modal close
     });
+
+    // button go to top
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+            $('.fixed-action-btn').fadeIn();
+        } else {
+            $('.fixed-action-btn').fadeOut().removeClass('active');
+        }
+    });
+    $('.fixed-action-btn ul li > .go-to-top').on('click', function() {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 1000);
+
+        return false;
+    });
+
+
 });
 
 
