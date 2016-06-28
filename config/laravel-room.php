@@ -18,5 +18,5 @@ return [
 
     // FOOTER
     'copyright' => 'Copyright © 2016 Laravel Room All rights reserved.',
-    'content' => 'このサイトは、プログラミングやITなどの技術系の情報の備忘録や周知を目的としています。また、このサイトはLarave5.2とMaterializeCSSで構築されています。'
+    'content' => 'このサイトは、プログラミングやITなどの技術系の情報の備忘録や周知を目的としています。また、このサイトはLarave5.2とMaterializeで構築されています。'
 ];
