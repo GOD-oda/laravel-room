@@ -18,23 +18,38 @@ nav i.material-icons {
 nav .brand-logo {
   font-size: 1.5em;
 }
-/* SideNav系 */
+/* sideNav系 */
 .side-nav a {
   font-size: 1em;
+  color: #fff;
   border-bottom: solid 1px #fff;
+  background-color: transparent;
 }
-
-/*
- * ページネーション
- */
+.side-nav a.btn {
+  width: 100%;
+  margin: 0;
+}
+.side-nav li {
+  padding: 0;
+}
+/*-------------------------------
+ * actioin button
+ *-------------------------------*/
+.fixed-action-btn {
+  bottom: 20px;
+  right: 24px;
+}
+/*--------------------------
+ * pagenation
+ *--------------------------*/
 .pagination li.active {
   color: #f5f5f5;
   background-color: #009688;
 }
 
-/*
+/*-------------------------
  * parallax
- */
+ *-------------------------*/
 .parallax-container {
   margin-bottom: 20px;
 }
@@ -189,6 +204,15 @@ nav .brand-logo {
   }
 }
 
+/*---------------------------
+ * SNS
+ *---------------------------*/
+.twitter-share-button {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fff;
+  border-radius: 5%;
+}
 
 
 

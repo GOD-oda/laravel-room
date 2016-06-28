@@ -1,5 +1,4 @@
 <?php
-
 Route::group(['middleware' => 'web'], function () {
     // 管理
     Route::group(['prefix' => 'admin'], function () {
@@ -84,7 +83,8 @@ Route::group(['middleware' => 'web'], function () {
     // });
     /**
      * ブログ
-     */
+    */
+
     Route::get('contact', 'ContactController@index');
     Route::post('contact', 'ContactController@contact');
     Route::get('/{entry}', 'ArticlesController@show');

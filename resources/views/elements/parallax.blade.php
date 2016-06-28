@@ -13,12 +13,12 @@
             <a href="{{ action('ContactController@index') }}" class="waves-effect waves-light btn btn-ghost">お問い合わせ</a>
           </li>
         </ul>
-        <ul id="slide-out" class="side-nav teal lighten-3">
+        <ul id="slide-out" class="side-nav">
           <li>
-            <a href="{{ url('/') }}">TOP</a>
+            <a href="{{ url('/') }}" class="btn waves-effect teal waves-light">TOP</a>
           </li>
           <li>
-            <a href="{{ action('ContactController@index') }}">お問い合わせ</a>
+            <a href="{{ action('ContactController@index') }}" class="btn waves-effect teal waves-light">お問い合わせ</a>
           </li>
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>

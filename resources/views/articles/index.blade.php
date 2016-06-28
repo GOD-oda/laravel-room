@@ -1,6 +1,7 @@
 @extends('layouts.home_master')
 
 @section('content')
+@include('elements.parallax')
 <div class="container" id="top-main-content">
   {!! $articles->render() !!}
   <div class="row">
@@ -17,6 +18,7 @@
           <div class="card-reveal">
             <span class="card-title grey-text text-darken-4">{{ $article->title }}<i class="material-icons right">close</i></span>
             <p>{!! nl2br($article->discription) !!}</p>
+            <p><a href="{{ action('ArticlesController@show', ['uri' => $article->uri]) }}">詳細はこちら</a></p>
           </div>
         </div>
       </div>
@@ -24,4 +26,4 @@
   </div>
   {!! $articles->render() !!}
 </div><!-- /.container -->
-@stop
+@endsection
