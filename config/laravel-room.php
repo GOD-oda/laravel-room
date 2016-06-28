@@ -18,6 +18,6 @@ return [
 
     // FOOTER
     'copyright' => 'Copyright © 2016 Laravel Room All rights reserved.',
-    'content' => 'このサイトは、プログラミングやITなどの技術系の情報の備忘録や周知を目的としています。また、このサイトはLarave5.2とMaterializeで構築されています。',
-    'author' => '石川県の生まれで大学が大阪で就職が東京という、じっとしていられない男',
+    'content' => 'このサイトは、プログラミングやITなどの技術系の情報の備忘録や周知を目的としています。また、このサイトはLaravel5.2とMaterializeで構築されています。',
+    'profile' => '生まれは石川、大学が大阪、就職が東京というじっとしていられない男。t-odaです。',
 ];

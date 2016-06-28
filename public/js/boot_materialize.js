@@ -45,14 +45,19 @@ $(document).ready(function() {
       //complete: function() { alert('Closed'); } // Callback for Modal close
     });
 
-    // button go to top
+    // アクションボタンを表示/非表示
     $(window).scroll(function(){
-        if ($(this).scrollTop() > 100) {
+        var scrollTop = $(this).scrollTop();
+        var scrollHeight = $(document).height();
+        var scrollPosition = $(this).height() + $(this).scrollTop();
+
+        if (scrollTop > 0 || (scrollHeight - scrollPosition) / scrollHeight === 0) {
             $('.fixed-action-btn').fadeIn();
         } else {
             $('.fixed-action-btn').fadeOut().removeClass('active');
         }
     });
+    // button go to top
     $('.fixed-action-btn ul li > .go-to-top').on('click', function() {
         $('body,html').animate({
             scrollTop: 0

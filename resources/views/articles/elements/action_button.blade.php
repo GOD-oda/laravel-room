@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="fixed-action-btn">
+  <div class="fixed-action-btn" style="display: none;">
     <a class="btn-floating btn-large green"><i class="material-icons">menu</i></a>
     <ul>
       <li><a href="body" class="btn-floating waves-effect waves-light green go-to-top"><i class="material-icons">arrow_upward</i></a></li>
