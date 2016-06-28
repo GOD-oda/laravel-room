@@ -22,7 +22,9 @@ class ArticleRequest extends Request
             'title'        => 'required|max:255|unique:articles',
             'body'         => 'required',
             'discription'  => 'required',
-            'published_at' => 'required'
+            'published_at' => 'required',
+            'thumbnail'    => 'image|size:3'
+
         ];
     }
 

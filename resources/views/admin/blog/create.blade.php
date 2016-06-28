@@ -20,7 +20,7 @@
 @endif
 
 <div class="row">
-  {!! Form::open(['route' => 'admin.blog.store']) !!}
+  {!! Form::open(['route' => 'admin.blog.store', 'files' => true]) !!}
     @include('admin.blog.elements.form', ['submitButtonName' => '新規作成', 'icon' => 'fiber_new'])
   {!! Form::close() !!}
 </div>

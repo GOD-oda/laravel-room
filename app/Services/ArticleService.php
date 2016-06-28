@@ -16,7 +16,7 @@ class ArticleService
         $this->gate = $gate;
     }
 
-    public function addArticle(array $params)
+    public function saveArticle(array $params)
     {
         if (isset($params['id'])) {
             if (! $this->getArticleUpdateAbility($params['id'])) {

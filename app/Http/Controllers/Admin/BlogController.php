@@ -53,7 +53,7 @@ class BlogController extends Controller
             $input['published_at'] . ' ' . Carbon::now()->toTimeString();
         $input['user_id'] = $this->guard->user()->id;
 
-        $this->article->addArticle($input);
+        $this->article->saveArticle($input);
 
         \Session::flash('message', '登録に成功しました');
 
@@ -75,7 +75,9 @@ class BlogController extends Controller
         $input['published_at'] =
             $input['published_at'] . ' ' . Carbon::now()->toTimeString();
 
-        $this->article->addArticle($input);
+        $this->article->saveArticle($input);
+
+        \Session::flash('message', '編集に成功しました');
 
         return redirect()->route('admin.blog.index');
     }

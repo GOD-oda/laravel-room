@@ -21,6 +21,10 @@ class ArticleRepository implements ArticleRepositoryInterface
         $attributes = [];
         $attributes['id'] = (isset($params['id'])) ? $params['id'] : null;
         $result = $this->eloquent->updateOrCreate($attributes, $params);
+        /**
+         * ここに画像を移動させる処理を...
+         */
+
         if ($result) {
             $this->cache->flush();
         }
