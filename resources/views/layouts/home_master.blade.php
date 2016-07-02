@@ -40,6 +40,8 @@
   </header>
 
   <main>
+    @include('elements.parallax')
+
     @yield('content')
 
     @include('articles.elements.action_button')

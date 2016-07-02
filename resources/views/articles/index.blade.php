@@ -1,7 +1,6 @@
 @extends('layouts.home_master')
 
 @section('content')
-@include('elements.parallax')
 <div class="container" id="top-main-content">
   {!! $articles->render() !!}
   <div class="row">
