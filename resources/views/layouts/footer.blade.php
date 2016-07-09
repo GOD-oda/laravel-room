@@ -16,9 +16,14 @@
         <p class="grey-text text-lighten-4">
           {{ Config::get('laravel-room.profile') }}
         </p>
-        <!-- <div class="chip">
-          <img src="{{ asset('img/laravel5.jpg') }}" alt="">
-        </div> -->
+        <!-- ポートフォリオ作った時にこれを開放する
+        <div class="chip">
+          <a href="#" class="grey-text text-darken-4">
+            <img src="{{ asset('img/laravel5.jpg') }}" alt="author">
+            t-oda
+          </a>
+        </div>
+        -->
       </div>
     </div>
     <!-- sns button -->
