@@ -1,7 +1,6 @@
 @extends('layouts.home_master')
 
 @section('content')
-@include('elements.parallax')
 <div class="container">
   @if (Session::has('mail_success'))
     <div class="row" id="mail-success">
