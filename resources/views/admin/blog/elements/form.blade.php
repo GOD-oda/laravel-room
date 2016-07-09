@@ -40,7 +40,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="input-field col s6 m6 l6">
+  <div class="input-field col s12">
     <i class="material-icons prefix">text_fields</i>
     {!! Form::textarea('body', null, ['class' => 'custom-textarea', 'id' => 'editor']) !!}
     {!! Form::label('body', '記事内容', ['for' => 'icon-prefix']) !!}
