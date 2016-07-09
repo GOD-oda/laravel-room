@@ -54,7 +54,6 @@
   <script src="{{ asset('js/materialize.min.js') }}"></script>
   <script src="{{ asset('js/boot_materialize.js') }}"></script>
   <script src="{{ asset('js/article.js') }}"></script>
-  <script src="{{ asset('js/sns_twitter') }}"></script>
 
   @include('articles.elements.sns')
 
