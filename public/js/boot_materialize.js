@@ -9,8 +9,7 @@ $(document).ready(function() {
     $('select').material_select();
 
     // side navigation
-    $(".button-collapse").sideNav({
-    });
+    $(".button-collapse").sideNav();
 
     // datepicker
     $('.datepicker').pickadate({

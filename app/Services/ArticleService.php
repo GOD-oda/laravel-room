@@ -65,4 +65,9 @@ class ArticleService
         return $this->gate->check('destroy', $this->getArticle($id));
     }
 
+    public function searchArticle($request)
+    {
+        $this->article->search($request);
+    }
+
 }

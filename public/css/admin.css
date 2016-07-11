@@ -1,4 +1,11 @@
 /*
+ * sideNavi系
+ */
+header, main, footer {
+  /* padding-left: 70px; */
+}
+
+/*
  * nav系
  */
 nav {
@@ -17,6 +24,20 @@ nav i.material-icons {
 nav .brand-logo {
   font-size: 1.5em;
 }
+.side-nav {
+  width: 70px;
+}
+.side-nav li {
+  padding: 0;
+}
+.side-nav.fixed a {
+  /* padding: 10px 22px 0; */
+  padding: 10px 23px 0px;
+}
+.side-nav li:hover {
+  background-color: transparent;
+}
+
 
 /*
  * 記事詳細

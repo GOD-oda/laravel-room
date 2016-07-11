@@ -89,6 +89,10 @@ class ArticleRepository implements ArticleRepositoryInterface
         );
     }
 
+    public function search($request)
+    {
+        dd($request);
+    }
 
 
 }

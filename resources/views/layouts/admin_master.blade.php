@@ -35,6 +35,10 @@
   <script src="{{ asset('js/facebook.js') }}"></script>
   <header>
     @yield('navbar')
+
+    @if (! Request::is('admin/login'))
+      @include('admin.elements.sideNav')
+    @endif
   </header>
 
   <main>

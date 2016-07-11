@@ -93,7 +93,7 @@ class BlogController extends Controller
 
     public function search(Request $requests)
     {
-        $articles = Article::search($requests);
+        $articles = $this->article->searchArticle($requests);
 
         return view('admin.blog.index', compact('articles'));
     }
