@@ -3,7 +3,7 @@
 /*
  * @author t-oda
  *
- * this  is css of blog.
+ * this is css of my blog.
  */
 
 /* html */
@@ -49,6 +49,12 @@ nav {
   /* background-color: transparent; */
 }
 
+/*
+ * blockquote
+ */
+blockquote {
+  border-left: 5px solid #90a4ae;
+}
 
 /*
  * margin系
