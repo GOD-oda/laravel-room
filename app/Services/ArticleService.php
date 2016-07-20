@@ -33,7 +33,7 @@ class ArticleService
         // サムネイルのパスはuriと同じにする
         $params['image_path'] = $params['uri'].'.'.$file->getClientOriginalExtension();
         if ($file->isValid()) {
-            $file->move(public_path('thumbnail'), $params['image_path']);
+            $file->move(asset('thumbnail'), $params['image_path']);
         }
 
         // 公開日のうち時間の設定
