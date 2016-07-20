@@ -48,12 +48,8 @@ class BlogController extends Controller
 
     public function store(ArticleStoreRequest $request)
     {
-        $input = $request->all();
-        $input['published_at'] =
-            $input['published_at'] . ' ' . Carbon::now()->toTimeString();
-        $input['user_id'] = $this->guard->user()->id;
-
-        $this->article->saveArticle($input);
+        $user_id = $this->guard->user()->id;
+        $this->article->saveArticle($input, $user_id);
 
         \Session::flash('message', '登録に成功しました');
 
@@ -70,12 +66,8 @@ class BlogController extends Controller
 
     public function update(ArticleUpdateRequest $request)
     {
-        $input = $request->all();
-        $input['user_id'] = $this->guard->user()->id;
-        $input['published_at'] =
-            $input['published_at'] . ' ' . Carbon::now()->toTimeString();
-
-        $this->article->saveArticle($input);
+        $user_id = $this->guard->user()->id;
+        $this->article->saveArticle($request, $user_id);
 
         \Session::flash('message', '編集に成功しました');
 

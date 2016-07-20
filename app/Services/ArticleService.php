@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+use Carbon\Carbon;
+use App\Http\Requests\Request;
 use Illuminate\Contracts\Auth\Access\Gate;
 use Illuminate\Pagination\LengthAwarePaginator;
 use App\Repositories\ArticleRepositoryInterface;
@@ -16,13 +18,26 @@ class ArticleService
         $this->gate = $gate;
     }
 
-    public function saveArticle(array $params)
+    public function saveArticle(Request $request)
     {
+        $params = $request->all();
+
         if (isset($params['id'])) {
             if (! $this->getArticleUpdateAbility($params['id'])) {
                 return false;
             }
         }
+
+        $file = $params['thumbnail'];
+
+        // サムネイルのパスはuriと同じにする
+        $params['image_path'] = $params['uri'].'.'.$file->getClientOriginalExtension();
+        if ($file->isValid()) {
+            $file->move(public_path('thumbnail'), $params['image_path']);
+        }
+
+        // 公開日のうち時間の設定
+        $params['published_at'] =  $params['published_at'] . ' ' . Carbon::now()->toTimeString();
 
         return $this->article->save($params);
     }

@@ -18,6 +18,7 @@ class Article extends Model
         'published_at',
         'user_id',
         'discription',
+        'image_path',
     ];
 
     public function byPage($limit, $page, $isLogin=false)
