@@ -8,7 +8,7 @@
       <div class="col s12 m6 l6">
         <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator img-cover" src="{{ isset($article->image_path) ? asset('thumbnail/'.$article->image_path) : asset('img/laravel5.jpg') }}">
+            <img class="activator img-cover" src="{{ isset($article->image_path) ? asset('img/thumbnail/'.$article->image_path) : asset('img/laravel5.jpg') }}">
           </div>
           <div class="card-content">
             <h2 class="card-title activator grey-text text-darken-4">{{ $article->title }}<i class="material-icons right">more_vert</i></h2>
