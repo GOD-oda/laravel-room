@@ -24,7 +24,7 @@
     <div class="file-field input-filed">
       <div class="btn">
         <span>thumbnail</span>
-        {!! Form::file('image_path') !!}
+        {!! Form::file('thumbnail') !!}
       </div>
       <div class="file-path-wrapper">
         <input type="text" class="file-path validate" placeholder="Upload one file">
