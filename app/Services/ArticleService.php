@@ -32,7 +32,7 @@ class ArticleService
         $file = $request->file('thumbnail');
         if ($file->isValid()) {
             $params['image_path'] = $params['uri'].'.'.$file->getClientOriginalExtension();
-            $file->move(asset('thumbnail'), $params['image_path']);
+            $file->move('img/thumbnail', public_path('img/thumbnail'.'/'.$params['image_path']));
         }
 
         // 公開日のうち時間の設定
