@@ -28,16 +28,15 @@ class ArticleService
             }
         }
 
-        $file = $params['thumbnail'];
-        
-        // サムネイルのパスはuriと同じにする
-        $params['image_path'] = $params['uri'].'.'.$file->getClientOriginalExtension();
+
+        /** サムネイルの設宁E*/
+        $file = $request->file('thumbnail');
         if ($file->isValid()) {
+            $params['image_path'] = $params['uri'].'.'.$file->getClientOriginalExtension();
             $file->move(asset('thumbnail'), $params['image_path']);
         }
 
-        // 公開日のぁE��時間の設宁E        $params['published_at'] =  $params['published_at'] . ' ' . Carbon::now()->toTimeString();
-
+        // 公開日のぁE��時間の設宁E        $params['published_at'] =  $params['published_at'].' '.Carbon::now()->toTimeString();
         return $this->article->save($params);
     }
 

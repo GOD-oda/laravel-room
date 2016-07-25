@@ -49,7 +49,7 @@ class BlogController extends Controller
     public function store(ArticleStoreRequest $request)
     {
         $user_id = $this->guard->user()->id;
-        $this->article->saveArticle($input, $user_id);
+        $this->article->saveArticle($request, $user_id);
 
         \Session::flash('message', '登録に成功しました');
 

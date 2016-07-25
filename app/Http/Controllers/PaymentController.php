@@ -17,7 +17,7 @@ class PaymentController extends Controller
 
     public function index(Request $requests)
     {
-        $payments = Payment::search($requests);
+        $payments = Payment::search($requests, 10);
 
         return view('admin.payment.index', compact('payments', 'requests'));
     }

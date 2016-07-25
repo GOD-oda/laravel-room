@@ -17,11 +17,11 @@ class Payment extends Model
         'pay_day'
     ];
 
-    public static function search($requests)
+    public static function search($requests, $num=15)
     {
         return Payment::paymentType($requests->type)
             ->payDay($requests->from_date, $requests->to_date)
-            ->get();
+            ->paginate($num);
     }
 
     public function scopePaymentType($query, $type)

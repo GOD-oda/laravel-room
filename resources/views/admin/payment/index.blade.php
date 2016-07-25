@@ -29,6 +29,7 @@
 {!! Form::close() !!}
 
 <div class="row">
+  {!! $payments->appends($requests->all())->render() !!}
   <!-- 追加実装する予定
   <div class="col s3">
     left navigation

@@ -8,6 +8,9 @@ $(document).ready(function() {
     // select box
     $('select').material_select();
 
+    // textarea
+    $('.custom-textarea').trigger('autoresize');
+
     // side navigation
     $(".button-collapse").sideNav();
 

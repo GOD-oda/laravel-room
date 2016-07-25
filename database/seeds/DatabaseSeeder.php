@@ -4,6 +4,7 @@ use App\User;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use App\DataAccess\Eloquent\Article;
+use App\Payment;
 use Illuminate\Database\Eloquent\Model;
 
 class DatabaseSeeder extends Seeder
@@ -17,8 +18,9 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        $this->call(UserTableSeeder::class);
-        $this->call(ArticleTableSeeder::class);
+        //$this->call(UserTableSeeder::class);
+        //$this->call(ArticleTableSeeder::class);
+        $this->call(PaymentsTableSeeder::class);
     }
 }
 
@@ -47,6 +49,21 @@ class ArticleTableSeeder extends Seeder
                 'published_at' => Carbon::now(),
                 'user_id' => 1,
                 'uri' => 'test-uri-'.$i
+            ]);
+        }
+    }
+}
+
+class PaymentsTableSeeder extends Seeder
+{
+    public function run()
+    {
+        for ($i = 1; $i < 21; $i++) {
+            Payment::create([
+                'type' => 1,
+                'utility_charges' => 10000,
+                'pay_day' => '2016-07-19 14:56:00',
+                'user_id' => 1
             ]);
         }
     }
