@@ -21,14 +21,17 @@ class ArticleService
     public function saveArticle(Request $request)
     {
         $params = $request->all();
-
+        
         if (isset($params['id'])) {
+        echo 1;
             if (! $this->getArticleUpdateAbility($params['id'])) {
+                echo 2;
+                exit;
                 return false;
             }
         }
 
-        /** サムネイルの設定 */
+        /** サムネイルの設宁E*/
         if ($request->hasFile('thumbnail')) {
             $file = $request->file('thumbnail');
             if ($file->isValid()) {
@@ -37,8 +40,7 @@ class ArticleService
             }
         }
 
-        // 公開日の設定
-        $params['published_at'] =  $params['published_at'].' '.Carbon::now()->toTimeString();
+        // 公開日の設宁E        $params['published_at'] =  $params['published_at'].' '.Carbon::now()->toTimeString();
 
         return $this->article->save($params);
     }

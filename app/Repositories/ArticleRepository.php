@@ -21,7 +21,7 @@ class ArticleRepository implements ArticleRepositoryInterface
         $attributes = [];
         $attributes['id'] = (isset($params['id'])) ? $params['id'] : null;
         $result = $this->eloquent->updateOrCreate($attributes, $params);
-
+        
         if ($result) {
             $this->cache->flush();
         }
