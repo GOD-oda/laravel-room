@@ -18,7 +18,6 @@ class ArticleRepository implements ArticleRepositoryInterface
 
     public function save(array $params)
     {
-        dd($params);
         $attributes = [];
         $attributes['id'] = (isset($params['id'])) ? $params['id'] : null;
         $result = $this->eloquent->updateOrCreate($attributes, $params);
