@@ -10,7 +10,7 @@
 @endsection
 
 @section('content')
-  {{-- @if (Session::has('message')) --}}
+  @if (Session::has('message'))
     <div class="col s12 alert">
       <div class="card-panel {{ Session::has('message_color') ? 'pink accent-2' : 'teal' }}">
         <span class="white-text">
@@ -19,7 +19,7 @@
         </span>
       </div>
     </div>
-  {{-- @endif --}}
+  @endif
 
   {{-- 検索 --}}
   {!! Form::open(['method' => 'post', 'url' => 'admin/blog/search']) !!}
