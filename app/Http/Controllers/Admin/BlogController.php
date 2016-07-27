@@ -49,9 +49,14 @@ class BlogController extends Controller
     public function store(ArticleStoreRequest $request)
     {
         $user_id = $this->guard->user()->id;
-        $this->article->saveArticle($request, $user_id);
+        $success_flag = $this->article->saveArticle($request, $user_id);
 
-        \Session::flash('message', '登録に成功しました');
+        if (! $success_flag) {
+            \Session::flash('message', '登録に失敗しました');
+            \Session::flash('message_color', true);
+        } else {
+            \Session::flash('message', '登録に成功しました');
+        }
 
         return redirect()->route('admin.blog.index');
     }
@@ -67,9 +72,14 @@ class BlogController extends Controller
     public function update(ArticleUpdateRequest $request)
     {
         $user_id = $this->guard->user()->id;
-        $this->article->saveArticle($request, $user_id);
+        $success_flag = $this->article->saveArticle($request, $user_id);
 
-        \Session::flash('message', '編集に成功しました');
+        if (! $success_flag) {
+            \Session::flash('message', '登録に失敗しました');
+            \Session::flash('message_color', true);
+        } else {
+            \Session::flash('message', '登録に成功しました');
+        }
 
         return redirect()->route('admin.blog.index');
     }
