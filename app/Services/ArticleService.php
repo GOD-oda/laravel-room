@@ -18,9 +18,10 @@ class ArticleService
         $this->gate = $gate;
     }
 
-    public function saveArticle(Request $request)
+    public function saveArticle(Request $request, $user_id)
     {
         $params = $request->all();
+        $params['user_id'] = $user_id;
 
         if (isset($params['id'])) {
             if (! $this->getArticleUpdateAbility($params['id'])) {
