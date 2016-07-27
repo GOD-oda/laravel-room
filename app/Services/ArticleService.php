@@ -64,6 +64,7 @@ class ArticleService
 
     public function getArticleUpdateAbility($id)
     {
+        dd($this->gate->check('update', $this->getArticleById($id)));
         return $this->gate->check('update', $this->getArticleById($id));
     }
 
