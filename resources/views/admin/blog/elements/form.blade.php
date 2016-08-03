@@ -20,14 +20,35 @@
   </div>
 </div>
 <div class="row">
-  <div class="input-field col s6">
-    <div class="file-field input-filed">
+  <div class="input-field col s12 m6">
+    <div class="file-field input-field">
       <div class="btn">
         <span>thumbnail</span>
         {!! Form::file('thumbnail') !!}
       </div>
       <div class="file-path-wrapper">
         <input type="text" class="file-path validate" placeholder="Upload one file">
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m6">
+    <!-- Modal Trigger -->
+    <a class="waves-effect waves-light btn modal-trigger" href="#image">Images</a>
+    <!-- Modial Structure -->
+    <div id="image" class="modal bottom-sheet">
+      <div class="modal-content">
+        <div class="file-field input-field">
+          <div class="btn">
+            <span>Images</span>
+            {!! Form::file('content_image', ['multiple']) !!}
+          </div>
+          <div class="file-path-wrapper">
+            <input type="text" class="file-path validate" placeholder="Upload one file">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">close</a>
       </div>
     </div>
   </div>

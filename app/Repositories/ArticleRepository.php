@@ -54,7 +54,6 @@ class ArticleRepository implements ArticleRepositoryInterface
 
     public function findById($id)
     {
-
         $result = $this->eloquent->find($id);
 
         return $result;
