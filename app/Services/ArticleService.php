@@ -38,6 +38,17 @@ class ArticleService
             }
         }
 
+        /** 画像のアップロード */
+        if ($request->hasFile('content_images')) {
+            $image_path = 'img/article/'.$params['id'];
+            $content_image_file = $request->file('content_images');
+            foreach ($content_image_file as $image) {
+                if ($image->isValid()) {
+                    $image->move($image_path, $image_path.'/'.$image->getClientOriginalName());
+                }
+            }
+        }
+
         // 公開日の設定
         $params['published_at'] =  $params['published_at'].' '.Carbon::now()->toTimeString();
 
