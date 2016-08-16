@@ -82,12 +82,17 @@ nav .brand-logo {
   #top-main-content {
     width: 100%;
   }
+  /* 記事タイトル */
   #top-main-content .card .card-content h2 {
     font-size: 1.2em;
     line-height: 1.5em;
   }
   #top-main-content .card .card-reveal .card-title {
     font-size: 1.2em;
+  }
+  .img-cover {
+    width: 100%;
+    height: auto;
   }
 }
 
