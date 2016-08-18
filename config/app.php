@@ -52,6 +52,7 @@ return [
          */
         Collective\Html\HtmlServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        Jenssegers\Agent\AgentServiceProvider::class,
         //Laravel\Socialite\SocialiteServiceProvider::class,
 
 
@@ -104,6 +105,7 @@ return [
         'Html'      => Collective\Html\HtmlFacade::class,
         'Debugbar'  => Barryvdh\Debugbar\Facade::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Agent'     => Jenssegers\Agent\Facades\Agent::class,
     ],
 
 ];

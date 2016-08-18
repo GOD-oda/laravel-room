@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Agent;
 use App\Article;
 use Illuminate\Http\Request;
 use App\Services\ArticleService;
@@ -22,6 +23,11 @@ class ArticlesController extends Controller
         $articles = $this->article
             ->getPage($request->get('page', 1), 20)
             ->setPath($request->getBasePath());
+
+        $ua = $request->server('HTTP_USER_AGENT');
+        if (Agent::isMobile($ua)) {
+            return view('articles.index-sp', compact('articles'));
+        }
 
         return view('articles.index', compact('articles'));
     }

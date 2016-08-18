@@ -76,11 +76,36 @@ nav .brand-logo {
  *-------------------------------------------------*/
 /* 記事タイトル */
 #top-main-content .card .card-content h2 {
-  font-size: 1.3em;
+  font-size: 1.0em;
 }
+/* 記事画像 */
+.card.horizontal .card-image {
+  max-width: 34%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+/* 記事タイトル */
+.card-stacked .card-content .card-title {
+  line-height: 35px;
+  margin: 0.3em 0.3em 0.5em;
+  border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+}
+/* 記事のタイトルと説明の領域 */
+.card .card-content {
+  padding: 10px;
+}
+/* 記事の説明 */
+.card .card-content p {
+  font-weight: lighter;
+}
+
 @media screen and (max-width: 480px) {
   #top-main-content {
     width: 100%;
+  }
+  #top-main-content .pagination {
+    margin: 0 10px 5px;
   }
   /* 記事タイトル */
   #top-main-content .card .card-content h2 {

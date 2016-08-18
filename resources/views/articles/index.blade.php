@@ -3,26 +3,27 @@
 @section('content')
 <div class="container" id="top-main-content">
   {!! $articles->render() !!}
-  <div class="row">
-    @foreach ($articles as $key => $article)
-      <div class="col s12 m6 l6">
-        <div class="card">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator img-cover" src="{{ isset($article->image_path) ? asset('img/thumbnail/'.$article->image_path) : asset('img/laravel5.jpg') }}">
+  @foreach ($articles as $key => $article)
+    <div class="row">
+      <div class="col s12">
+        <div class="card horizontal">
+          <div class="card-image">
+            <a href="{{ action('ArticlesController@show', ['uri' => $article->uri]) }}">
+              <img class="img-cover" src="{{ isset($article->image_path) ? asset('img/thumbnail/'.$article->image_path) : asset('img/laravel5.jpg') }}">
+            </a>
           </div>
-          <div class="card-content">
-            <h2 class="card-title activator grey-text text-darken-4">{{ $article->title }}<i class="material-icons right">more_vert</i></h2>
-            <p><a href="{{ action('ArticlesController@show', ['uri' => $article->uri]) }}">詳細はこちら</a></p>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">{{ $article->title }}<i class="material-icons right">close</i></span>
-            <p>{!! nl2br($article->discription) !!}</p>
-            <p><a href="{{ action('ArticlesController@show', ['uri' => $article->uri]) }}">詳細はこちら</a></p>
+          <div class="card-stacked">
+            <div class="card-content">
+              <a href="{{ action('ArticlesController@show', ['uri' => $article->uri]) }}">
+                <h2 class="card-title grey-text text-darken-4 left-align">{{ $article->title }}</h2>
+              </a>
+              <p>{!! nl2br($article->discription) !!}</p>
+            </div>
           </div>
         </div>
       </div>
-    @endforeach
-  </div>
+    </div>
+  @endforeach
   {!! $articles->render() !!}
 </div><!-- /.container -->
 @endsection
