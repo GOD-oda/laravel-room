@@ -15,9 +15,7 @@
         </div>
       </div>
       <div class="article-body">
-        <!-- <img src="{{ asset('img/laravel5.jpg') }}" alt="" class="like-eye-catch"> -->
         {!! $article->body !!}
-        <img class="materialboxed img-cover" src="{{ asset('img/test.png') }}">
       </div>
     </div>
   </div>
