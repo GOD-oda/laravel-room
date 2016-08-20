@@ -68,6 +68,9 @@ $(document).ready(function() {
         return false;
     });
 
+    // materialbox
+    $('.article-body img').materialbox();
+
 
 });
 
