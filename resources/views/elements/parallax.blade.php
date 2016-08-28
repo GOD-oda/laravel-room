@@ -23,8 +23,8 @@
           <a href="#"><span class="blue-grey-text text-lighten-5 name">t-oda</span></a>
           <a href="#"><span class="blue-grey-text text-lighten-5 email">takahiro.tech.oda@gmail.com</span></a>
           <ul class="sns-logo">
-            <li><a href="#" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+            <li><a href="https://twitter.com/Tkahiro_Oda" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+            <!-- <li><a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a></li> -->
             <!-- <li><a href="#" target="_blank"><i class="fa fa-github"></i></a></li> -->
         </ul>
       </li>
