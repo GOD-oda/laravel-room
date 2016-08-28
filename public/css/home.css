@@ -18,11 +18,9 @@ nav i.material-icons {
 nav .brand-logo {
   font-size: 1.5em;
 }
-/* sideNav系 */
-.side-nav a {
+/* sideNav系(sideNavはスマホの時に表示) */
+.side-nav .menu-list a {
   font-size: 1em;
-  color: #fff;
-  border-bottom: solid 1px #fff;
   background-color: transparent;
 }
 .side-nav a.btn {
@@ -31,6 +29,28 @@ nav .brand-logo {
 }
 .side-nav li {
   padding: 0;
+}
+.side-nav .userView {
+  margin: 0;
+}
+.side-nav .userView img {
+  object-fit: cover;
+  max-width: 320px;
+}
+.side-nav .userView .email {
+  padding-bottom: 0;
+}
+/* sns-logo */
+.sns-logo i {
+  /* padding-bottom: 32px; */
+  /* margin: 0 32px 32px 0 !important; */
+  /* height: 32px; */
+}
+.fa-twitter-square {
+  color: skyblue !important;
+}
+.fa-facebook-square {
+  color: navy !important;
 }
 /*-------------------------------
  * actioin button
@@ -93,6 +113,7 @@ nav .brand-logo {
 }
 /* 記事のタイトルと説明の領域 */
 .card .card-content {
+  max-height: 120px;
   padding: 10px;
 }
 /* 記事の説明 */
