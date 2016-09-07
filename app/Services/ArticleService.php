@@ -29,6 +29,11 @@ class ArticleService
             }
         }
 
+        // 公開日の設定
+        $params['published_at'] =  $params['published_at'].' '.Carbon::now()->toTimeString();
+        // insert or update
+        $article = $this->article->save($params);
+
         /** サムネイルの設定 */
         if ($request->hasFile('thumbnail')) {
             $file = $request->file('thumbnail');
@@ -40,7 +45,7 @@ class ArticleService
 
         /** 画像のアップロード */
         if ($request->hasFile('content_images')) {
-            $image_path = 'img/article/'.$params['id'];
+            $image_path = 'img/article/'.$article['id'];
             $content_image_file = $request->file('content_images');
             foreach ($content_image_file as $image) {
                 if ($image->isValid()) {
@@ -49,10 +54,7 @@ class ArticleService
             }
         }
 
-        // 公開日の設定
-        $params['published_at'] =  $params['published_at'].' '.Carbon::now()->toTimeString();
-
-        return $this->article->save($params);
+        return $article;
     }
 
     public function getArticle($entry)

@@ -181,45 +181,68 @@ nav .brand-logo {
 .article-body p {
   line-height: 2em;
 }
+.article-body p a {
+  position: relative;
+  display: inline-block;
+  transition: .3s;
+  text-decoration: none;
+  color: #3498db;
+}
+.article-body p a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  left: 50%;
+  height: 1px;
+  background-color: #3498db;
+  transition: .3s ;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.article-body p a:hover::after {
+  width: 100%;
+}
 /*
  * リスト系
  */
 .article-show ul {
   padding: 3px 10px;
-  border: solid 2px #607d8b;
 }
 .article-show li{
   padding:0px;
   margin:0px;
+  border-bottom: dashed 2px #607d8b;
 }
 .article-show li{
   list-style-type:none !important;
   list-style-image:none !important;
-  margin: 10px 0px 5px 0px !important;
-  position:relative;
-  padding-left:25px;
+  margin-bottom: 5px !important;
+  position: relative;
+  padding-left: 25px;
+  padding-bottom: 10px;
 }
 .article-show li:after, .article-show li:before{
-  content:'';
-  display:block;
-  position:absolute;
-  top:4px;
-  left:8px;
-  height:11px;
-  width:4px;
-  background:#aaa;
-  border-radius:10px;
-  transform:rotate(45deg);
-  -webkit-transform:rotate(45deg);
-  -o-transform:rotate(45deg);
+  content: '';
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  height: 11px;
+  width: 4px;
+  background: #aaa;
+  border-radius: 10px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
 }
 .article-show li:before{
-  top:8px;
-  left:3px;
-  height:8px;
-  transform:rotate(-45deg);
-  -webkit-transform:rotate(-45deg);
-  -o-transform:rotate(-45deg);
+  top: 8px;
+  left: 3px;
+  height: 8px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
 }
 .article-show pre {
   padding-left: 10px;
