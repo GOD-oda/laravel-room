@@ -29,12 +29,10 @@ class ArticleService
             }
         }
 
-        // 公開日の設定
+        /** set published_at */
         $params['published_at'] =  $params['published_at'].' '.Carbon::now()->toTimeString();
-        // insert or update
-        $article = $this->article->save($params);
 
-        /** サムネイルの設定 */
+        /** upload thumbnail  */
         if ($request->hasFile('thumbnail')) {
             $file = $request->file('thumbnail');
             if ($file->isValid()) {
@@ -43,7 +41,10 @@ class ArticleService
             }
         }
 
-        /** 画像のアップロード */
+        /** insert or update article */
+        $article = $this->article->save($params);
+
+        /** upload files in article */
         if ($request->hasFile('content_images')) {
             $image_path = 'img/article/'.$article['id'];
             $content_image_file = $request->file('content_images');
