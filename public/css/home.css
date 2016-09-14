@@ -97,6 +97,7 @@ nav .brand-logo {
 /* 記事タイトル */
 #top-main-content .card .card-content h2 {
   font-size: 1.0em;
+  font-weight: 400;
 }
 /* 記事画像 */
 .card.horizontal .card-image {
