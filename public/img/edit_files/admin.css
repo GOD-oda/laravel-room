@@ -38,30 +38,6 @@ nav .brand-logo {
   background-color: transparent;
 }
 
-/*
- * 一覧
- */
-.article-list .id {
-  width: 5%;
-}
-.article-list .title {
-  width: 45%;
-}
-.article-list .published-at {
-  width: 10%;
-}
-.article-list .show {
-  width: 13%;
-}
-.article-list .show i {
-  margin-right: 4px;
-}
-.article-list .edit {
-  width: 13%;
-}
-.article-list .edit i {
-  margin-right: 4px;
-}
 
 /*
  * 記事詳細
@@ -73,8 +49,8 @@ nav .brand-logo {
 /* 見出し */
 .article-show h2 {
   font-size: 1.5em;
-  border-left: 10px solid #009688;
-  border-bottom: 3px solid #009688;
+  border-left: 10px solid #424242;
+  border-bottom: 3px solid #424242;
   padding-left: 13px;
   padding-bottom: 3px;
   margin-top: 1.3em;

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)http://laravel-room.com/admin/blog/twitter-api-with-laravel53/edit -->
+<html lang="ja"><script id="facebook-jssdk" src="./edit_files/sdk.js.ダウンロード"></script><script type="text/javascript">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="このサイトは、日々奮闘する下っ端プログラマのOdaがオールジャンルの情報を提供し、運営するサイトです。">
+  <meta name="author" content="ODA">
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title></title>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="./edit_files/materialize.min.css">
+  <link rel="stylesheet" href="./edit_files/default.min.css">
+
+  <!-- Custom styles for this template -->
+  <link href="./edit_files/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./edit_files/admin.css">
+
+  <!-- Fonts from Google Fonts -->
+  <link href="./edit_files/css" rel="stylesheet" type="text/css">
+<link href="./edit_files/css(1)" rel="stylesheet" type="text/css">
+<link href="./edit_files/css(2)" rel="stylesheet" type="text/css">
+  <!-- Import Google Icon Font-->
+  <link href="./edit_files/icon" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+<body class="blue-grey lighten-5">
+  <script src="./edit_files/facebook.js.ダウンロード"></script>
+  <header>
+      <nav class="teal">
+  <div class="nav-wrapper">
+    <div class="container">
+      <div class="brand-logo">Article Edit</div>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="http://laravel-room.com/admin/blog">BLOG</a></li>
+        <li><a href="http://laravel-room.com/admin/payment">PAYMENT</a></li>
+        <!-- <li><a href="http://laravel-room.com/blog/create"><i class="material-icons left">create</i>記事作成</a></li> -->
+        <!-- <li><a href="http://laravel-room.com/auth/register">ユーザ登録</a></li> -->
+        <li><a href="http://laravel-room.com/admin/logout"><i class="material-icons left">exit_to_app</i>LOGOUT</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--  -->
+</nav>
+          <ul id="slide-out" class="side-nav fixed teal">
+  <li><a href="http://laravel-room.com/admin/blog" class="white-text"><i class="material-icons">home</i></a></li>
+  <li><a href="http://laravel-room.com/admin/blog" class="white-text"><i class="material-icons">list</i></a></li>
+  <li><a href="http://laravel-room.com/admin/blog/create" class="white-text"><i class="material-icons">create</i></a></li>
+</ul>      </header>
+
+  <main>
+    <div class="container mt10">
+      
+<div class="row">
+  <form method="POST" action="http://laravel-room.com/admin/blog/twitter-api-with-laravel53" accept-charset="UTF-8" enctype="multipart/form-data"><input name="_method" type="hidden" value="PATCH"><input name="_token" type="hidden" value="InKnbgmxXuvBPqCNEbBlzFqbq2UNMB4Xl4FngMQN">
+    <input class="input-field" name="id" type="hidden" value="15">
+
+    <div class="row">
+  <div class="input-field col s6">
+    <i class="material-icons prefix active">title</i>
+    <input class="input-field" name="title" type="text" value="Laravel5.3でTwitter APIを利用する方法の解説">
+    <label for="title" class="active">記事名</label>
+  </div>
+</div>
+<div class="row">
+  <div class="input-field col s6 m12 l12">
+    <i class="material-icons prefix active">http</i>
+    <input class="input-field" name="uri" type="text" value="twitter-api-with-laravel53">
+    <label for="uri" class="active">記事のパス</label>
+  </div>
+</div>
+<div class="row">
+  <div class="input-field col s6 m12 l12">
+    <i class="material-icons prefix active">label_outline</i>
+    <textarea class="materialize-textarea" cols="50" name="discription" rows="10" style="height: 29px;">thujohn/twitterというTwitterAPIを利用するためのLaravel4もしくは5専用のパッケージの解説です。TwitterAPIに特化したパッケージなのでその他のAPIには使えませんが、このパッケージ自体かなり使いやすいのでお勧めです。</textarea>
+    <label for="discription" class="active">記事概要</label>
+  </div>
+</div>
+<div class="row">
+  <div class="input-field col s12 m6">
+    <div class="file-field input-field">
+      <div class="btn">
+        <span>thumbnail</span>
+        <input name="thumbnail" type="file">
+      </div>
+      <div class="file-path-wrapper">
+        <input type="text" class="file-path validate" placeholder="Upload one file">
+      </div>
+    </div>
+  </div>
+  <div class="input-field col s12 m6">
+    <div class="file-field input-field">
+      <div class="btn">
+        <span>Content Images</span>
+        <input multiple="multiple" name="content_images[]" type="file">
+      </div>
+      <div class="file-path-wrapper">
+        <input type="text" class="file-path validate" placeholder="Upload one file">
+      </div>
+    </div>
+  </div>
+<!--   <div class="col s12 m6">
+    <a class="waves-effect waves-light btn modal-trigger" href="#image">Images</a>
+    <div id="image" class="modal bottom-sheet">
+      <div class="modal-content">
+        <div class="file-field input-field">
+          <div class="btn">
+            <span>Images</span>
+            <input multiple="multiple" name="content_image" type="file">
+          </div>
+          <div class="file-path-wrapper">
+            <input type="text" class="file-path validate" placeholder="Upload one file">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">close</a>
+      </div>
+    </div>
+  </div> -->
+</div>
+<div class="row">
+  <div class="input-field col s6">
+    <i class="material-icons prefix active">perm_contact_calendar</i>
+    <input class="input-field datepicker picker__input" name="published_at" type="text" value="2016-09-19" readonly="" id="P1816668851" tabindex="-1" aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="P1816668851_root"><div class="picker" id="P1816668851_root" tabindex="0" aria-hidden="true"><div class="picker__holder"><div class="picker__frame"><div class="picker__wrap"><div class="picker__box"><div class="picker__date-display"><div class="picker__weekday-display">月曜日</div><div class="picker__month-display"><div>9月</div></div><div class="picker__day-display"><div>19</div></div><div class="picker__year-display"><div>2016</div></div></div><div class="picker__calendar-container"><div class="picker__header"><select class="picker__select--month browser-default" disabled="" aria-controls="P1816668851_table" title="月を選択"><option value="0">1月</option><option value="1">2月</option><option value="2">3月</option><option value="3">4月</option><option value="4">5月</option><option value="5">6月</option><option value="6">7月</option><option value="7">8月</option><option value="8" selected="">9月</option><option value="9">10月</option><option value="10">11月</option><option value="11">12月</option></select><select class="picker__select--year browser-default" disabled="" aria-controls="P1816668851_table" title="年を選択"><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016" selected="">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option></select><div class="picker__nav--prev" data-nav="-1" role="button" aria-controls="P1816668851_table" title="前月"> </div><div class="picker__nav--next" data-nav="1" role="button" aria-controls="P1816668851_table" title="翌月"> </div></div><table class="picker__table" id="P1816668851_table" role="grid" aria-controls="P1816668851" aria-readonly="true"><thead><tr><th class="picker__weekday" scope="col" title="日曜日">日</th><th class="picker__weekday" scope="col" title="月曜日">月</th><th class="picker__weekday" scope="col" title="火曜日">火</th><th class="picker__weekday" scope="col" title="水曜日">水</th><th class="picker__weekday" scope="col" title="木曜日">木</th><th class="picker__weekday" scope="col" title="金曜日">金</th><th class="picker__weekday" scope="col" title="土曜日">土</th></tr></thead><tbody><tr><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1472310000000" role="gridcell" aria-label="2016-08-28">28</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1472396400000" role="gridcell" aria-label="2016-08-29">29</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1472482800000" role="gridcell" aria-label="2016-08-30">30</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1472569200000" role="gridcell" aria-label="2016-08-31">31</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1472655600000" role="gridcell" aria-label="2016-09-01">1</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1472742000000" role="gridcell" aria-label="2016-09-02">2</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1472828400000" role="gridcell" aria-label="2016-09-03">3</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1472914800000" role="gridcell" aria-label="2016-09-04">4</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1473001200000" role="gridcell" aria-label="2016-09-05">5</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1473087600000" role="gridcell" aria-label="2016-09-06">6</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1473174000000" role="gridcell" aria-label="2016-09-07">7</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1473260400000" role="gridcell" aria-label="2016-09-08">8</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1473346800000" role="gridcell" aria-label="2016-09-09">9</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1473433200000" role="gridcell" aria-label="2016-09-10">10</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1473519600000" role="gridcell" aria-label="2016-09-11">11</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1473606000000" role="gridcell" aria-label="2016-09-12">12</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1473692400000" role="gridcell" aria-label="2016-09-13">13</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1473778800000" role="gridcell" aria-label="2016-09-14">14</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1473865200000" role="gridcell" aria-label="2016-09-15">15</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1473951600000" role="gridcell" aria-label="2016-09-16">16</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1474038000000" role="gridcell" aria-label="2016-09-17">17</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1474124400000" role="gridcell" aria-label="2016-09-18">18</div></td><td role="presentation"><div class="picker__day picker__day--infocus picker__day--today picker__day--selected picker__day--highlighted" data-pick="1474210800000" role="gridcell" aria-label="2016-09-19" aria-selected="true" aria-activedescendant="true">19</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1474297200000" role="gridcell" aria-label="2016-09-20">20</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1474383600000" role="gridcell" aria-label="2016-09-21">21</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1474470000000" role="gridcell" aria-label="2016-09-22">22</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1474556400000" role="gridcell" aria-label="2016-09-23">23</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1474642800000" role="gridcell" aria-label="2016-09-24">24</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1474729200000" role="gridcell" aria-label="2016-09-25">25</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1474815600000" role="gridcell" aria-label="2016-09-26">26</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1474902000000" role="gridcell" aria-label="2016-09-27">27</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1474988400000" role="gridcell" aria-label="2016-09-28">28</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1475074800000" role="gridcell" aria-label="2016-09-29">29</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1475161200000" role="gridcell" aria-label="2016-09-30">30</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1475247600000" role="gridcell" aria-label="2016-10-01">1</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1475334000000" role="gridcell" aria-label="2016-10-02">2</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1475420400000" role="gridcell" aria-label="2016-10-03">3</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1475506800000" role="gridcell" aria-label="2016-10-04">4</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1475593200000" role="gridcell" aria-label="2016-10-05">5</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1475679600000" role="gridcell" aria-label="2016-10-06">6</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1475766000000" role="gridcell" aria-label="2016-10-07">7</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1475852400000" role="gridcell" aria-label="2016-10-08">8</div></td></tr></tbody></table></div><div class="picker__footer"><button class="btn-flat picker__today" type="button" data-pick="1474210800000" disabled="" aria-controls="P1816668851">今日</button><button class="btn-flat picker__clear" type="button" data-clear="1" disabled="" aria-controls="P1816668851">クリア</button><button class="btn-flat picker__close" type="button" data-close="true" disabled="" aria-controls="P1816668851">閉じる</button></div></div></div></div></div></div>
+    <label for="published_at" class="active">公開日</label>
+  </div>
+</div>
+<div class="row">
+  <div class="input-field col s12">
+    <i class="material-icons prefix active">text_fields</i>
+    <textarea class="custom-textarea" id="editor" name="body" cols="50" rows="10" style="height: 1228px; line-height: 20px;">&lt;h2&gt;前提&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://apps.twitter.com/" target="_blank"&gt;ここ&lt;/a&gt;でAPIを利用するためのアプリケーションを作成しておきましょう。ここで作成されたコンシューマーキーが必要になるからです。&lt;/p&gt;
+&lt;h2&gt;準備&lt;/h2&gt;
+&lt;p&gt;まずは環境の確認です。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Laravel5.3&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/thujohn/twitter" target="_blank"&gt;thujohn/twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;php7(xampp)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Laravelのバージョンは5.3です。thujohn/twitterはLaravelでTwitter APIを簡単に利用できるようになるパッケージです。このパッケージはTwitter APIに特化したパッケージで、これだけでほぼすべての機能が利用できます。&lt;/p&gt;
+&lt;p&gt;ローカル環境で利用する場合は注意です。cURLを使ってhttpsにアクセスするのでサイト証明書が必要になりますが、当然ローカルなのでありません。cURL 60エラーがでてしまいます。&lt;/p&gt;
+&lt;p&gt;これを回避するために&lt;a href="https://gist.github.com/VersatilityWerks/5719158/download"&gt;https://gist.github.com/VersatilityWerks/5719158/download&lt;/a&gt;からcacert.pemをダウンロードし、php.iniでこのファイルを読み込むようにしましょう。C:\xampp\phpにcacert.pemを置き、php.iniの最後でいいのでcurl.cainfo = "C:\xampp\php\cacert.pem"を追記します。&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://laravel-room.com/img/article/15/cacert.JPG" alt="cacert.pemの設置" class="responsive-img"&gt;&lt;/p&gt;
+&lt;h2&gt;初期設定&lt;/h2&gt;
+&lt;p&gt;パッケージをインストールしましょう。
+composer.jsonに"thujohn/twitter": "~2.0"を追加して$ composer updateするか、$ composer require thujohn/twitterでインストールします。&lt;/p&gt;
+&lt;p&gt;そして、config/app.phpにサービスプロバイダとエイリアスを追記します。&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://laravel-room.com/img/article/15/add-providers-and-aliases.JPG" alt="サービスプロバイダとエイリアスの追記" class="responsive-img"&gt;&lt;/p&gt;
+&lt;p&gt;次に以下のコマンドを実行してパッケージの設定ファイルのconfig/ttwitter.phpを作成しましょう。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;php artisan vendor:publish&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;最後に.envにコンシューマーキーやアクセストークンを記述して初期設定は完了です。&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://laravel-room.com/img/article/15/add-env-key.JPG" alt=".envファイルにキーの設定" class="responsive-img"&gt;&lt;/p&gt;
+&lt;h2&gt;アクセストークン取得までの流れ&lt;/h2&gt;
+&lt;p&gt;Twitter APIを利用するためにはまずアクセストークンが必要になります。取得までの流れを簡単に説明します。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;リクエストトークンを取得&lt;/li&gt;
+&lt;li&gt;認証画面のURLのパラメータに取得したリクエストトークンをつけてリダイレクト&lt;/li&gt;
+&lt;li&gt;認証画面でユーザーが許可かキャンセルかを選ぶ&lt;/li&gt;
+&lt;li&gt;コールバックURLにパラメータが付けられてリダイレクトされる&lt;/li&gt;
+&lt;li&gt;アクセストークンを取得&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;これらの処理を自前で用意しようとするとかなり骨の折れる作業になりますが、それぞれメソッドが用意されていますので何も意識しなくてもさくっと実装できます。&lt;/p&gt;
+&lt;h2&gt;アクセストークンの取得実装&lt;/h2&gt;
+&lt;p&gt;基本的にパッケージのGithubのreadmeを見ればよく、これに沿って実装していきます。&lt;/p&gt;
+&lt;p&gt;まずはweb.php（Laravel5.3より前ならroutes.php）にルーティングしていきましょう。&lt;/p&gt;
+&lt;script src="https://gist.github.com/GOD-oda/b466c9335ed7719b427254bdc1ba303b.js"&gt;&lt;/script&gt;
+&lt;p&gt;コントローラークラスはなんでもいいですが、ここではTwitterControllerというクラスを作成して使用しました。&lt;/p&gt;
+&lt;p&gt;ログイン処理はloginメソッドに実装していきます。このメソッドは認証画面へリダイレクトさせるとこまでを担当します。&lt;/p&gt;
+&lt;script src="https://gist.github.com/GOD-oda/0128637db17723ce7fccae2867e43221.js"&gt;&lt;/script&gt;
+&lt;p&gt;認証画面はこんな感じです。ここで連携アプリを認証かキャンセルをクリックすると、コールバックURLにパラメータを付けたものが戻ってきます。&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://laravel-room.com/img/article/15/authorize.JPG" alt="認証画面" class="responsive-img"&gt;&lt;/p&gt;
+&lt;p&gt;パラメータはRequestクラスをタイプヒントして取得可能です。&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://laravel-room.com/img/article/15/request_token.JPG" alt="パラメータ" class="responsive-img"&gt;&lt;/p&gt;
+&lt;p&gt;そして、今度はアクセストークンを取得します。&lt;/p&gt;
+&lt;script src="https://gist.github.com/GOD-oda/1fbc912f80118a740837dae9be1990b8.js"&gt;&lt;/script&gt;
+&lt;p&gt;リクエストトークンの取得と同じようにアクセストークンを取得します。取得に成功すると、$tokenは次のようになります。&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://laravel-room.com/img/article/15/access_token.JPG" alt="アクセストークン" class="responsive-img"&gt;&lt;/p&gt;
+&lt;p&gt;Twitter::getCredentialsメソッドで認証したユーザーの情報を取得しています。これが正しく取得できていれば、ちゃんと認証できているということです。&lt;/p&gt;
+&lt;p&gt;なので、このif文の中に処理を記述すればいいですが、今回はタイムラインの一覧を表示するindexにリダイレクトさせています。&lt;/p&gt;
+&lt;p&gt;あとはindexで一覧を取得する処理、postでツイートする処理、logoutでログアウトする処理を書けば基本的な処理は完成です。&lt;/p&gt;
+</textarea>
+    <label for="body" class="active">記事内容</label>
+  </div>
+</div>
+<div class="row">
+  <div class="input-field col s6">
+    <i class="material-icons left">update</i>
+    <i class="btn waves-effect waves-light waves-input-wrapper" style=""><input class="waves-button-input" type="submit" value="更新"></i>
+  </div>
+</div>  </form>
+</div>
+
+        <div class="container">
+  <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large red"><i class="material-icons">menu</i></a>
+    <ul>
+      <li><a href="http://laravel-room.com/admin/logout" class="btn-floating waves-effect waves-light red"><i class="material-icons prefix">exit_to_app</i></a></li>
+      <li><a href="http://laravel-room.com/admin/blog" class="btn-floating waves-effect waves-light red"><i class="material-icons prefix">list</i></a></li>
+    </ul>
+  </div>
+</div>    </div>
+  </main>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="./edit_files/jquery-2.1.1.min.js.ダウンロード"></script>
+  <script src="./edit_files/jquery-ui.min.js.ダウンロード"></script>
+  <script src="./edit_files/highlight.min.js.ダウンロード"></script>
+  <script src="./edit_files/marked.min.js.ダウンロード"></script>
+
+  <!-- Custome script for this template -->
+  <script src="./edit_files/materialize.min.js.ダウンロード"></script>
+  <script src="./edit_files/boot_materialize.js.ダウンロード"></script>
+  <script src="./edit_files/boot_marked.js.ダウンロード"></script>
+  <script src="./edit_files/submit.js.ダウンロード"></script>
+  <script src="./edit_files/all.js.ダウンロード"></script>
+
+<div class="hiddendiv common" style="font-size: 10px; font-family: 游ゴシック, YuGothic, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, メイリオ, Meiryo, sans-serif; width: 826px;">thujohn/twitterというTwitterAPIを利用するためのLaravel4もしくは5専用のパッケージの解説です。TwitterAPIに特化したパッケージなのでその他のAPIには使えませんが、このパッケージ自体かなり使いやすいのでお勧めです。<br></div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./edit_files/P5DLcu0KGJB.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./edit_files/P5DLcu0KGJB(1).html" style="border: none;"></iframe></div></div></div></body></html>

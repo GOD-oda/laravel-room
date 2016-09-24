@@ -47,14 +47,14 @@
             <th>公開日</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="article-list">
           @forelse ($articles as $article)
             <tr>
-              <td>{{ $article->id }}</td>
-              <td>{{ $article->title }}</td>
-              <td>{{ date('Y/m/d H:i:s', strtotime($article->published_at)) }}</td>
-              <td><a href="{{ action('Admin\BlogController@show', [$article->uri]) }}"><i class="material-icons left">details</i>詳細</a></td>
-              <td><a href="{{ action('Admin\BlogController@edit', [$article->uri]) }}"><i class="material-icons left">edit</i>編集</a></td>
+              <td class="id">{{ $article->id }}</td>
+              <td class="title">{{ $article->title }}</td>
+              <td class="published-at">{{ date('Y/m/d H:i:s', strtotime($article->published_at)) }}</td>
+              <td class="show"><a href="{{ action('Admin\BlogController@show', [$article->uri]) }}" class="btn"><i class="material-icons left">details</i>詳細</a></td>
+              <td class="edit"><a href="{{ action('Admin\BlogController@edit', [$article->uri]) }}" class="btn"><i class="material-icons left">edit</i>編集</a></td>
               <td>
                 {!! Form::open(['method' => 'delete', 'action' => ['Admin\BlogController@destroy', $article->id]]) !!}
                   <input type="submit" class="btn delete-btn" value="削除">
