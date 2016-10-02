@@ -18,14 +18,14 @@ class ContactController extends Controller
 
     public function contact(ContactRequest $request)
     {
-        // Mail::send('contact.mail', ['request' => $request], function (Message $message) {
-        //     $message->to([
-        //         'takahiro.tech.oda@gmail.com',
-        //         'laravel.room@gmail.com'
-        //     ])
-        //     //$message->to('laravel-room@conpw3.sakura.ne.jp')
-        //         ->subject('Laravel Roomのお問い合わせ');
-        // });
+        Mail::send('contact.mail', ['request' => $request], function (Message $message) {
+            $message->to([
+                'takahiro.tech.oda@gmail.com',
+                'laravel.room@gmail.com'
+            ])
+            //$message->to('laravel-room@conpw3.sakura.ne.jp')
+                ->subject('Laravel Roomのお問い合わせ');
+        });
 
         Session::flash('mail_success', true);
 
