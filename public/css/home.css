@@ -280,7 +280,9 @@ nav .brand-logo {
 #contact-form .input-field label {
     font-size: 0.85em;
 }
-
+#confirm-btn input {
+  outline: 0;
+}
 @media screen and (max-width: 480px) {
   #contact-form .input-field label {
     font-size: 1em;
