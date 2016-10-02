@@ -18,8 +18,8 @@
     <ul id="slide-out" class="side-nav">
       <li>
         <div class="userView">
-          <img src="{{ asset('img/profile-background2.jpg') }}" alt="" class="background">
-          <a href="#"><img src="{{ asset('img/profile-background.jpg') }}" alt="" class="circle"></a>
+          <img src="{{ asset('img/profile-background2.jpeg') }}" alt="" class="background">
+          <a href="#"><img src="{{ asset('img/profile-background.jpeg') }}" alt="" class="circle"></a>
           <a href="#"><span class="blue-grey-text text-lighten-5 name">t-oda</span></a>
           <a href="#"><span class="blue-grey-text text-lighten-5 email">takahiro.tech.oda@gmail.com</span></a>
           <ul class="sns-logo">
