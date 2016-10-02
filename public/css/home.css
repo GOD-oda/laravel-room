@@ -207,27 +207,20 @@ nav .brand-logo {
 /*
  * リスト系
  */
-.article-show ul {
-  padding: 3px 10px;
-}
-.article-show li{
-  padding:0px;
-  margin:0px;
-  border-bottom: dashed 2px #607d8b;
-}
 .article-show li{
   list-style-type:none !important;
   list-style-image:none !important;
   margin-bottom: 5px !important;
   position: relative;
   padding-left: 25px;
-  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: dashed 2px #607d8b;
 }
 .article-show li:after, .article-show li:before{
   content: '';
   display: block;
   position: absolute;
-  top: 4px;
+  top:18px;
   left: 8px;
   height: 11px;
   width: 4px;
@@ -238,7 +231,7 @@ nav .brand-logo {
   -o-transform: rotate(45deg);
 }
 .article-show li:before{
-  top: 8px;
+  top: 22px;
   left: 3px;
   height: 8px;
   transform: rotate(-45deg);
