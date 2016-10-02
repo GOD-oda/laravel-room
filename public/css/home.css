@@ -207,42 +207,48 @@ nav .brand-logo {
 /*
  * リスト系
  */
-.article-show li{
+.article-body h4.list-title {
+  padding-left: 15px;
+  border-left: solid 3px #ff80ab;
+}
+.article-body ul {
+  margin-top: -5px;
+}
+.article-body li{
   list-style-type:none !important;
   list-style-image:none !important;
   margin-bottom: 5px !important;
   position: relative;
-  padding-left: 25px;
+  padding-left: 45px;
   padding-top: 10px;
-  border-bottom: dashed 2px #607d8b;
 }
-.article-show li:after, .article-show li:before{
+.article-body li:after, .article-body li:before{
   content: '';
   display: block;
   position: absolute;
   top:18px;
-  left: 8px;
+  left: 28px;
   height: 11px;
   width: 4px;
-  background: #aaa;
+  background: #ff80ab;
   border-radius: 10px;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -o-transform: rotate(45deg);
 }
-.article-show li:before{
+.article-body li:before{
   top: 22px;
-  left: 3px;
+  left: 23px;
   height: 8px;
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
 }
-.article-show pre {
+.article-body pre {
   padding-left: 10px;
   border: solid 2px #607d8b;
 }
-.article-show code {
+.article-body code {
   /* margin-bottom: 10px;*/
   padding: 10px;
   border: solid 2px #607d8b;
