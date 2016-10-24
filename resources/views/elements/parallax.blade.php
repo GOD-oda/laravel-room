@@ -1,16 +1,40 @@
 <div class="parallax-container" style="height: auto;">
-  <div class="container">
+  <div class="container" style="width: 90%;">
     <h1 class="center">
       <a href="{{ url('/') }}" class="grey-text text-lighten-1">{{ Config::get('laravel-room.parallax.title') }}</a>
     </h1>
+    <!-- Dropdown Structure -->
+    <ul id="tutorial" class="dropdown-content">
+      <li><a href="#!">初心者向け</a></li>
+      <li><a href="#!">週休者向け</a></li>
+    </ul>
+    <!-- <ul id="dropdown1" class="dropdown-content">
+      <li><a href="#!">one</a></li>
+      <li><a href="#!">two</a></li>
+      <li class="divider"></li>
+      <li><a href="#!">three</a></li>
+    </ul> -->
     <nav>
       <div class="nav-wrapper">
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <ul id="nav-mobile" class="center hide-on-med-and-down">
           <li>
-            <a href="{{ url('/') }}" class="waves-effect waves-light btn btn-ghost">TOP</a>
+            <a href="{{ url('/') }}" class="waves-effect waves-light">TOP</a>
+          </li>
+          <!-- Dropdown Trigger -->
+          <li>
+            <a href="#!" class="dropdown-button" data-activates="tutorial">チュートリアル<i class="material-icons right">arrow_drop_down</i></a>
+          </li>
+          <!-- <li>
+            <a href="#!" class="dropdown-button" data-activates="dropdown1">チュートリアル<i class="material-icons right">arrow_drop_down</i></a>
+          </li> -->
+          <!-- <li>
+            <a href="{{ route('beginner') }}" class="waves-effect waves-light btn btn-ghost">中級者向けチュートリアル</a>
           </li>
           <li>
-            <a href="{{ action('ContactController@index') }}" class="waves-effect waves-light btn btn-ghost">お問い合わせ</a>
+            <a href="{{ route('intermediate') }}" class="waves-effect waves-light btn btn-ghost">中級者向けチュートリアル</a>
+          </li> -->
+          <li>
+            <a href="{{ action('ContactController@index') }}" class="waves-effect waves-light">お問い合わせ</a>
           </li>
         </ul>
       </div>

@@ -9,6 +9,10 @@ nav {
 nav .container .nav-wrapper a {
   color: #bdbdbd;
 }
+nav ul li {
+  display: inline-block;
+  float: none;
+}
 nav ul a {
   font-size: 1.2em;
 }
@@ -77,11 +81,6 @@ nav .brand-logo {
   font-family: 'Amatic SC', 'Condiment', cursive;
   font-size: 5em;
   font-weight: 800;
-}
-.parallax-container .container .btn-ghost {
-  background-color: rgba(0, 0, 0, 0.1);
-  border: 1px solid;
-  border-color: #fff;
 }
 
 /*--------------------------------
@@ -188,6 +187,10 @@ nav .brand-logo {
   transition: .3s;
   text-decoration: none;
   color: #3498db;
+  word-wrap: break-word;
+}
+.article-body p a.block {
+  display: block;
 }
 .article-body p a::after {
   content: '';
@@ -210,6 +213,12 @@ nav .brand-logo {
 .article-body h4.list-title {
   padding-left: 15px;
   border-left: solid 3px #ff80ab;
+  font-size: 1.3em;
+}
+@media screen and (max-width: 480px) {
+  .article-body h4.list-title {
+    font-size: 1.2em;
+  }
 }
 .article-body ul {
   margin-top: -5px;

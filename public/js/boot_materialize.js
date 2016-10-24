@@ -11,6 +11,9 @@ $(document).ready(function() {
     // textarea
     $('.custom-textarea').trigger('autoresize');
 
+    // dorpdown nav
+    $('.dropdown-button').dropdown();
+
     // side navigation
     $(".button-collapse").sideNav();
 

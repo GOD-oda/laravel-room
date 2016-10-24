@@ -38,4 +38,14 @@ class ArticlesController extends Controller
 
         return view('articles.show', compact('article'));
     }
+
+    public function beginner()
+    {
+        dd('beginner');
+    }
+
+    public function intermediate()
+    {
+        dd('intermediate');
+    }
 }

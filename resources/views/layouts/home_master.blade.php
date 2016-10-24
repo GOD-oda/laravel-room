@@ -39,10 +39,55 @@
 </head>
 <body class="blue-grey lighten-5">
   <header>
+    @include('elements.parallax')
+
+    {{--
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+              <ul id="nav-mobile" class="center hide-on-med-and-down">
+                <li>
+                  <a href="{{ url('/') }}" class="waves-effect waves-light btn btn-ghost">TOP</a>
+                </li>
+                <li>
+                  <a href="{{ route('beginner') }}" class="waves-effect waves-light btn btn-ghost">中級者向けチュートリアル</a>
+                </li>
+                <li>
+                  <a href="{{ route('intermediate') }}" class="waves-effect waves-light btn btn-ghost">中級者向けチュートリアル</a>
+                </li>
+                <li>
+                  <a href="{{ action('ContactController@index') }}" class="waves-effect waves-light btn btn-ghost">お問い合わせ</a>
+                </li>
+              </ul>
+          <ul id="slide-out" class="side-nav">
+            <li>
+              <div class="userView">
+                <img src="{{ asset('img/profile-background2.jpeg') }}" alt="" class="background">
+                <a href="#"><img src="{{ asset('img/profile-background.jpeg') }}" alt="" class="circle"></a>
+                <a href="#"><span class="blue-grey-text text-lighten-5 name">t-oda</span></a>
+                <a href="#"><span class="blue-grey-text text-lighten-5 email">takahiro.tech.oda@gmail.com</span></a>
+                <ul class="sns-logo">
+                  <li><a href="https://twitter.com/Tkahiro_Oda" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+                  <!-- <li><a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a></li> -->
+                  <!-- <li><a href="#" target="_blank"><i class="fa fa-github"></i></a></li> -->
+              </ul>
+            </li>
+            <li>
+              <a href="{{ url('/') }}" class="black-text"><i class="material-icons left">home</i>TOP</a>
+            </li>
+            <li>
+              <a href="{{ action('ContactController@index') }}" class="black-text"><i class="material-icons left">info_inline</i>お問い合わせ</a>
+            </li>
+          </ul>
+          <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only white-text"><i class="material-icons">view_headline</i></a>
+        </div>
+        </div>
+      </nav>
+    </div>
+    --}}
   </header>
 
   <main>
-    @include('elements.parallax')
 
     @yield('content')
 
