@@ -11,7 +11,7 @@
       </div>
       <div class="col l4 offset-12 s12">
         <h5 class="white-text">
-          Profile
+          Administrator Profile
         </h5>
         <p class="grey-text text-lighten-4">
           {{ Config::get('laravel-room.profile') }}

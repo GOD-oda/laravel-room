@@ -37,8 +37,15 @@ main {
   /* padding-left: 200px; */
 }
 
-footer {
-  /* padding-left: 200px; */
+/* footer */
+footer.page-footer {
+  line-height: 1.5;
+}
+footer.page-footer h5 {
+  margin-bottom: 1.5em;
+}
+footer.page-footer p {
+  margin-bottom: 1.3em;
 }
 
 /*
@@ -49,15 +56,7 @@ nav {
   /* background-color: transparent; */
 }
 
-/*
- * blockquote
- */
-blockquote {
-  border-left: 5px solid #90a4ae;
-  background-color: #fff;
-  font-style: italic;
-  font-family: Lato;
-}
+
 
 /*
  * margin系
