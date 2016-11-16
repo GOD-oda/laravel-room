@@ -32,8 +32,6 @@ nav .brand-logo {
 }
 .side-nav li {
   width: 100%;
-  /* padding: 0; */
-  max-height: 48px;
 }
 .side-nav .menu-list a { /* 用途不明 */
   font-size: 1em;
@@ -50,8 +48,14 @@ nav .brand-logo {
   object-fit: cover;
   max-width: 320px;
 }
+.side-nav .userView .name {
+  color: #000;
+  opacity: .87;
+}
 .side-nav .userView .email {
   padding-bottom: 0;
+  color: #000;
+  opacity: .54;
 }
 /* sns-logo */
 .sns-logo i {
