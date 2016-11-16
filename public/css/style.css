@@ -28,7 +28,7 @@ body {
 
 /* header */
 header {
-  /* padding-left: 200px; */
+  margin-bottom: 1em;
 }
 
 /* main */
@@ -47,16 +47,6 @@ footer.page-footer h5 {
 footer.page-footer p {
   margin-bottom: 1.3em;
 }
-
-/*
- * navbar系
- */
-nav {
-  /* box-shadow: none; */
-  /* background-color: transparent; */
-}
-
-
 
 /*
  * margin系

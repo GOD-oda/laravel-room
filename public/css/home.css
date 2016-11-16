@@ -4,7 +4,9 @@
 /* nav */
 nav {
   box-shadow: none;
-  background-color: transparent;
+}
+nav .nav-wrapper {
+  padding: 0 10px;
 }
 nav .container .nav-wrapper a {
   color: #bdbdbd;
@@ -17,22 +19,29 @@ nav ul a {
   font-size: 1.2em;
 }
 nav i.material-icons {
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 nav .brand-logo {
   font-size: 1.5em;
+  margin-left: 30px;
 }
-/* sideNav系(sideNavはスマホの時に表示) */
-.side-nav .menu-list a {
+@media screen and (min-width: 993px) {
+  nav a.button-collapse {
+    display: inline;
+  }
+}
+.side-nav li {
+  width: 100%;
+  /* padding: 0; */
+  max-height: 48px;
+}
+.side-nav .menu-list a { /* 用途不明 */
   font-size: 1em;
   background-color: transparent;
 }
 .side-nav a.btn {
   width: 100%;
   margin: 0;
-}
-.side-nav li {
-  padding: 0;
 }
 .side-nav .userView {
   margin: 0;
@@ -56,6 +65,29 @@ nav .brand-logo {
 .fa-facebook-square {
   color: navy !important;
 }
+.nav-search-wrapper {
+  height: 100%;
+  width: 50%;
+  margin: 0 0 0 auto;
+}
+.nav-search-wrapper i.material-icons {
+  font-size: 2em;
+}
+.nav-search-wrapper .input-field {
+  padding: 5px 0;
+}
+.nav-search-wrapper .input-field input[type=search] {
+  margin: 0;
+}
+.nav-search-wrapper .input-field input[type=search]:focus {
+  background-color: transparent;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 1.3em;
+}
+.nav-search-wrapper .input-field input[type=search]:focus+label i {
+  color: #fff;
+}
 /*-------------------------------
  * actioin button
  *-------------------------------*/
@@ -66,6 +98,9 @@ nav .brand-logo {
 /*--------------------------
  * pagenation
  *--------------------------*/
+ .pagination {
+  margin-bottom: 1em;
+ }
 .pagination li.active {
   color: #f5f5f5;
   background-color: #009688;
@@ -75,7 +110,7 @@ nav .brand-logo {
  * parallax
  *-------------------------*/
 .parallax-container {
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 .parallax-container .container h1 {
   font-family: 'Amatic SC', 'Condiment', cursive;
@@ -108,8 +143,9 @@ nav .brand-logo {
 /* 記事タイトル */
 .card-stacked .card-content .card-title {
   line-height: 35px;
+  opacity: .87;
   margin: 0 0 0.3em;
-  border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+  border-bottom: 1px solid rgba(160, 160, 160, 0.5);
 }
 /* 記事のタイトルと説明の領域 */
 .card .card-content {
@@ -287,6 +323,9 @@ nav .brand-logo {
 /*---------------------------------------------
  *お問い合わせページ
  *---------------------------------------------*/
+#contact-form p {
+  margin-bottom: 2em;
+}
 @media screen and (max-width: 480px) {
   #contact-form h1 {
     font-size: 2em;
