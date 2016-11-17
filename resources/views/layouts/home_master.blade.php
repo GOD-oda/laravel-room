@@ -21,7 +21,6 @@
 
   <!-- Custom styles for this template -->
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 
 
   <!-- Fonts from Google Fonts -->
@@ -42,19 +41,15 @@
   <script src="{{ asset('js/trackingcode.js') }}"></script>
 </head>
 <body class="blue-grey lighten-5">
-  <header>
-    @include('elements.navbar')
 
-    {{-- @include('elements.parallax') --}}
-
-    {{-- @include('elements.navigations') --}}
-  </header>
+  @include('elements.header')
 
   <main>
 
     @yield('content')
 
     @include('articles.elements.action_button')
+
   </main>
 
   @include('layouts.footer')
@@ -67,5 +62,8 @@
 
   @include('articles.elements.sns')
 
+
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>

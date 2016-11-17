@@ -6,7 +6,7 @@ nav {
   box-shadow: none;
 }
 nav .nav-wrapper {
-  padding: 0 10px;
+  /* padding: 0 10px; */
 }
 nav .container .nav-wrapper a {
   color: #bdbdbd;
@@ -23,19 +23,21 @@ nav i.material-icons {
 }
 nav .brand-logo {
   font-size: 1.5em;
-  margin-left: 30px;
 }
 @media screen and (min-width: 993px) {
   nav a.button-collapse {
     display: inline;
   }
 }
+nav .hamburger-button {
+  width: 6%;
+  text-align: center;
+}
 .side-nav li {
   width: 100%;
 }
-.side-nav .menu-list a { /* 用途不明 */
-  font-size: 1em;
-  background-color: transparent;
+.side-nav  a {
+  font-size: 16px;
 }
 .side-nav a.btn {
   width: 100%;
@@ -64,6 +66,7 @@ nav .brand-logo {
   /* height: 32px; */
 }
 .fa-twitter-square {
+  font-size: 16px;
   color: skyblue !important;
 }
 .fa-facebook-square {

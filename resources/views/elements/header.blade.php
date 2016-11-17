@@ -2,8 +2,7 @@
   <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper teal">
-        <!-- trigger side navigation -->
-        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+        <a href="#" data-activates="slide-out" class="button-collapse hamburger-button"><i class="material-icons">menu</i></a>
         <a href="{{ url('/') }}" class="brand-logo">{{ Config::get('laravel-room.title') }}</a>
 
         <!-- TODO
@@ -33,9 +32,15 @@
     </div>
   </li> -->
   <li>
-    <a href="{{ url('/') }}" class="black-text waves-effect waves-teal waves-light waves-ripple"><i class="material-icons left">home</i>TOP</a>
+    <a href="{{ route('top') }}" class="black-text waves-effect waves-teal waves-light waves-ripple"><i class="material-icons left">home</i>TOP</a>
   </li>
   <li>
-    <a href="{{ action('ContactController@index') }}" class="black-text waves-effect waves-teal waves-light waves-ripple"><i class="material-icons left">info_inline</i>お問い合わせ</a>
+    <a href="{{ route('contact') }}" class="black-text waves-effect waves-teal waves-light waves-ripple"><i class="material-icons left">info_inline</i>お問い合わせ</a>
   </li>
+  <!-- <li>
+    <a href="{{ route('beginner') }}" class="black-text waves-effect waves-teal waves-light waves-ripple"><i class="material-icons left">school</i>初心者チュートリアル</a>
+  </li> -->
+  <!-- <li>
+    <a href="{{ route('beginner') }}">初心者チュートリアル</a>
+  </li> -->
 </ul>
