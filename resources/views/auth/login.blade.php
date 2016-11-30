@@ -7,7 +7,7 @@
 @section('content')
 <div class="container">
   {{-- エラー表示 --}}
-  @if ($errors->has())
+  @if (count($errors) > 0)
     <div class="row">
       <div class="col s6 offset-s3">
         <div class="card-panel">

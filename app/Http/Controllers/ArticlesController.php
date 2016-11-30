@@ -23,7 +23,7 @@ class ArticlesController extends Controller
         $articles = $this->article
             ->getPage($request->get('page', 1), 20)
             ->setPath($request->getBasePath());
-
+        
         $ua = $request->server('HTTP_USER_AGENT');
         if (Agent::isMobile($ua)) {
             return view('articles.index-sp', compact('articles'));

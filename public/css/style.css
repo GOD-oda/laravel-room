@@ -185,10 +185,10 @@ footer.page-footer .profile  {
  *---------------------------------------*/
 /* nav */
 nav {
-  box-shadow: none;
+
 }
 nav .nav-wrapper {
-  /* padding: 0 10px; */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 nav .container .nav-wrapper a {
   color: #bdbdbd;
@@ -346,6 +346,7 @@ nav .hamburger-button {
   font-weight: lighter;
   font-size: 0.9em;
   line-height: 1.5;
+  opacity: .54;
 }
 
 @media screen and (max-width: 480px) {
@@ -417,10 +418,21 @@ nav .hamburger-button {
   word-wrap: break-word;
 }
 .article-body blockquote {
-  border-left: 5px solid #90a4ae;
-  background-color: #fff;
-  font-style: italic;
-  font-family: Lato;
+  background: #ddd;
+  padding: 2.6em 1.2em 1.2em;
+  line-height: 1.3em;
+  position: relative;
+  border-left: none;
+}
+.article-body blockquote::before {
+    content:"“";
+    font-size: 600%;
+    line-height: 1em;
+    font-family: "MS Pゴシック", sans-serif;
+    color: #999;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 .article-body blockquote p {
   margin: 0;

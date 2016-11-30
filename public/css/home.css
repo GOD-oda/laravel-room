@@ -164,6 +164,7 @@ nav .hamburger-button {
   font-weight: lighter;
   font-size: 0.9em;
   line-height: 1.5;
+  opacity: .54;
 }
 
 @media screen and (max-width: 480px) {
@@ -375,14 +376,3 @@ nav .hamburger-button {
 .fb-like {
   top: -8px;
 }
-
-
-
-
-
-
-
-
-
-
-

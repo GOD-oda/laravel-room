@@ -58,7 +58,7 @@ class BlogController extends Controller
             \Session::flash('message', '登録に成功しました');
         }
 
-        return redirect()->route('admin.blog.index');
+        return redirect()->route('blog.index');
     }
 
     public function edit($entry)
@@ -81,7 +81,7 @@ class BlogController extends Controller
             \Session::flash('message', '登録に成功しました');
         }
 
-        return redirect()->route('admin.blog.index');
+        return redirect()->route('blog.index');
     }
 
     public function destroy($id)
@@ -90,14 +90,14 @@ class BlogController extends Controller
 
         \Session::flash('message', '削除に成功しました');
 
-        return redirect()->route('admin.blog.index');
+        return redirect()->route('blog.index');
     }
 
     public function search(Request $requests)
     {
         $articles = $this->article->searchArticle($requests);
 
-        return view('admin.blog.index', compact('articles'));
+        return view('blog.index', compact('articles'));
     }
 
 }

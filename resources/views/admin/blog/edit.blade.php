@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-@if ($errors->has())
+@if (count($errors) > 0)
   <div class="row">
     <div class="col s6 offset-s3">
       <div class="card-panel">

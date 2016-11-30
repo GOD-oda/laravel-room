@@ -17,7 +17,7 @@
        <p class="grey-text text-lighten-4">
           name : t-oda
           <br>
-          e-mail : <span class="email">takahiro.tech.oda@gmail.com</span>
+          e-mail : <span class="email">laravel.room@gmail.com</span>
           <br>
           twitter : <a href="https://twitter.com/Tkahiro_Oda" class="twitter-follow-button" data-show-count="false" data-lang="ja">@Tkahiro_Odaさんをフォロー</a>
           <br>

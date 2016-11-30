@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Auth;
 use App\User;
 use Validator;
 use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\ThrottlesLogins;
-use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class AuthController extends Controller
 {
-    use AuthenticatesAndRegistersUsers, ThrottlesLogins;
+    use AuthenticatesUsers;
 
     protected $redirectTo = 'admin/blog';
     protected $redirectAfterLogout = 'admin/login';
@@ -69,9 +69,16 @@ class AuthController extends Controller
         return view('auth.login', compact('logo'));
     }
 
-    public function loginUsername()
+    public function username()
     {
-        return property_exists($this, 'name') ? $this->username : 'name';
+        return 'name';
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+
+        return redirect('/admin');
     }
 
 }
