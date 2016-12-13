@@ -505,10 +505,6 @@ nav .hamburger-button {
   -webkit-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
 }
-.article-body pre {
-  padding-left: 10px;
-  border: solid 2px #607d8b;
-}
 .article-body code {
   display: block;
   width: 100%;
@@ -520,6 +516,7 @@ nav .hamburger-button {
   font-style: italic;
   font-family: Lato;
   position: relative;
+  margin-bottom: 20px;
 }
 .article-body code::before {
   content: 'CODE';
@@ -531,6 +528,9 @@ nav .hamburger-button {
   padding: 5px 10px 5px 5px;
   color: #fff;
   opacity: .7;
+}
+.article-body code p {
+  margin: 0;
 }
 .article-comment {
   /* margin: 15px auto; */
