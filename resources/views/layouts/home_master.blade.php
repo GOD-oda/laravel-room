@@ -13,9 +13,6 @@
 
   <link rel="shortcut icon" href="{{ asset('img/laravel.ico') }}" />
 
-  <!--  -->
-  <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
-
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 
