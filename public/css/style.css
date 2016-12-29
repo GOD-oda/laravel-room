@@ -142,8 +142,7 @@ footer.page-footer .profile  {
 
 /* 分割線 */
 .divider {
-  height: 2px;
-  background-color: #9e9e9e;
+  margin: 0 !important;
 }
 
 /* img */
@@ -226,6 +225,7 @@ nav .hamburger-button {
 }
 .side-nav  a {
   font-size: 16px;
+  padding: 0 24px;
 }
 .side-nav a.btn {
   width: 100%;
@@ -335,6 +335,7 @@ nav .hamburger-button {
   height: auto;
   object-fit: cover;
 }
+
 /* 記事タイトル */
 .card-stacked .card-content .card-title {
   line-height: 35px;
@@ -349,10 +350,9 @@ nav .hamburger-button {
 }
 /* 記事の説明 */
 .card .card-content p {
-  font-weight: lighter;
   font-size: 0.9em;
   line-height: 1.5;
-  opacity: .54;
+  opacity: .7;
 }
 
 @media screen and (max-width: 480px) {
@@ -399,8 +399,8 @@ nav .hamburger-button {
 /* 見出し */
 .article-show h2 {
   font-size: 1.5em;
-  border-left: 10px solid #009688;
-  border-bottom: 3px solid #009688;
+  border-left: 10px solid #4DB6AC;
+  border-bottom: 3px solid #4DB6AC;
   padding-left: 13px;
   padding-bottom: 3px;
   margin-top: 1.3em;
@@ -509,7 +509,7 @@ nav .hamburger-button {
   display: block;
   width: 100%;
   height: 100%;
-  padding: 2.6em 1.2em 1.2em;
+  padding: 1.2em;
   background: #474949;
   color: #fff;
   border-radius: 3px;
@@ -517,8 +517,9 @@ nav .hamburger-button {
   font-family: Lato;
   position: relative;
   margin-bottom: 20px;
+  letter-spacing: 2px;
 }
-.article-body code::before {
+/*.article-body code::before {
   content: 'CODE';
   font-size: 130%;
   top: 0;
@@ -528,7 +529,7 @@ nav .hamburger-button {
   padding: 5px 10px 5px 5px;
   color: #fff;
   opacity: .7;
-}
+}*/
 .article-body code p {
   margin: 0;
 }
