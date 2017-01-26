@@ -30,7 +30,7 @@
       <i class="material-icons left">home</i>TOP
     </a>
   </li>
-  {{*
+  {{--
   <div class="divider"></div>
   <li>
     <a href="{{ route('beginner') }}" class="black-text waves-effect waves-teal waves-light">
@@ -43,7 +43,7 @@
       <i class="material-icons left">folder</i>中級者向けチュートリアル
     </a>
   </li>
-  *}}
+  --}}
   <div class="divider"></div>
   <li>
     <a href="{{ route('contact') }}" class="black-text waves-effect waves-teal waves-light waves-ripple">
