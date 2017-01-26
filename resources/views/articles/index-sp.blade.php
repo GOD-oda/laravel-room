@@ -1,11 +1,11 @@
 @extends('layouts.home_master')
 
 @section('content')
-<div class="container" id="top-main-content">
+<div class="container top-main-content">
   {!! $articles->render() !!}
   @foreach ($articles as $key => $article)
     <div class="row">
-      <div class="col s12 m6 l6">
+      <div class="col s12">
         <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator img-cover" src="{{ isset($article->image_path) ? asset('img/thumbnail/'.$article->image_path) : asset('img/laravel5.jpg') }}">

@@ -1,11 +1,15 @@
 @extends('layouts.home_master')
 
 @section('content')
-<div class="container" id="top-main-content">
-  {!! $articles->render() !!}
+<div class="container top-main-content">
+
+  @if (Request::is('/'))
+    {!! $articles->render() !!}
+  @endif
+
   @foreach ($articles as $key => $article)
     <div class="row">
-      <div class="col s12">
+      <div class="col s10 m12">
         <div class="card horizontal">
           <div class="card-image">
             <a href="{{ action('ArticlesController@show', ['uri' => $article->uri]) }}">
@@ -15,7 +19,7 @@
           <div class="card-stacked">
             <div class="card-content">
               <a href="{{ action('ArticlesController@show', ['uri' => $article->uri]) }}">
-                <h2 class="card-title grey-text text-darken-4 left-align">{{ $article->title }}</h2>
+                <h2 class="card-title left-align">{{ $article->title }}</h2>
               </a>
               <p>{!! nl2br($article->discription) !!}</p>
             </div>
@@ -24,6 +28,10 @@
       </div>
     </div>
   @endforeach
-  {!! $articles->render() !!}
+
+  @if (Request::is('/'))
+    {!! $articles->render() !!}
+  @endif
+
 </div><!-- /.container -->
 @endsection

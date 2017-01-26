@@ -14,7 +14,7 @@ html {
 /* body */
 body {
   font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-  font-size: 2em;
+  font-size: 2rem;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -22,19 +22,18 @@ body {
 
 @media screen and (max-width: 480px) {
   body {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 }
 
 /* header */
 header {
-  margin-bottom: 1em;
+  margin-bottom: 1.5rem;
 }
 
 /* main */
 main {
   flex: 1 0 auto;
-  /* padding-left: 200px; */
 }
 
 /**
@@ -183,27 +182,17 @@ footer.page-footer .profile  {
  * nav系
  *---------------------------------------*/
 /* nav */
+.navbar-fixed {
+  z-index: 997;
+}
 nav {
 
 }
 nav .nav-wrapper {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
-nav .container .nav-wrapper a {
-  color: #bdbdbd;
-}
-nav ul li {
-  display: inline-block;
-  float: none;
-}
-nav ul a {
-  font-size: 1.2em;
-}
-nav i.material-icons {
-  font-size: 1.5em;
-}
 nav .brand-logo {
-  font-size: 1.5em;
+  font-size: 3rem;
 }
 @media screen and (min-width: 993px) {
   nav a.button-collapse {
@@ -214,52 +203,11 @@ nav .hamburger-button {
   width: 15%;
   text-align: center;
 }
-@media screen and (min-width: 993px) {
-  nav a.hamburger-button {
-    width: 6%;
-    text-align: center;
-  }
-}
-.side-nav li {
-  width: 100%;
-}
 .side-nav  a {
-  font-size: 16px;
+  font-size: 1.5rem;
   padding: 0 24px;
 }
-.side-nav a.btn {
-  width: 100%;
-  margin: 0;
-}
-.side-nav .userView {
-  margin: 0;
-}
-.side-nav .userView img {
-  object-fit: cover;
-  max-width: 320px;
-}
-.side-nav .userView .name {
-  color: #000;
-  opacity: .87;
-}
-.side-nav .userView .email {
-  padding-bottom: 0;
-  color: #000;
-  opacity: .54;
-}
-/* sns-logo */
-.sns-logo i {
-  /* padding-bottom: 32px; */
-  /* margin: 0 32px 32px 0 !important; */
-  /* height: 32px; */
-}
-.fa-twitter-square {
-  font-size: 16px;
-  color: skyblue !important;
-}
-.fa-facebook-square {
-  color: navy !important;
-}
+/* これはまだ実装してない */
 .nav-search-wrapper {
   height: 100%;
   width: 50%;
@@ -286,9 +234,11 @@ nav .hamburger-button {
 /*-------------------------------
  * actioin button
  *-------------------------------*/
-.fixed-action-btn {
-  bottom: 20px;
-  right: 24px;
+.action-btn-menu,
+.action-to-top,
+.action-to-home,
+.action-to-contact {
+  background-color: #ff7f7f !important;
 }
 /*--------------------------
  * pagenation
@@ -301,18 +251,6 @@ nav .hamburger-button {
   background-color: #009688;
 }
 
-/*-------------------------
- * parallax
- *-------------------------*/
-.parallax-container {
-  /* margin-bottom: 20px; */
-}
-.parallax-container .container h1 {
-  font-family: 'Amatic SC', 'Condiment', cursive;
-  font-size: 5em;
-  font-weight: 800;
-}
-
 /*--------------------------------
  * chips
  *-------------------------------*/
@@ -323,51 +261,46 @@ nav .hamburger-button {
 /*-------------------------------------------------
  * topのスタイル
  *-------------------------------------------------*/
-/* 記事タイトル */
-#top-main-content .card .card-content h2 {
-  font-size: 1.0em;
-  font-weight: 400;
+/* 記事のタイトルと説明の領域 */
+.top-main-content .card-content {
+  padding: 1.5rem;
 }
 /* 記事画像 */
-.card.horizontal .card-image {
-  max-width: 34%;
+.top-main-content .card-image {
+  max-width: 34% !important;
   width: 100%;
   height: auto;
   object-fit: cover;
 }
-
 /* 記事タイトル */
-.card-stacked .card-content .card-title {
-  line-height: 35px;
-  opacity: .87;
-  margin: 0 0 0.3em;
+.top-main-content .card-content .card-title {
+  font-size: 2.2rem;
+  color: rgba(0, 0, 0, .87);
+  margin: 0 0 1rem;
   border-bottom: 1px solid rgba(160, 160, 160, 0.5);
-}
-/* 記事のタイトルと説明の領域 */
-.card .card-content {
-  max-height: 120px;
-  padding: 10px;
+  letter-spacing: 1.2px;
+  line-height: 1.5 !important;
 }
 /* 記事の説明 */
-.card .card-content p {
-  font-size: 0.9em;
+.top-main-content .card-content p {
+  font-size: 1.8rem;
   line-height: 1.5;
-  opacity: .7;
+  color: rgba(0, 0, 0, .54);
 }
 
 @media screen and (max-width: 480px) {
-  #top-main-content {
+  .top-main-content {
     width: 100%;
   }
-  #top-main-content .pagination {
-    margin: 0 10px 5px;
+  .top-main-content .pagination {
+    /*margin: 0 10px 5px;*/
   }
   /* 記事タイトル */
-  #top-main-content .card .card-content h2 {
+  .top-main-content .card .card-content h2 {
     font-size: 1.2em;
     line-height: 1.5em;
   }
-  #top-main-content .card .card-reveal .card-title {
+  .top-main-content .card .card-reveal .card-title {
     font-size: 1.2em;
   }
   .img-cover {
@@ -379,6 +312,9 @@ nav .hamburger-button {
 /*-----------------------------------------------
  * 記事詳細画面のスタイル
  *-----------------------------------------------*/
+ .article-show {
+  background-color: #fff;
+ }
 /* 横幅 */
 @media screen and (min-width: 993px) {
   .article-show {
@@ -388,7 +324,7 @@ nav .hamburger-button {
 }
 /* 記事タイトル */
 .article-show h1 {
-  font-size: 1.7em;
+  font-size: 4rem;
 }
 @media screen and (max-width: 480px) {
   .article-show h1 {
@@ -398,12 +334,15 @@ nav .hamburger-button {
 }
 /* 見出し */
 .article-show h2 {
-  font-size: 1.5em;
+  font-size: 3rem;
   border-left: 10px solid #4DB6AC;
   border-bottom: 3px solid #4DB6AC;
   padding-left: 13px;
   padding-bottom: 3px;
-  margin-top: 1.3em;
+  margin: 0 0 2.5rem;
+}
+.article-show h2:not(:first-child) {
+  margin-top: 8rem;
 }
 @media screen and (max-width: 480px) {
   .article-show h2 {
@@ -413,7 +352,8 @@ nav .hamburger-button {
 /* 本文 */
 .article-body p {
   line-height: 2em;
-  margin-bottom: 20px;
+  margin: 0 0 2.5rem;
+  letter-spacing: 1.5px;
 }
 .article-body p a {
   position: relative;
@@ -422,27 +362,6 @@ nav .hamburger-button {
   text-decoration: none;
   color: #3498db;
   word-wrap: break-word;
-}
-.article-body blockquote {
-  background: #ddd;
-  padding: 2.6em 1.2em 1.2em;
-  line-height: 1.3em;
-  position: relative;
-  border-left: none;
-  border-radius: 3px;
-}
-.article-body blockquote::before {
-    content:"“";
-    font-size: 600%;
-    line-height: 1em;
-    font-family: "MS Pゴシック", sans-serif;
-    color: #999;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-.article-body blockquote p {
-  margin: 0;
 }
 .article-body p a.block {
   display: block;
@@ -462,13 +381,36 @@ nav .hamburger-button {
 .article-body p a:hover::after {
   width: 100%;
 }
+.article-body blockquote {
+  background: #ddd;
+  padding: 5rem 3rem 2rem;
+  line-height: 1.3rem;
+  position: relative;
+  border-left: none;
+  border-radius: 3px;
+  margin: 0 0 2.5rem;
+}
+.article-body blockquote::before {
+    content:"“";
+    font-size: 600%;
+    line-height: 1em;
+    font-family: "MS Pゴシック", sans-serif;
+    color: #999;
+    position: absolute;
+    left: 10px;
+    top: 0;
+}
+.article-body blockquote p {
+  margin: 0;
+}
 /*
  * リスト系
  */
+.article-body h3,
 .article-body h4.list-title {
-  padding-left: 15px;
+  padding-left: 1.5rem;
   border-left: solid 3px #ff80ab;
-  font-size: 1.3em;
+  font-size: 2.5rem;
 }
 @media screen and (max-width: 480px) {
   .article-body h4.list-title {
@@ -476,12 +418,13 @@ nav .hamburger-button {
   }
 }
 .article-body ul {
-  margin-bottom: 20px;
+  margin: 2rem 0;
 }
 .article-body li{
   position: relative;
   padding: 10px 45px;
-  line-height: 1.5em;
+  line-height: 1.5;
+  letter-spacing: 2px;
 }
 .article-body li:after, .article-body li:before {
   content: '';
@@ -505,34 +448,26 @@ nav .hamburger-button {
   -webkit-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
 }
+.article-body pre {
+  overflow-x: auto;
+  width: 100%;
+  background: #474949;
+  padding: 2rem;
+  margin: 2rem 0;
+}
 .article-body code {
   display: block;
-  width: 100%;
-  height: 100%;
-  padding: 1.2em;
   background: #474949;
   color: #fff;
   border-radius: 3px;
-  font-style: italic;
-  font-family: Lato;
+  font-family: 'Roboto Mono';
   position: relative;
-  margin-bottom: 20px;
   letter-spacing: 2px;
 }
-/*.article-body code::before {
-  content: 'CODE';
-  font-size: 130%;
-  top: 0;
-  left: 0;
-  border: solid 1px #fff;
-  position: absolute;
-  padding: 5px 10px 5px 5px;
-  color: #fff;
-  opacity: .7;
-}*/
 .article-body code p {
   margin: 0;
 }
+/* コメントの実装はまだ */
 .article-comment {
   /* margin: 15px auto; */
   border: solid 2px #607d8b;
@@ -540,7 +475,9 @@ nav .hamburger-button {
 .article-comment.comment-area {
 
 }
-
+.ads-area {
+  margin: 2rem auto;
+}
 
 /*---------------------------------------------
  *お問い合わせページ

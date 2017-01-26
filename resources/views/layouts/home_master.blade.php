@@ -53,7 +53,7 @@
 
     @yield('content')
 
-    @include('articles.elements.action_button')
+    @include('elements.action_button')
 
   </main>
 
