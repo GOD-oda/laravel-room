@@ -19,9 +19,8 @@ Route::group(['middleware' => 'web'], function () {
     });
     Route::get('contact', 'ContactController@index')->name('contact');
     Route::post('contact', 'ContactController@contact');
+    //Route::get('beginner', 'ArticlesController@beginner')->name('beginner');
+    //Route::get('intermediate', 'ArticlesController@intermediate')->name('intermediate');
     Route::get('/{entry}', 'ArticlesController@show');
     Route::get('/', 'ArticlesController@index')->name('top');
-    Route::get('/beginner', 'ArticlesController@beginnger')->name('beginner');
-    // 中級者向けチュートリアル
-    // Route::get('/intermediate', 'ArticlesController@intermediate')->name('intermediate');
 });
