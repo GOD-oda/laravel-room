@@ -23,7 +23,11 @@ class ArticlesController extends Controller
         $articles = $this->article
             ->getPage($request->get('page', 1), 20)
             ->setPath($request->getBasePath());
-        
+
+        /**
+         * スマホとそれ以外（タブレット以上の横幅）だと
+         * デザインが違うのでテンプレートを分ける必要がある
+         */
         $ua = $request->server('HTTP_USER_AGENT');
         if (Agent::isMobile($ua)) {
             return view('articles.index-sp', compact('articles'));
@@ -41,11 +45,21 @@ class ArticlesController extends Controller
 
     public function beginner()
     {
-        dd('beginner');
+        $articles = collect();
+        for ($i = 3; $i < 8; $i++) {
+            $articles->put($i, $this->article->getArticleById($i));
+        }
+
+        return view('articles.index', compact('articles'));
     }
 
     public function intermediate()
     {
-        dd('intermediate');
+        $articles = collect();
+        for ($i = 8; $i < 13; $i++) {
+            $articles->put($i,$this->article->getArticleById($i));
+        }
+
+        return view('articles.index', compact('articles'));
     }
 }

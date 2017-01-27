@@ -272,6 +272,11 @@ nav .hamburger-button {
   height: auto;
   object-fit: cover;
 }
+@media screen and (max-width: 600px) {
+  .top-main-content .card-image {
+    max-width: 100% !important;
+  }
+}
 /* 記事タイトル */
 .top-main-content .card-content .card-title {
   font-size: 2.2rem;
@@ -324,7 +329,7 @@ nav .hamburger-button {
 }
 /* 記事タイトル */
 .article-show h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 @media screen and (max-width: 480px) {
   .article-show h1 {

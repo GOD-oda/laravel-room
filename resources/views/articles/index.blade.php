@@ -9,7 +9,7 @@
 
   @foreach ($articles as $key => $article)
     <div class="row">
-      <div class="col s10 m12">
+      <div class="col s12">
         <div class="card horizontal">
           <div class="card-image">
             <a href="{{ action('ArticlesController@show', ['uri' => $article->uri]) }}">
