@@ -430,6 +430,7 @@ nav .hamburger-button {
   padding: 10px 45px;
   line-height: 1.5;
   letter-spacing: 2px;
+  word-wrap: break-word;
 }
 .article-body li:after, .article-body li:before {
   content: '';
