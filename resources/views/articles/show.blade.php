@@ -6,8 +6,8 @@
 <meta name="twitter:creator" content="@Tkahiro_Oda" />
 <meta name="twitter:domain" content="laravel-room.com" />
 <meta name="twitter:title" content="{{ $article->title }}" />
-<meta name="twitter:description" content="{{ $article->description }}" />
-<meta name="twitter:image" content="{{ $article->image_path }}" />
+<meta name="twitter:description" content="{{ $article->discription }}" />
+<meta name="twitter:image" content="{{ is_null($article->image_path) ? '' : asset('img/thumbnail/'.$article->image_path) }}" />
 @endsection
 
 @section('content')
