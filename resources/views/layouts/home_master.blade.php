@@ -42,6 +42,9 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
   <![endif]-->
 
+  <!-- twitter tags -->
+  @yield('twitter-tags')
+
   <!-- Google Analytics Tracking Code -->
   <script src="{{ asset('js/trackingcode.js') }}"></script>
 </head>

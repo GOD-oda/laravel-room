@@ -1,5 +1,15 @@
 @extends('layouts.home_master')
 
+@section('twitter-tags')
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@Tkahiro_Oda" />
+<meta name="twitter:creator" content="@Tkahiro_Oda" />
+<meta name="twitter:domain" content="laravel-room.com" />
+<meta name="twitter:title" content="{{ $article->title }}" />
+<meta name="twitter:description" content="{{ $article->description }}" />
+<meta name="twitter:image" content="{{ $article->image_path }}" />
+@endsection
+
 @section('content')
 <article>
   <div class="article-show card">
