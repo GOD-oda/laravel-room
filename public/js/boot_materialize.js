@@ -63,7 +63,7 @@ $(document).ready(function() {
         }
     });
     // button go to top
-    $('.fixed-action-btn ul li > .go-to-top').on('click', function() {
+    $('.fixed-action-btn ul li > .action-to-top').on('click', function() {
         $('body,html').animate({
             scrollTop: 0
         }, 1000);

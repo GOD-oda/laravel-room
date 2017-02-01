@@ -41,6 +41,7 @@ main {
  */
 footer.page-footer {
   line-height: 1.8;
+  letter-spacing: 1px;
 }
 footer.page-footer p {
   margin-bottom: 1.3em;
@@ -62,14 +63,6 @@ footer.page-footer .profile  {
 /*
  * margin系
  */
-/* margin */
-.m0 { margin: 0 }
-.m3 { margin: 3px }
-.m5 { margin: 5px }
-.m10 { margin: 10px }
-.m15 { margin: 15px }
-.m20 { margin: 20px }
-.m30 { margin: 30px }
 /* margin right left auto */
 .mtb0 { margin: 0 auto;}
 .mtb3 { margin: 3px auto;}
@@ -317,28 +310,27 @@ nav .hamburger-button {
 /*-----------------------------------------------
  * 記事詳細画面のスタイル
  *-----------------------------------------------*/
- .article-show {
+ .article-box {
   background-color: #fff;
+  padding: 2rem;
  }
-/* 横幅 */
-@media screen and (min-width: 993px) {
-  .article-show {
-    width: 971px;
-    margin: 0 auto;
-  }
-}
 /* 記事タイトル */
-.article-show h1 {
+.article-box h1 {
   font-size: 3.5rem;
 }
 @media screen and (max-width: 480px) {
-  .article-show h1 {
+  .article-box h1 {
     font-size: 1.5em;
     line-height: 1.5em;
   }
 }
+/* 投稿日時、更新日時のエリア */
+.posted-at {
+  text-align: right;
+  margin: 1rem 0;
+}
 /* 見出し */
-.article-show h2 {
+.article-body h2 {
   font-size: 3rem;
   border-left: 10px solid #4DB6AC;
   border-bottom: 3px solid #4DB6AC;
@@ -346,11 +338,11 @@ nav .hamburger-button {
   padding-bottom: 3px;
   margin: 0 0 2.5rem;
 }
-.article-show h2:not(:first-child) {
+.article-body h2:not(:first-child) {
   margin-top: 8rem;
 }
 @media screen and (max-width: 480px) {
-  .article-show h2 {
+  .article-body h2 {
     font-size: 1.3em;
   }
 }
@@ -524,8 +516,29 @@ nav .hamburger-button {
 /*---------------------------
  * SNS
  *---------------------------*/
-.twitter-share-button {
+.sns-area {
+  position: relative;
 }
+.sns-label {
+  position: absolute;
+  top: 0px;
+  left: -5px;
+  text-transform: uppercase;
+  transform-origin: top left;
+  -webkit-transform-origin: top left;
+  transform: translateX(0) rotate(90deg);
+  -webkit-transform: translateX(0) rotate(90deg);
+  font-size: 2rem;
+  font-family: 'Roboto Mono';
+  font-weight: 100;
+}
+.sns-icon {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 2rem;
+}
+
 .fb-like {
   top: -11px;
 }

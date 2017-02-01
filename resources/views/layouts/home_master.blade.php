@@ -24,10 +24,6 @@
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 
-  <!-- Custom styles for this template -->
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
-
   <!-- Fonts from Google Fonts -->
   @include('elements.fonts')
 
@@ -35,6 +31,9 @@
   <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Font Awesome -->
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -44,6 +43,9 @@
 
   <!-- twitter tags -->
   @yield('twitter-tags')
+
+  <!-- facebook tags -->
+  @yield('facebook-tags')
 
   <!-- Google Analytics Tracking Code -->
   <script src="{{ asset('js/trackingcode.js') }}"></script>
