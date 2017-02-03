@@ -327,7 +327,7 @@ nav .hamburger-button {
 /* 投稿日時、更新日時のエリア */
 .posted-at {
   text-align: right;
-  margin: 1rem 0;
+  margin: 1rem 0 4rem;
 }
 /* 見出し */
 .article-body h2 {
@@ -462,6 +462,17 @@ nav .hamburger-button {
   position: relative;
   letter-spacing: 2px;
 }
+.article-body p code {
+  font-size: 85%;
+  font-family: 'Roboto Mono';
+  background-color: #eee;
+  border: solid 1px #cfd8dc;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  padding: 5px;
+  word-wrap: break-word;
+}
+/* 最初に書いてた時はcodeの中にpを書いてたのでそれがある場合は初期化するため */
 .article-body code p {
   margin: 0;
 }
