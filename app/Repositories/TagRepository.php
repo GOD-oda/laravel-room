@@ -13,14 +13,22 @@ class TagRepository implements TagRepositoryInterface
         $this->eloquent = $eloquent;
     }
 
-    public function save(array $params)
+    public function save($article_id, $tag_name)
     {
-        $attributes = [];
-        $attributes['id'] = (isset($params['id'])) ? $params['id'] : null;
-        $result = $this->eloquent->updateOrCreate($attributes, $params);
-        if ($result) {
-            $this->cache->flush();
-        }
+        $this->eloquent->article_id = $article_id;
+        $this->eloquent->tag = $tag_name;
+        $result = $this->eloquent->save();
+
+        return $result;
+    }
+
+    public function delete($article_id, $tag_name)
+    {
+        $tag = $this->eloquent->first([
+            'article_id' => $article_id,
+            'tag' => $tag_name,
+        ]);
+        $result = $tag->delete();
 
         return $result;
     }

@@ -20,6 +20,19 @@
   </div>
 </div>
 <div class="row">
+  <div class="input-field col s6">
+    <i class="material-icons prefix">loyalty</i>
+    {!! Form::text('tag', null, ['class' => 'input-field']) !!}
+    {!! Form::label('tag', '記事のタグ', ['for' => 'icon-prefix']) !!}
+  </div>
+  <div class="col s6">
+    <div class="chip">
+      Tag
+      <a href=""><i class="material-icons">close</i></a>
+    </div>
+  </div>
+</div>
+<div class="row">
   <div class="input-field col s12 m6">
     <div class="file-field input-field">
       <div class="btn">

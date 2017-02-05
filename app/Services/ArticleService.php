@@ -55,6 +55,9 @@ class ArticleService
         /** insert or update article */
         $article = $this->article->save($params);
 
+        /** insert tag */
+        $tag = $this->tag->save($article['id'], $params['tag']);
+
         /** upload files in article */
         if ($request->hasFile('content_images')) {
             $image_path = 'img/article/'.$article['id'];
