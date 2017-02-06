@@ -50,5 +50,6 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'exists.article' => \App\Http\Middleware\ExistsArticle::class,
         'UA' => \App\Http\Middleware\SwitchViewForUA::class,
+        'exists.articleById' => \App\Http\Middleware\ExistsArticleById::class,
     ];
 }

@@ -11,6 +11,7 @@ use App\Http\Controllers\Controller;
 use App\DataAccess\Eloquent\Article;
 use App\Http\Requests\ArticleStoreRequest;
 use App\Http\Requests\ArticleUpdateRequest;
+use Response;
 
 class BlogController extends Controller
 {
@@ -21,7 +22,7 @@ class BlogController extends Controller
     {
         $this->article = $article;
         $this->guard = $guard;
-        $this->middleware('exists.article', ['only' => ['show', 'edit', 'update']]);
+        $this->middleware('exists.articleById', ['only' => ['show', 'edit', 'update']]);
         //$this->middleware('self.entry', ['only' => ['show', 'edit', 'update']]);
     }
 
@@ -63,10 +64,12 @@ class BlogController extends Controller
 
     public function edit($entry)
     {
-        $article = $this->article->getArticle($entry);
+        $article = $this->article->getArticleById($entry);
         $article['published_at'] = Carbon::parse($article['published_at'])->format('Y-m-d');
 
-        return view('admin.blog.edit', compact('article'));
+        $tags = $this->article->getTagsOnArticle($entry);
+
+        return view('admin.blog.edit', compact('article', 'tags'));
     }
 
     public function update(ArticleUpdateRequest $request)
@@ -98,6 +101,13 @@ class BlogController extends Controller
         $articles = $this->article->searchArticle($requests);
 
         return view('blog.index', compact('articles'));
+    }
+
+    public function deleteTag(Request $request)
+    {
+        $result = $this->article->destroyTag($request->article_id, $request->tag_name);
+
+        return Response::json($result);
     }
 
 }

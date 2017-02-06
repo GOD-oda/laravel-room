@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Tag extends Model
 {
-    use SoftDeletes;
-
-    protected $dates = ['deleted_at'];
+    protected $fillable = [
+        'article_id',
+        'tag_name',
+    ];
 }

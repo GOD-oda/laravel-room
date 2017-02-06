@@ -93,6 +93,16 @@ class ArticleService
     }
 
     /**
+     * idで指定した記事のタグを取得するメソッド
+     * @param  int    $id [description]
+     * @return [type]     [description]
+     */
+    public function getTagsOnArticle(int $id)
+    {
+        return $this->tag->find($id);
+    }
+
+    /**
      * 記事一覧を取得するメソッド
      * @param  int|integer  $page    ページ数
      * @param  int|integer  $limit   １ページに表示する記事数
@@ -142,9 +152,18 @@ class ArticleService
         return $this->gate->check('destroy', $this->getArticle($id));
     }
 
-    public function getTags()
+    /**
+     * [getTags description]
+     * @return [type] [description]
+     */
+    public function getTags($article_id)
     {
+        dd($$this->tag->list($article_id));
+    }
 
+    public function destroyTag($article_id, $tag_name)
+    {
+        return $this->tag->destroy($article_id, $tag_name);
     }
 
     /**
