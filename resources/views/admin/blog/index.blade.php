@@ -53,8 +53,8 @@
               <td class="id">{{ $article->id }}</td>
               <td class="title">{{ $article->title }}</td>
               <td class="published-at">{{ date('Y/m/d H:i:s', strtotime($article->published_at)) }}</td>
-              <td class="show"><a href="{{ action('Admin\BlogController@show', [$article->uri]) }}" class="btn"><i class="material-icons left">details</i>詳細</a></td>
-              <td class="edit"><a href="{{ action('Admin\BlogController@edit', [$article->uri]) }}" class="btn"><i class="material-icons left">edit</i>編集</a></td>
+              <td class="show"><a href="{{ action('Admin\BlogController@show', [$article->id]) }}" class="btn"><i class="material-icons left">details</i>詳細</a></td>
+              <td class="edit"><a href="{{ action('Admin\BlogController@edit', [$article->id]) }}" class="btn"><i class="material-icons left">edit</i>編集</a></td>
               <td>
                 {!! Form::open(['method' => 'delete', 'action' => ['Admin\BlogController@destroy', $article->id]]) !!}
                   <input type="submit" class="btn delete-btn" value="削除">
