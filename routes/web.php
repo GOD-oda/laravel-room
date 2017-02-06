@@ -9,6 +9,7 @@ Route::group(['middleware' => 'web'], function () {
 
         Route::group(['middleware' => 'auth'], function () {
             Route::post('blog/search', 'Admin\BlogController@search');
+            Route::post('blog/delete-tag', 'Admin\BlogController@deleteTag');
             Route::resource('blog', 'Admin\BlogController');
             Route::post('payment/search', 'PaymentController@search');
             Route::resource('payment', 'PaymentController');
