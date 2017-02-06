@@ -351,32 +351,16 @@ nav .hamburger-button {
   line-height: 2em;
   margin: 0 0 2.5rem;
   letter-spacing: 1.5px;
+  word-break: break-all;
 }
-.article-body p a {
+.article-body a {
   position: relative;
-  display: inline-block;
   transition: .3s;
   text-decoration: none;
-  color: #3498db;
-  word-wrap: break-word;
+  color: #3d5afe;
 }
-.article-body p a.block {
-  display: block;
-}
-.article-body p a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  bottom: 0;
-  left: 50%;
-  height: 1.5px;
-  background-color: #3498db;
-  transition: .3s ;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-.article-body p a:hover::after {
-  width: 100%;
+.article-body a:hover {
+  opacity: .5;
 }
 .article-body blockquote {
   background: #ddd;
@@ -403,13 +387,14 @@ nav .hamburger-button {
 /*
  * リスト系
  */
-.article-body h3,
+.article-body ul h3,
 .article-body h4.list-title {
   padding-left: 1.5rem;
   border-left: solid 3px #ff80ab;
   font-size: 2.5rem;
 }
 @media screen and (max-width: 480px) {
+  .article-body ul h3,
   .article-body h4.list-title {
     font-size: 1.2em;
   }
@@ -417,7 +402,7 @@ nav .hamburger-button {
 .article-body ul {
   margin: 2rem 0;
 }
-.article-body li{
+.article-body li {
   position: relative;
   padding: 10px 45px;
   line-height: 1.5;
@@ -463,14 +448,16 @@ nav .hamburger-button {
   letter-spacing: 2px;
 }
 .article-body p code {
+  display: inline;
   font-size: 85%;
   font-family: 'Roboto Mono';
+  color: rgba(0, 0, 0, .87);
   background-color: #eee;
   border: solid 1px #cfd8dc;
   border-radius: 5px;
   letter-spacing: 2px;
   padding: 5px;
-  word-wrap: break-word;
+  word-break: break-all;
 }
 /* 最初に書いてた時はcodeの中にpを書いてたのでそれがある場合は初期化するため */
 .article-body code p {
@@ -554,4 +541,10 @@ nav .hamburger-button {
   top: -11px;
 }
 
+/*---------------------------
+ * other
+ *---------------------------*/
+.gist {
+  margin-bottom: 2rem;
+}
 /*# sourceMappingURL=style.css.map */
