@@ -21,7 +21,7 @@
 
 <div class="row">
   {!! Form::open(['route' => 'blog.store', 'files' => true]) !!}
-    @include('admin.blog.elements.form', ['submitButtonName' => '新規作成', 'icon' => 'fiber_new'])
+    @include('admin.blog.elements.form', ['submitButtonName' => '新規作成', 'icon' => 'fiber_new', 'tags' => []])
   {!! Form::close() !!}
 </div>
 @endsection
