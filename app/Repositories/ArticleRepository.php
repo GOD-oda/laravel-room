@@ -71,7 +71,7 @@ class ArticleRepository implements ArticleRepositoryInterface
         return $result;
     }
 
-    public function byPage($page = 1, $limit = 20, $isLogin=false)
+    public function byPage($page = 1, $limit = 20, $isLogin = false)
     {
         $key = "article_page:{$page}:{$limit}";
         if ($this->cache->has($key)) {

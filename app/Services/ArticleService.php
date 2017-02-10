@@ -153,14 +153,11 @@ class ArticleService
     }
 
     /**
-     * [getTags description]
-     * @return [type] [description]
+     * 指定の記事のタグ削除
+     * @param  [type] $article_id [description]
+     * @param  [type] $tag_name   [description]
+     * @return [type]             [description]
      */
-    public function getTags($article_id)
-    {
-        dd($$this->tag->list($article_id));
-    }
-
     public function destroyTag($article_id, $tag_name)
     {
         return $this->tag->destroy($article_id, $tag_name);

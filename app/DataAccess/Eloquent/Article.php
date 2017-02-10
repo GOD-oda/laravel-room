@@ -21,7 +21,7 @@ class Article extends Model
         'image_path',
     ];
 
-    public function byPage($limit, $page, $isLogin=false)
+    public function byPage($limit, $page, $isLogin = false)
     {
         return $this->query()
             ->published($isLogin)
