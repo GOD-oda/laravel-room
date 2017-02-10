@@ -23,7 +23,6 @@ class BlogController extends Controller
         $this->article = $article;
         $this->guard = $guard;
         $this->middleware('exists.articleById', ['only' => ['show', 'edit', 'update']]);
-        //$this->middleware('self.entry', ['only' => ['show', 'edit', 'update']]);
     }
 
     public function index(Request $request)
