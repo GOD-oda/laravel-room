@@ -21,19 +21,19 @@ class Article extends Model
         'image_path',
     ];
 
-    public function byPage($limit, $page, $isLogin = false)
+    public function byPage($limit, $page, $isAdmin = false)
     {
         return $this->query()
-            ->published($isLogin)
+            ->published($isAdmin)
             ->skip($limit * ($page - 1))
             ->take($limit)
             ->orderBy('id', 'desc')
             ->get();
     }
 
-    public function scopePublished($query, $isLogin=false)
+    public function scopePublished($query, $isAdmin = false)
     {
-        if (! $isLogin) {
+        if (! $isAdmin) {
             return $query->where('published_at', '<=', Carbon::now());
         }
 
