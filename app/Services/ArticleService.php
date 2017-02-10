@@ -92,14 +92,23 @@ class ArticleService
         return $this->article->findById($id);
     }
 
+    public function getArticleByTag(string $tag_name, int $page = 1, int $limit = 20)
+    {
+        $result = $this->article->byTag($tag_name, $page, $limit);
+
+        return new LengthAwarePaginator(
+            $result->items, $result->total, $result->perPage, $result->currentPage
+        );
+    }
+
     /**
      * idで指定した記事のタグを取得するメソッド
      * @param  int    $id [description]
      * @return [type]     [description]
      */
-    public function getTagsOnArticle(int $id)
+    public function getTagsOnArticle(int $article_id)
     {
-        return $this->tag->find($id);
+        return $this->tag->findByArticleId($article_id);
     }
 
     /**

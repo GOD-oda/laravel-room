@@ -71,13 +71,34 @@ class ArticleRepository implements ArticleRepositoryInterface
         return $result;
     }
 
-    public function byPage($page = 1, $limit = 20, $isLogin = false)
+    public function byPage($page = 1, $limit = 20, $isAdmin = false)
     {
         $key = "article_page:{$page}:{$limit}";
         if ($this->cache->has($key)) {
             return $this->cache->get($key);
         }
-        $articles = $this->eloquent->byPage($limit, $page, $isLogin);
+        $articles = $this->eloquent->byPage($limit, $page, $isAdmin);
+
+        return $this->cache->putPaginateCache(
+            $page, $limit, $this->count(), $articles, $key
+        );
+    }
+
+    public function byTag($tag_name, $page = 1, $limit = 20, $isAdmin = false)
+    {
+        $key = "article_page_with_tag:{$page}:{$limit}";
+        if ($this->cache->has($key)) {
+            return $this->cache->get($key);
+        }
+
+        $articles = $this->eloquent
+            ->join('tags', 'articles.id', '=', 'tags.article_id')
+            ->where('tag_name', '=', $tag_name)
+            ->published($isAdmin)
+            ->skip($limit * ($page - 1))
+            ->take($limit)
+            ->orderBy('articles.id', 'desc')
+            ->get();
 
         return $this->cache->putPaginateCache(
             $page, $limit, $this->count(), $articles, $key

@@ -8,5 +8,5 @@ interface TagRepositoryInterface
 
     public function destroy($article_id, $tag_name);
 
-    public function find($article_id);
+    public function findByArticleId($article_id);
 }

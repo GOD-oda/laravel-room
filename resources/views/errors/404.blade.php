@@ -4,9 +4,12 @@
 <div class="container">
   <div class="row">
     <div class="col s12">
-      ついにあなたも存在しないページを見つけましたか・・・。<br />
-      しかし、ここには何もない！<br />
-      おとなしくブラウザバックするが良い！！
+      <div class="error-404">
+        <span class="error-text">大変申し訳ございません。お探しのページは見つかりませんでした。</span>
+        <div class="mt30">
+          <a href="{{ route('top') }}" class="btn-back">TOPへ戻る</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>

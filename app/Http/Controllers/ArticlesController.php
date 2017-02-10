@@ -6,15 +6,18 @@ use Agent;
 use App\Article;
 use Illuminate\Http\Request;
 use App\Services\ArticleService;
+use App\Services\TagService;
 use App\Http\Requests\ContactRequest;
 
 class ArticlesController extends Controller
 {
     protected $article;
+    protected $tag;
 
-    public function __construct(ArticleService $article)
+    public function __construct(ArticleService $article, TagService $tag)
     {
         $this->article = $article;
+        $this->tag = $tag;
         $this->middleware('exists.article:entry', ['only' => ['show']]);
     }
 
@@ -23,6 +26,8 @@ class ArticlesController extends Controller
         $articles = $this->article
             ->getPage($request->get('page', 1), 20)
             ->setPath($request->getBasePath());
+
+        $tag_name_list = $this->tag->getTagNameList();
 
         /**
          * スマホとそれ以外（タブレット以上の横幅）だと
@@ -33,7 +38,7 @@ class ArticlesController extends Controller
             return view('articles.index-sp', compact('articles'));
         }
 
-        return view('articles.index', compact('articles'));
+        return view('articles.index', compact('articles', 'tag_name_list'));
     }
 
     public function show($entry)
@@ -41,6 +46,20 @@ class ArticlesController extends Controller
         $article = $this->article->getArticle($entry);
 
         return view('articles.show', compact('article'));
+    }
+
+    public function tag($tag_name, Request $request)
+    {
+        $tag_name_list = $this->tag->getTagNameList();
+        if (! in_array($tag_name, $tag_name_list, true)) {
+            abort(404);
+        }
+
+        $articles = $this->article
+            ->getArticleByTag($tag_name, $request->get('page', 1))
+            ->setPath($request->getBasePath());
+
+        return view('articles.index', compact('articles', 'tag_name_list'));
     }
 
     public function beginner()

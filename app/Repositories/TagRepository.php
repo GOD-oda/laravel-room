@@ -50,7 +50,7 @@ class TagRepository implements TagRepositoryInterface
      * @param  [type] $article_id [description]
      * @return [type]             [description]
      */
-    public function find($article_id)
+    public function findByArticleId($article_id)
     {
         return $this->eloquent->where('article_id', $article_id)->get();
     }
@@ -61,6 +61,7 @@ class TagRepository implements TagRepositoryInterface
      */
     public function getTagNameList()
     {
-        return $this->eloquent->groupBy('tag_name')->get(['tag_name'])->toArray();
+        return $this->eloquent->groupBy('tag_name')->pluck('tag_name')->all();
     }
+
 }

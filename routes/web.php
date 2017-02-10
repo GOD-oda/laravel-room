@@ -23,5 +23,6 @@ Route::group(['middleware' => 'web'], function () {
     //Route::get('beginner', 'ArticlesController@beginner')->name('beginner');
     //Route::get('intermediate', 'ArticlesController@intermediate')->name('intermediate');
     Route::get('/{entry}', 'ArticlesController@show');
+    Route::get('/tag/{tag_name}', 'ArticlesController@tag');
     Route::get('/', 'ArticlesController@index')->name('top');
 });

@@ -254,6 +254,10 @@ nav .hamburger-button {
 /*-------------------------------------------------
  * topのスタイル
  *-------------------------------------------------*/
+.top-main-content {
+  width: 85%;
+  margin: 0 auto;
+}
 /* 記事のタイトルと説明の領域 */
 .top-main-content .card-content {
   padding: 1.5rem;
@@ -261,7 +265,6 @@ nav .hamburger-button {
 /* 記事画像 */
 .top-main-content .card-image {
   max-width: 34% !important;
-  width: 100%;
   height: auto;
   object-fit: cover;
 }
@@ -305,6 +308,16 @@ nav .hamburger-button {
     width: 100%;
     height: auto;
   }
+}
+/* タグの領域 */
+.tag-box {
+  padding: 1rem !important;
+}
+/* タグのタイトル */
+.tag-box .tag-title-area {
+  border-bottom: solid 1px #e0e0e0;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 /*-----------------------------------------------
@@ -471,6 +484,7 @@ nav .hamburger-button {
 .article-comment.comment-area {
 
 }
+/* 広告 */
 .ads-area {
   margin: 2rem auto;
 }
@@ -536,10 +550,36 @@ nav .hamburger-button {
   height: 5rem;
   margin-bottom: 2rem;
 }
-
 .fb-like {
   top: -11px;
 }
+
+/*---------------------------
+ * error page
+ *---------------------------*/
+.error-404 {
+  margin-top: 4rem;
+  text-align: center;
+}
+.error-404 .error-text {
+  font-size: 3rem;
+}
+.error-404 .btn-back {
+  display: inline-block;
+  font-size: 3rem;
+  padding: 2rem;
+  background-color: #ff7f7f;
+  border: solid 3px #ff7f7f;
+  color: #fff;
+  transition: .25s;
+  -webkit-transition: .25s;
+}
+.error-404 .btn-back:hover {
+  background-color: transparent;
+  color: #ff7f7f;
+  border: solid 3px #ff7f7f;
+}
+
 
 /*---------------------------
  * other
@@ -547,4 +587,17 @@ nav .hamburger-button {
 .gist {
   margin-bottom: 2rem;
 }
+
+/*---------------------------
+ * adsense
+ *---------------------------*/
+.ads-rectangle-area {
+  padding: 2rem;
+}
+.ads-rectangle-area .ads-rectangle {
+  width: 300px;
+  margin: 0 auto;
+}
+
+
 /*# sourceMappingURL=style.css.map */
