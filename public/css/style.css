@@ -311,14 +311,26 @@ nav .hamburger-button {
 }
 /* タグの領域 */
 .tag-box {
-  padding: 1rem !important;
+  padding: 1rem;
+  margin-bottom: 3rem;
 }
-/* タグのタイトル */
+/* タグのタイトル領域 */
 .tag-box .tag-title-area {
   border-bottom: solid 1px #e0e0e0;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
 }
+/* 各タグ（chip） */
+.tag-box .tag-list-area .chip {
+  background-color: transparent;
+  border: solid 2px #00bfa5;
+  letter-spacing: 2px;
+}
+.tag-box .tag-list-area .chip:hover {
+  background-color: #00bfa5;
+  color: #fff;
+}
+
 
 /*-----------------------------------------------
  * 記事詳細画面のスタイル
