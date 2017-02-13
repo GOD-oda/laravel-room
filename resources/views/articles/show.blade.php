@@ -22,7 +22,7 @@
 <article>
   <div class="container">
     <div class="post-image">
-      <img src="{{ asset('img/article/21/pakutaso.jpg') }}" alt="">
+      <img src="{{ asset('img/thumbnail/'.$article->image_path) }}" alt="">
     </div>
     <section class="article-box card">
       <div class="row">
