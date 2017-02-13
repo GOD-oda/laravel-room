@@ -335,10 +335,19 @@ nav .hamburger-button {
 /*-----------------------------------------------
  * 記事詳細画面のスタイル
  *-----------------------------------------------*/
- .article-box {
+.article-box {
   background-color: #fff;
-  padding: 2rem;
- }
+  padding: 8rem 2rem 4rem;
+  margin: 0;
+}
+/* アイキャッチ */
+.post-image {
+  margin-top: 3rem;
+  line-height: 0;
+}
+.post-image img {
+  width: 100%;
+}
 /* 記事タイトル */
 .article-box h1 {
   font-size: 3.5rem;
@@ -498,7 +507,7 @@ nav .hamburger-button {
 }
 /* 広告 */
 .ads-area {
-  margin: 2rem auto;
+  margin: 6rem auto 2rem;
 }
 
 /*---------------------------------------------

@@ -21,6 +21,9 @@
 @section('content')
 <article>
   <div class="container">
+    <div class="post-image">
+      <img src="{{ asset('img/article/21/pakutaso.jpg') }}" alt="">
+    </div>
     <section class="article-box card">
       <div class="row">
         <div class="col s12 m10">
