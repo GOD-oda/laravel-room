@@ -56,7 +56,9 @@ class ArticleService
         $article = $this->article->save($params);
 
         /** insert tag */
-        $tag = $this->tag->save($article['id'], $params['tag']);
+        if (! empty($params['tag'])) {
+            $tag = $this->tag->save($article['id'], $params['tag']);
+        }
 
         /** upload files in article */
         if ($request->hasFile('content_images')) {
@@ -73,9 +75,9 @@ class ArticleService
     }
 
     /**
-     * URIで記事を取得するメソッド
-     * @param  string $entry URI
-     * @return collection        URIに応じた記事の詳細データ
+     * URLで記事を取得するメソッド
+     * @param  string $entry URL
+     * @return collection        URLに応じた記事の詳細データ
      */
     public function getArticle(string $entry)
     {
@@ -92,6 +94,13 @@ class ArticleService
         return $this->article->findById($id);
     }
 
+    /**
+     * タグ名の記事一覧を取得
+     * @param  string      $tag_name タグ名
+     * @param  int|integer $page     ページ数
+     * @param  int|integer $limit    １ページの記事数
+     * @return LengthAwarePaginator
+     */
     public function getArticleByTag(string $tag_name, int $page = 1, int $limit = 20)
     {
         $result = $this->article->byTag($tag_name, $page, $limit);
