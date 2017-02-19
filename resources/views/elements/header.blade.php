@@ -2,7 +2,7 @@
 <header>
   <div class="navbar-fixed">
     <nav>
-      <div class="nav-wrapper teal">
+      <div class="nav-wrapper teal lighten-1">
         <div class="container">
           <a href="#" data-activates="slide-out" class="button-collapse hamburger-button"><i class="material-icons">menu</i></a>
           <a href="{{ url('/') }}" class="brand-logo">{{ Config::get('laravel-room.title') }}</a>

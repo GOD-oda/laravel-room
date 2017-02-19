@@ -5,7 +5,7 @@
         <h5 class="white-text">
           このサイトについて
         </h5>
-        <p class="grey-text text-lighten-4">
+        <p class="white-text">
           このサイトは、Laravelに関する情報の備忘録や周知を目的を目的としています。<br>
           また、このサイトはLaravel5.2とMaterializeで構築されています。
         </p>
@@ -14,7 +14,7 @@
         <h5 class="white-text">
           管理人プロフィール
         </h5>
-       <p class="grey-text text-lighten-4">
+       <p class="white-text">
           name : t-oda
           <br>
           e-mail : <span class="email">laravel.room@gmail.com</span>
