@@ -184,8 +184,10 @@ nav {
 nav .nav-wrapper {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
-nav .brand-logo {
+nav .brand-logo h1 {
   font-size: 3rem;
+  margin: 0;
+  line-height: 64px;
 }
 @media screen and (min-width: 993px) {
   nav a.button-collapse {

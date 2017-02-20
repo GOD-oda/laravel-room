@@ -5,7 +5,7 @@
       <div class="nav-wrapper teal lighten-1">
         <div class="container">
           <a href="#" data-activates="slide-out" class="button-collapse hamburger-button"><i class="material-icons">menu</i></a>
-          <a href="{{ url('/') }}" class="brand-logo">{{ Config::get('laravel-room.title') }}</a>
+          <a href="{{ url('/') }}" class="brand-logo"><h1>{{ Config::get('laravel-room.title') }}</h1></a>
         </div>
         <!-- TODO
           検索の処理を追加するまでは出さない。
