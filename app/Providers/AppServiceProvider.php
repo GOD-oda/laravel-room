@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\DataAccess\Cache\DataCache;
 use Illuminate\Support\ServiceProvider;
+use Config;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,7 +15,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        if (Config::get('app.env') === 'production') {
+            \URL::forceSchema('https');
+        }
     }
 
     /**
