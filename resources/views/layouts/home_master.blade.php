@@ -19,7 +19,7 @@
 
   <title>{{ Config::get('laravel-room.title') }}</title>
 
-  <link rel="shortcut icon" href="{{ asset('img/laravel.ico') }}" />
+  <link rel="shortcut icon" href="{{ secure_asset('img/laravel.ico') }}" />
 
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
@@ -32,10 +32,10 @@
   <!-- Font Awesome -->
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
+  <link rel="stylesheet" href="{{ secure_asset('css/normalize.css') }}">
 
   <!-- Custom styles for this template -->
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+  <link rel="stylesheet" href="{{ secure_asset('css/style.css') }}">
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
