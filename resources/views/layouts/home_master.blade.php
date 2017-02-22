@@ -69,8 +69,8 @@
   <!-- Bootstrap core JavaScript -->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-  <script src="{{ asset('js/boot_materialize.js') }}"></script>
-  <script src="{{ asset('js/article.js') }}"></script>
+  <script src="{{ secure_asset('js/boot_materialize.js') }}"></script>
+  <script src="{{ secure_asset('js/article.js') }}"></script>
 
   @include('articles.elements.sns')
 
@@ -79,7 +79,7 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <script language="JavaScript">
     $(document).ready( function () {
-       $("a[href^='http']:not([href*='" + location.hostname + "'])").attr('target', '_blank');
+       $("a[href^='https']:not([href*='" + location.hostname + "'])").attr('target', '_blank');
     })
   </script>
 </body>
