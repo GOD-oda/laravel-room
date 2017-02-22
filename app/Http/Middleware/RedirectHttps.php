@@ -18,7 +18,7 @@ class RedirectHttps
     public function handle($request, Closure $next)
     {
         if (! $request->isSecure() && Config::get('app.env') === 'production') {
-            return Redirect::secure($request->path());
+            return $next(Redirect::secure($request->path()));
         }
 
         return $next($request);
