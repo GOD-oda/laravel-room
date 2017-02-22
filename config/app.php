@@ -6,7 +6,7 @@ return [
 
     'debug' => env('APP_DEBUG', false),
 
-    'url' => 'http://localhost',
+    'url' => 'https://laravel-room.com',
 
     'timezone' => 'Asia/Tokyo',
 
