@@ -23,7 +23,6 @@ class ContactController extends Controller
                 'takahiro.tech.oda@gmail.com',
                 'laravel.room@gmail.com'
             ])
-            //$message->to('laravel-room@conpw3.sakura.ne.jp')
                 ->subject('Laravel Roomのお問い合わせ');
         });
 
