@@ -25,7 +25,7 @@
   @include('elements.fonts')
 
   <!-- Import Google Icon Font-->
-  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -34,7 +34,6 @@
   <![endif]-->
 </head>
 <body class="blue-grey lighten-5">
-  <script src="{{ asset('js/facebook.js') }}"></script>
   <header>
     @yield('navbar')
 
@@ -52,8 +51,8 @@
   </main>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.19/jquery-ui.min.js"></script>
+  <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.19/jquery-ui.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
 
@@ -69,6 +68,6 @@
   <script src="{{ asset('js/boot_materialize.js') }}"></script>
   <script src="{{ asset('js/boot_marked.js') }}"></script>
   <script src="{{ asset('js/submit.js') }}"></script>
-  <script src="http://connect.facebook.net/jp_JP/all.js"></script>
+  <script src="https://connect.facebook.net/jp_JP/all.js"></script>
 </body>
 </html>
