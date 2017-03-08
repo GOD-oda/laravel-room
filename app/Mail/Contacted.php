@@ -32,7 +32,7 @@ class Contacted extends Mailable
      */
     public function build()
     {
-        return $this->from('example@example.com')
+        return $this->from('laravel-room@conpw3.sakura.ne.jp')
                 ->view('contact.mail')
                 ->subject('Laravel Roomのお問い合わせ')
                 ->with([
