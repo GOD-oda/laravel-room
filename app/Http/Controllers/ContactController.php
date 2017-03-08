@@ -8,6 +8,7 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Message;
 use App\Http\Requests\ContactRequest;
+use App\Mail\Contacted;
 
 class ContactController extends Controller
 {
@@ -18,13 +19,7 @@ class ContactController extends Controller
 
     public function contact(ContactRequest $request)
     {
-        Mail::send('contact.mail', ['request' => $request], function (Message $message) {
-            $message->to([
-                'takahiro.tech.oda@gmail.com',
-                'laravel.room@gmail.com'
-            ])
-                ->subject('Laravel Roomのお問い合わせ');
-        });
+        Mail::to('laravel-room@conpw3.sakura.ne.jp')->send(new Contacted($request));
 
         Session::flash('mail_success', true);
 

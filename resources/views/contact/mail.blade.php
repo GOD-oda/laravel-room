@@ -2,21 +2,21 @@
 
 名前<br />
 ------------------------------<br />
-{{ $request->name }}<br /><br />
+{{ $contact_name }}<br /><br />
 
 メールアドレス<br />
 ------------------------------<br />
-{{ $request->email }}<br /><br />
+{{ $contact_email }}<br /><br />
 
 サイトURL<br />
 ------------------------------<br />
-{{ $request->uri }}<br /><br />
+{{ $contact_uri }}<br /><br />
 
 件名<br />
 ------------------------------<br />
-{{ $request->title }}<br /><br />
+{{ $contact_title }}<br /><br />
 
 本文<br />
 ------------------------------<br />
-{!! nl2br($request->body) !!}<br /><br />
+{!! nl2br($contact_body) !!}<br /><br />
 
