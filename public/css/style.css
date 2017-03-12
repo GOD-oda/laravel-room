@@ -399,23 +399,9 @@ nav .hamburger-button {
   opacity: .5;
 }
 .article-body blockquote {
-  background: #ddd;
-  padding: 5rem 3rem 2rem;
-  line-height: 1.3rem;
-  position: relative;
-  border-left: none;
-  border-radius: 3px;
-  margin: 0 0 2.5rem;
-}
-.article-body blockquote::before {
-    content:"“";
-    font-size: 600%;
-    line-height: 1em;
-    font-family: "MS Pゴシック", sans-serif;
-    color: #999;
-    position: absolute;
-    left: 10px;
-    top: 0;
+  margin: 2.5rem;
+  font-style: italic;
+  border-color: #ff7f7f;
 }
 .article-body blockquote p {
   margin: 0;
