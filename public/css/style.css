@@ -562,6 +562,9 @@ nav .hamburger-button {
 .fb-like {
   top: -11px;
 }
+.sns-hatena {
+  float: left;
+}
 
 /*---------------------------
  * error page

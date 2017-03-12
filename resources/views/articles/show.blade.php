@@ -11,7 +11,7 @@
 @endsection
 
 @section('facebook-tags')
-<meta property="og:url" content="http://laravel-room.com/{{ $article->uri }}" />
+<meta property="og:url" content="//laravel-room.com/{{ $article->uri }}" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="{{ $article->title }}" />
 <meta property="og:description" content="{{ $article->discription }}" />
@@ -47,6 +47,9 @@
           <a href="https://www.facebook.com/sharer/sharer.php?u=http://laravel-room.com/{{ $article->uri }}" target="_blank" rel="nofollow">
             <img src="{{ secure_asset('img/sns/facebook.svg') }}" alt="" class="sns-icon">
           </a>
+          <div class="sns-hatena">
+            <a href="http://b.hatena.ne.jp/entry/s/laravel-room.com/{{ $article->uri }}" class="hatena-bookmark-button" data-hatena-bookmark-layout="touch-counter" data-hatena-bookmark-width="50" data-hatena-bookmark-height="50" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+          </div>
         </div>
       </div>
 
