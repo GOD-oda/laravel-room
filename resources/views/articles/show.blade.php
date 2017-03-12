@@ -48,7 +48,7 @@
             <img src="{{ secure_asset('img/sns/facebook.svg') }}" alt="" class="sns-icon">
           </a>
           <div class="sns-hatena">
-            <a href="http://b.hatena.ne.jp/entry/s/laravel-room.com/{{ $article->uri }}" class="hatena-bookmark-button" data-hatena-bookmark-layout="touch-counter" data-hatena-bookmark-width="50" data-hatena-bookmark-height="50" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+            <a href="http://b.hatena.ne.jp/entry/s/laravel-room.com/{{ $article->uri }}" class="hatena-bookmark-button" data-hatena-bookmark-layout="touch-counter" data-hatena-bookmark-title="{{ $article->title }}" data-hatena-bookmark-width="50" data-hatena-bookmark-height="50" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
           </div>
         </div>
       </div>
