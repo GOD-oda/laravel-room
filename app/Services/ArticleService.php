@@ -3,7 +3,7 @@
 namespace App\Services;
 
 use Carbon\Carbon;
-use App\Http\Requests\Request;
+use Illuminate\Http\Request;
 use Illuminate\Contracts\Auth\Access\Gate;
 use Illuminate\Pagination\LengthAwarePaginator;
 use App\Repositories\ArticleRepositoryInterface;
@@ -57,7 +57,10 @@ class ArticleService
 
         /** insert tag */
         if (! empty($params['tag'])) {
-            $tag = $this->tag->save($article['id'], $params['tag']);
+            $tags = explode(',', $params['tag']);
+            foreach ($tags as $tag) {
+                $this->tag->save($article['id'], $tag);
+            }
         }
 
         /** upload files in article */
@@ -112,8 +115,8 @@ class ArticleService
 
     /**
      * idで指定した記事のタグを取得するメソッド
-     * @param  int    $id [description]
-     * @return [type]     [description]
+     * @param  int    $article_id [description]
+     * @return Illuminate\Database\Model
      */
     public function getTagsOnArticle(int $article_id)
     {
@@ -182,15 +185,15 @@ class ArticleService
     }
 
     /**
+     * TODO: 未実装
      * 記事を検索するメソッド
-     * 実装しないかも。
      * Requestじゃなくてstringのほうがいいかも。
      * @param  Request $request 検索内容
      * @return collection           検索結果
      */
     public function searchArticle(Request $request)
     {
-        $this->article->search($request);
+        return $this->article->search($request);
     }
 
 }

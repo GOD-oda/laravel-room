@@ -17,15 +17,13 @@ class TagRepository implements TagRepositoryInterface
      * タグの保存
      * @param  [type] $article_id [description]
      * @param  [type] $tag_name   [description]
-     * @return [type]             [description]
      */
     public function save($article_id, $tag_name)
     {
-        $this->eloquent->article_id = $article_id;
-        $this->eloquent->tag_name = $tag_name;
-        $result = $this->eloquent->save();
-
-        return $result;
+        $this->eloquent->create([
+            'article_id' => $article_id,
+            'tag_name' => $tag_name,
+        ]);
     }
 
     /**

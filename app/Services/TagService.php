@@ -6,18 +6,22 @@ use App\Repositories\TagRepositoryInterface;
 
 class TagService
 {
+    /** @var TagRepositoryInterface  */
     protected $tag;
 
+    /**
+     * TagService constructor.
+     * @param TagRepositoryInterface $tag
+     */
     public function __construct(TagRepositoryInterface $tag)
     {
         $this->tag = $tag;
     }
 
-    public function getAll()
-    {
-        return $this->tag->getAll();
-    }
-
+    /**
+     *
+     * @return mixed
+     */
     public function getTagNameList()
     {
         return $this->tag->getTagNameList();
