@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Services\TagService;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Services\ArticleService;
@@ -14,12 +15,14 @@ use Response;
 class BlogController extends Controller
 {
     protected $article;
+    protected $tag;
     protected $guard;
 
-    public function __construct(ArticleService $article, Guard $guard)
+    public function __construct(ArticleService $article, TagService $tag, Guard $guard)
     {
         $this->article = $article;
         $this->guard = $guard;
+        $this->tag = $tag;
         $this->middleware('exists.articleById', ['only' => ['show', 'edit', 'update']]);
     }
 
@@ -41,7 +44,9 @@ class BlogController extends Controller
 
     public function create()
     {
-        return view('admin.blog.create');
+        $all_tag = $this->tag->getTagNameList();
+
+        return view('admin.blog.create', compact('all_tag'));
     }
 
     public function store(ArticleStoreRequest $request)
@@ -66,7 +71,9 @@ class BlogController extends Controller
 
         $tags = $this->article->getTagsOnArticle($entry);
 
-        return view('admin.blog.edit', compact('article', 'tags'));
+        $all_tag = $this->tag->getTagNameList();
+
+        return view('admin.blog.edit', compact('article', 'tags', 'all_tag'));
     }
 
     public function update(ArticleUpdateRequest $request)

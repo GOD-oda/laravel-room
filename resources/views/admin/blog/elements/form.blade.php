@@ -20,6 +20,18 @@
   </div>
 </div>
 <div class="row">
+  <div class="col s2">
+    タグ一覧
+  </div>
+  <div class="col s10">
+    @foreach ($all_tag as $tag)
+      <div class="chip">
+        {{ $tag }}
+      </div>
+    @endforeach
+  </div>
+</div>
+<div class="row">
   <div class="input-field col s6">
     <i class="material-icons prefix">loyalty</i>
     {!! Form::text('tag', null, ['class' => 'input-field']) !!}
