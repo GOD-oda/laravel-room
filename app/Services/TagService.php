@@ -6,11 +6,12 @@ use App\Repositories\TagRepositoryInterface;
 
 class TagService
 {
-    /** @var TagRepositoryInterface  */
+    /** @var TagRepositoryInterface */
     protected $tag;
 
     /**
      * TagService constructor.
+     *
      * @param TagRepositoryInterface $tag
      */
     public function __construct(TagRepositoryInterface $tag)
@@ -19,7 +20,6 @@ class TagService
     }
 
     /**
-     *
      * @return mixed
      */
     public function getTagNameList()

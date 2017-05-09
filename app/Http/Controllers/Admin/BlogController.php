@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Services\TagService;
-use Carbon\Carbon;
-use Illuminate\Http\Request;
-use App\Services\ArticleService;
-use Illuminate\Contracts\Auth\Guard;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ArticleStoreRequest;
 use App\Http\Requests\ArticleUpdateRequest;
+use App\Services\ArticleService;
+use App\Services\TagService;
+use Carbon\Carbon;
+use Illuminate\Contracts\Auth\Guard;
+use Illuminate\Http\Request;
 use Response;
 
 class BlogController extends Controller
@@ -54,7 +54,7 @@ class BlogController extends Controller
         $user_id = $this->guard->user()->id;
         $success_flag = $this->article->saveArticle($request, $user_id);
 
-        if (! $success_flag) {
+        if (!$success_flag) {
             \Session::flash('message', '登録に失敗しました');
             \Session::flash('message_color', true);
         } else {
@@ -81,7 +81,7 @@ class BlogController extends Controller
         $user_id = $this->guard->user()->id;
         $success_flag = $this->article->saveArticle($request, $user_id);
 
-        if (! $success_flag) {
+        if (!$success_flag) {
             \Session::flash('message', '登録に失敗しました');
             \Session::flash('message_color', true);
         } else {
@@ -113,5 +113,4 @@ class BlogController extends Controller
 
         return Response::json($result);
     }
-
 }

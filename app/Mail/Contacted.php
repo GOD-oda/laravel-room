@@ -2,12 +2,10 @@
 
 namespace App\Mail;
 
+use App\Http\Requests\ContactRequest;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use App\Http\Requests\ContactRequest;
-use App\Mail\Contacted;
 
 class Contacted extends Mailable
 {
@@ -36,11 +34,11 @@ class Contacted extends Mailable
                 ->view('contact.mail')
                 ->subject('Laravel Roomのお問い合わせ')
                 ->with([
-                    'contact_name' => $this->request->name,
+                    'contact_name'  => $this->request->name,
                     'contact_email' => $this->request->email,
-                    'contact_uri' => $this->request->uri,
+                    'contact_uri'   => $this->request->uri,
                     'contact_title' => $this->request->title,
-                    'contact_body' => $this->request->body,
+                    'contact_body'  => $this->request->body,
                 ]);
     }
 }

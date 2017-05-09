@@ -55,8 +55,6 @@ return [
         Jenssegers\Agent\AgentServiceProvider::class,
         //Laravel\Socialite\SocialiteServiceProvider::class,
 
-
-
         /*
          * Application Service Providers...
          */

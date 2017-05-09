@@ -13,5 +13,4 @@ interface ArticleRepositoryInterface
     public function byPage($page = 1, $limit = 20);
 
     public function search($request);
-
 }

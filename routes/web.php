@@ -1,4 +1,5 @@
 <?php
+
 Route::group(['middleware' => 'web'], function () {
     // 管理
     Route::group(['prefix' => 'admin'], function () {

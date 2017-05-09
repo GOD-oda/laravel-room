@@ -2,9 +2,8 @@
 
 namespace App\Http\Middleware;
 
-use Closure;
-use Carbon\Carbon;
 use App\Services\ArticleService;
+use Closure;
 
 class ExistsArticleById
 {
@@ -24,7 +23,7 @@ class ExistsArticleById
             $this->parameterName = 'entry';
         }
 
-        if (! $this->article->getArticleById($request->route()->getParameter($this->parameterName))) {
+        if (!$this->article->getArticleById($request->route()->getParameter($this->parameterName))) {
             $uri = $this->redirectToAdmin;
             if ($for !== 'admin') {
                 $uri = $this->redirectTo;

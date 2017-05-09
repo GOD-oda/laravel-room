@@ -2,10 +2,9 @@
 
 namespace App\Jobs;
 
-use App\Jobs\Job;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 
 class TestJob extends Job implements ShouldQueue
 {
@@ -28,6 +27,6 @@ class TestJob extends Job implements ShouldQueue
      */
     public function handle()
     {
-        echo "test";
+        echo 'test';
     }
 }

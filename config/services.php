@@ -36,10 +36,10 @@ return [
     ],
 
     'twitter' => [
-        'client_id' => 'nPJRDyMPrYuUpRNr54jsfZMg6',
-        'client_secret' => '   we08LswXV4CI5ny9FRULt7RNCMbkfG4vftAg8SLDaleQsVebbg',
-        'oauth_token' => '740712037915889665-Fh9PVMkiUZZFSbc34j0gOiNO3CSLpnL',
+        'client_id'      => 'nPJRDyMPrYuUpRNr54jsfZMg6',
+        'client_secret'  => '   we08LswXV4CI5ny9FRULt7RNCMbkfG4vftAg8SLDaleQsVebbg',
+        'oauth_token'    => '740712037915889665-Fh9PVMkiUZZFSbc34j0gOiNO3CSLpnL',
         'oauth_verifier' => '7fQLRtkaEJmofDjDVp6smknlQtGebKxVlHUNA2jAdyqX8',
-        'redirect' => 'localhost:8000/twitter',
-    ]
+        'redirect'       => 'localhost:8000/twitter',
+    ],
 ];

@@ -24,7 +24,7 @@ class RandomNumberServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('FixedRandomNumber', function() {
+        $this->app->singleton('FixedRandomNumber', function () {
             return new RandomNumber();
         });
     }

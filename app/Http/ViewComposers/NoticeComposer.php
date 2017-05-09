@@ -18,7 +18,4 @@ class NoticeComposer
     {
         $view->with('notice', $this->notice);
     }
-
-
-
 }

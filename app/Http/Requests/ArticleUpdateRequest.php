@@ -2,7 +2,6 @@
 
 namespace App\Http\Requests;
 
-use App\Http\Requests\Request;
 use Illuminate\Contracts\Auth\Guard;
 
 class ArticleUpdateRequest extends Request
@@ -29,11 +28,11 @@ class ArticleUpdateRequest extends Request
     public function rules()
     {
         return [
-            'title' => 'required|max:255|unique:articles,title,' . Request::get('id'),
-            'uri' => 'required|max:255|unique:articles,uri,' . Request::get('id'),
-            'body' => 'required',
-            'discription' => 'required',
-            'published_at' => 'required'
+            'title'        => 'required|max:255|unique:articles,title,'.Request::get('id'),
+            'uri'          => 'required|max:255|unique:articles,uri,'.Request::get('id'),
+            'body'         => 'required',
+            'discription'  => 'required',
+            'published_at' => 'required',
         ];
     }
 
@@ -41,10 +40,10 @@ class ArticleUpdateRequest extends Request
     {
         return [
             'title'        => '記事名',
-            'uri'        => '記事のパス',
+            'uri'          => '記事のパス',
             'body'         => '記事内容',
             'discription'  => '記事概要',
-            'published_at' => '公開日'
+            'published_at' => '公開日',
         ];
     }
 }
