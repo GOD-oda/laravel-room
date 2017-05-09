@@ -21,6 +21,5 @@ class TagController extends Controller
 
     public function update()
     {
-        
     }
 }

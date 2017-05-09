@@ -4,10 +4,9 @@ namespace App\Http\Controllers;
 
 use Agent;
 use App\Article;
-use Illuminate\Http\Request;
 use App\Services\ArticleService;
 use App\Services\TagService;
-use App\Http\Requests\ContactRequest;
+use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
 {
@@ -31,7 +30,7 @@ class ArticlesController extends Controller
 
         /**
          * スマホとそれ以外（タブレット以上の横幅）だと
-         * デザインが違うのでテンプレートを分ける必要がある
+         * デザインが違うのでテンプレートを分ける必要がある.
          */
         $ua = $request->server('HTTP_USER_AGENT');
         if (Agent::isMobile($ua)) {
@@ -51,7 +50,7 @@ class ArticlesController extends Controller
     public function tag($tag_name, Request $request)
     {
         $tag_name_list = $this->tag->getTagNameList();
-        if (! in_array($tag_name, $tag_name_list, true)) {
+        if (!in_array($tag_name, $tag_name_list, true)) {
             abort(404);
         }
 
@@ -76,7 +75,7 @@ class ArticlesController extends Controller
     {
         $articles = collect();
         for ($i = 8; $i < 13; $i++) {
-            $articles->put($i,$this->article->getArticleById($i));
+            $articles->put($i, $this->article->getArticleById($i));
         }
 
         return view('articles.index', compact('articles'));

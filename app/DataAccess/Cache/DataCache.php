@@ -2,7 +2,6 @@
 
 namespace App\DataAccess\Cache;
 
-use App\DataAccess\Cache\Cacheable;
 use Illuminate\Cache\CacheManager;
 
 class DataCache implements Cacheable
@@ -55,12 +54,13 @@ class DataCache implements Cacheable
         $key,
         $minutes = 10
     ) {
-        $cached = new \StdClass;
+        $cached = new \StdClass();
         $cached->currentPage = $currentPage;
         $cached->items = $items;
         $cached->total = $total;
         $cached->perPage = $perPage;
         $this->put($key, $cached, $minutes);
+
         return $cached;
     }
 }

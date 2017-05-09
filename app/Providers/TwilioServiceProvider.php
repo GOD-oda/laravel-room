@@ -14,7 +14,7 @@ class TwilioServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app->bind(Service_Twilio::class, function() {
+        $this->app->bind(Service_Twilio::class, function () {
             return new Service_Twilio(env('TWILIO_ACCOUNT_SID'), env('TWILIO_AUTH_TOKEN'));
         });
     }

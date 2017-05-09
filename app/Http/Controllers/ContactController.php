@@ -2,13 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Mail;
-use Session;
-use App\Http\Requests;
-use Illuminate\Http\Request;
-use Illuminate\Mail\Message;
 use App\Http\Requests\ContactRequest;
 use App\Mail\Contacted;
+use Mail;
+use Session;
 
 class ContactController extends Controller
 {

@@ -15,7 +15,7 @@ class PaymentTypeComposer
             '家賃',
             '水道代',
             '電気代',
-            'ガス代'
+            'ガス代',
         ];
     }
 
@@ -23,7 +23,4 @@ class PaymentTypeComposer
     {
         $view->with('type', $this->type);
     }
-
-
-
 }

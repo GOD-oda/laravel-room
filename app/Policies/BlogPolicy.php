@@ -2,8 +2,8 @@
 
 namespace App\Policies;
 
-use App\User;
 use App\DataAccess\Eloquent\Article;
+use App\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class BlogPolicy
@@ -22,11 +22,11 @@ class BlogPolicy
 
     public function update(User $user, Article $article)
     {
-        return $user->id === (int)$article->user_id;
+        return $user->id === (int) $article->user_id;
     }
 
     public function destroy(User $user, Article $article)
     {
-        return $user->id === (int)$article->user_id;
+        return $user->id === (int) $article->user_id;
     }
 }

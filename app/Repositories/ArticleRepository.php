@@ -2,8 +2,8 @@
 
 namespace App\Repositories;
 
-use App\DataAccess\Eloquent\Article;
 use App\DataAccess\Cache\Cacheable;
+use App\DataAccess\Eloquent\Article;
 
 class ArticleRepository implements ArticleRepositoryInterface
 {
@@ -63,7 +63,7 @@ class ArticleRepository implements ArticleRepositoryInterface
     {
         $key = 'article_count';
         if ($this->cache->has($key)) {
-            return $this->cache0>get($key);
+            return $this->cache0 > get($key);
         }
         $result = $this->eloquent->count();
         $this->cache->put($key, $result);

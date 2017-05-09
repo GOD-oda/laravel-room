@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
 
 class CreatePaymentTable extends Migration
 {
@@ -12,7 +12,7 @@ class CreatePaymentTable extends Migration
      */
     public function up()
     {
-        Schema::create('payments', function(Blueprint $table) {
+        Schema::create('payments', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('type');
             $table->integer('utility_charges');

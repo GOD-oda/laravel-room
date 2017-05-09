@@ -3,8 +3,8 @@
 namespace App\Providers;
 
 use App\DataAccess\Cache\DataCache;
-use Illuminate\Support\ServiceProvider;
 use Config;
+use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -32,7 +32,7 @@ class AppServiceProvider extends ServiceProvider
             \App\Repositories\ArticleRepositoryInterface::class,
             function ($app) {
                 return new \App\Repositories\ArticleRepository(
-                    new \App\DataAccess\Eloquent\Article,
+                    new \App\DataAccess\Eloquent\Article(),
                     new DataCache($app['cache'], 'article', 120)
                 );
             }

@@ -14,23 +14,26 @@ class TagRepository implements TagRepositoryInterface
     }
 
     /**
-     * タグの保存
-     * @param  [type] $article_id [description]
-     * @param  [type] $tag_name   [description]
+     * タグの保存.
+     *
+     * @param [type] $article_id [description]
+     * @param [type] $tag_name   [description]
      */
     public function save($article_id, $tag_name)
     {
         $this->eloquent->create([
             'article_id' => $article_id,
-            'tag_name' => $tag_name,
+            'tag_name'   => $tag_name,
         ]);
     }
 
     /**
-     * 指定の記事のタグの削除
-     * @param  [type] $article_id [description]
-     * @param  [type] $tag_name   [description]
-     * @return [type]             [description]
+     * 指定の記事のタグの削除.
+     *
+     * @param [type] $article_id [description]
+     * @param [type] $tag_name   [description]
+     *
+     * @return [type] [description]
      */
     public function destroy($article_id, $tag_name)
     {
@@ -44,9 +47,11 @@ class TagRepository implements TagRepositoryInterface
     }
 
     /**
-     * 指定の記事のタグを取得
-     * @param  [type] $article_id [description]
-     * @return [type]             [description]
+     * 指定の記事のタグを取得.
+     *
+     * @param [type] $article_id [description]
+     *
+     * @return [type] [description]
      */
     public function findByArticleId($article_id)
     {
@@ -54,12 +59,12 @@ class TagRepository implements TagRepositoryInterface
     }
 
     /**
-     * 全タグを取得
+     * 全タグを取得.
+     *
      * @return array タグ一覧
      */
     public function getTagNameList()
     {
         return $this->eloquent->groupBy('tag_name')->pluck('tag_name')->all();
     }
-
 }

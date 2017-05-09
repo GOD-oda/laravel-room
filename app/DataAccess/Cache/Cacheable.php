@@ -12,7 +12,7 @@ interface Cacheable
 
     public function flush();
 
-    public function  putPaginateCache(
+    public function putPaginateCache(
         $currentPgae,
         $perPage,
         $totla,

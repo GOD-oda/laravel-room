@@ -33,11 +33,10 @@ class Article extends Model
 
     public function scopePublished($query, $isAdmin = false)
     {
-        if (! $isAdmin) {
+        if (!$isAdmin) {
             return $query->where('published_at', '<=', Carbon::now());
         }
 
         return $query;
     }
-
 }

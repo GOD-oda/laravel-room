@@ -2,7 +2,6 @@
 
 namespace App\Http\Requests;
 
-use App\Http\Requests\Request;
 use Illuminate\Contracts\Auth\Guard;
 
 class ArticleStoreRequest extends Request
@@ -19,10 +18,10 @@ class ArticleStoreRequest extends Request
     public function rules()
     {
         return [
-            'title' => 'required|max:255|unique:articles',
-            'uri' => 'required|max:255|unique:articles',
-            'body' => 'required',
-            'discription' => 'required',
+            'title'        => 'required|max:255|unique:articles',
+            'uri'          => 'required|max:255|unique:articles',
+            'body'         => 'required',
+            'discription'  => 'required',
             'published_at' => 'required',
         ];
     }
@@ -30,11 +29,11 @@ class ArticleStoreRequest extends Request
     public function attributes()
     {
         return [
-            'title' => '記事名',
-            'uri' => '記事のパス',
-            'body' => '記事内容',
-            'discription' => '記事概要',
-            'published_at' => '公開日'
+            'title'        => '記事名',
+            'uri'          => '記事のパス',
+            'body'         => '記事内容',
+            'discription'  => '記事概要',
+            'published_at' => '公開日',
         ];
     }
 }
