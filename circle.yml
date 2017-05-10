@@ -1,3 +1,18 @@
 machine:
+  timezone: Asia/Tokyo
   php:
-      version: 5.6
+    version: 7.1.4
+  environment:
+    DB_CONNECTION: circle_test
+    APP_ENV: local
+  services:
+    - mysql
+
+database:
+  override:
+    - "php artisan migrate"
+    - "php artisan db:seed"
+
+test:
+  override:
+    - echo Hello world
