@@ -14,26 +14,25 @@ class TagRepository implements TagRepositoryInterface
     }
 
     /**
-     * タグの保存.
+     * Save a new tag or returns a model.
      *
-     * @param [type] $article_id [description]
-     * @param [type] $tag_name   [description]
+     * @param array $credentials tag information about the specific article.
+     *
+     * @return mixed
      */
-    public function save($article_id, $tag_name)
+    public function save(string $tag_name)
     {
-        $this->eloquent->create([
-            'article_id' => $article_id,
-            'tag_name'   => $tag_name,
+        return $this->eloquent->firstOrCreate([
+            'name'   => $tag_name,
         ]);
     }
 
     /**
-     * 指定の記事のタグの削除.
+     * TODO: どっかで使われているから直す。
+     * Delete the tag from tags table.
      *
-     * @param [type] $article_id [description]
-     * @param [type] $tag_name   [description]
-     *
-     * @return [type] [description]
+     * @param int $article_id article id.
+     * @return ?
      */
     public function destroy($article_id, $tag_name)
     {
@@ -47,24 +46,22 @@ class TagRepository implements TagRepositoryInterface
     }
 
     /**
-     * 指定の記事のタグを取得.
+     * Get all tag collections.
      *
-     * @param [type] $article_id [description]
-     *
-     * @return [type] [description]
+     * @return collection
      */
-    public function findByArticleId($article_id)
+    public function all()
     {
-        return $this->eloquent->where('article_id', $article_id)->get();
+        return $this->eloquent->all();
     }
 
     /**
-     * 全タグを取得.
-     *
-     * @return array タグ一覧
+     * Get a tag collection by tag name.
+     * @param  string $tag_name tag name
+     * @return collection
      */
-    public function getTagNameList()
+    public function findByName(string $tag_name)
     {
-        return $this->eloquent->groupBy('tag_name')->pluck('tag_name')->all();
+        return $this->eloquent->where('name', '=', $tag_name)->first();
     }
 }

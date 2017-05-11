@@ -24,24 +24,24 @@
     タグ一覧
   </div>
   <div class="col s10">
-    @foreach ($all_tag as $tag)
+    @foreach ($all_tags as $tag)
       <div class="chip">
-        {{ $tag }}
+        {{ $tag->name }}
       </div>
     @endforeach
   </div>
 </div>
 <div class="row">
-  <div class="input-field col s6">
+  <div class="col s2">
     <i class="material-icons prefix">loyalty</i>
-    {!! Form::text('tag', null, ['class' => 'input-field']) !!}
-    {!! Form::label('tag_name', '記事のタグ', ['for' => 'icon-prefix']) !!}
+    <input type="text" name="tag_name" placeholder="新しいタグ名">
+    <input type="button" class="btn add-tag-btn" value="タグ追加">
   </div>
-  <div class="col s6">
+  <div class="col s10">
     @foreach ($tags as $tag)
       <div class="chip">
-        {{ $tag->tag_name }}
-        <i class="material-icons delete-tag" data-article_id="{{ $article->id }}" data-tag_name="{{ $tag->tag_name }}" data-url="{{ action('Admin\BlogController@deleteTag') }}">close</i>
+        {{ $tag->name }}
+        <i class="material-icons delete-tag" data-article_id="{{ $article->id }}" data-tag_id="{{ $tag->id }}" data-url="{{ action('Admin\TagController@destroy') }}">close</i>
       </div>
     @endforeach
   </div>

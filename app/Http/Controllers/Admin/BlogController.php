@@ -44,9 +44,9 @@ class BlogController extends Controller
 
     public function create()
     {
-        $all_tag = $this->tag->getTagNameList();
+        $all_tags = $this->tag->getAll();
 
-        return view('admin.blog.create', compact('all_tag'));
+        return view('admin.blog.create', compact('all_tags'));
     }
 
     public function store(ArticleStoreRequest $request)
@@ -69,11 +69,9 @@ class BlogController extends Controller
         $article = $this->article->getArticleById($entry);
         $article['published_at'] = Carbon::parse($article['published_at'])->format('Y-m-d');
 
-        $tags = $this->article->getTagsOnArticle($entry);
+        $all_tags = $this->tag->getAll();
 
-        $all_tag = $this->tag->getTagNameList();
-
-        return view('admin.blog.edit', compact('article', 'tags', 'all_tag'));
+        return view('admin.blog.edit', compact('article', 'all_tags'));
     }
 
     public function update(ArticleUpdateRequest $request)
@@ -105,12 +103,5 @@ class BlogController extends Controller
         $articles = $this->article->searchArticle($requests);
 
         return view('blog.index', compact('articles'));
-    }
-
-    public function deleteTag(Request $request)
-    {
-        $result = $this->article->destroyTag($request->article_id, $request->tag_name);
-
-        return Response::json($result);
     }
 }

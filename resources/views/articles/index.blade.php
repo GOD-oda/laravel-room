@@ -36,10 +36,10 @@
           <span class="tag-title">タグ</span>
         </div>
         <div class="tag-list-area">
-          @foreach ($tag_name_list as $tag_name)
-            <a href="{{ url('tag/'.$tag_name) }}">
+          @foreach ($tags as $tag)
+            <a href="{{ url('tag/'.$tag->name) }}">
               <div class="chip">
-                <span>{{ $tag_name }}</span>
+                <span>{{ $tag->name }}</span>
               </div>
             </a>
           @endforeach
