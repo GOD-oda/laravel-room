@@ -80,11 +80,11 @@ class ArticleService
     }
 
     /**
-     * URLで記事を取得するメソッド.
+     * Get a article by URL
      *
      * @param string $entry URL
      *
-     * @return collection URLに応じた記事の詳細データ
+     * @return collection
      */
     public function getArticle(string $entry)
     {
@@ -92,9 +92,9 @@ class ArticleService
     }
 
     /**
-     * idで記事を取得するメソッド.
+     * Get a article by id.
      *
-     * @param int $id 記事のid
+     * @param int $id article id.
      *
      * @return collection
      */
@@ -104,17 +104,19 @@ class ArticleService
     }
 
     /**
-     * タグ名の記事一覧を取得.
+     * Get article list of tag name.
      *
-     * @param string  $tag_name タグ名
-     * @param int|int $page     ページ数
-     * @param int|int $limit    １ページの記事数
+     * @param string  $tag_name tag name.
+     * @param int|int $page     page number.
+     * @param int|int $limit    number of articles per a page.
      *
      * @return LengthAwarePaginator
      */
     public function getArticleByTag(string $tag_name, int $page = 1, int $limit = 20)
     {
-        $result = $this->article->byTag($tag_name, $page, $limit);
+        $tag = $this->tag->findByName($tag_name);
+
+        $result = $this->article->byTag($tag->id, $page, $limit);
 
         return new LengthAwarePaginator(
             $result->items, $result->total, $result->perPage, $result->currentPage
@@ -122,19 +124,7 @@ class ArticleService
     }
 
     /**
-     * idで指定した記事のタグを取得するメソッド.
-     *
-     * @param int $article_id [description]
-     *
-     * @return Illuminate\Database\Model
-     */
-    public function getTagsOnArticle(int $article_id)
-    {
-        return $this->tag->findByArticleId($article_id);
-    }
-
-    /**
-     * 記事一覧を取得するメソッド.
+     * Get article list.
      *
      * @param int|int   $page    ページ数
      * @param int|int   $limit   １ページに表示する記事数
@@ -152,11 +142,11 @@ class ArticleService
     }
 
     /**
-     * 対象の記事を更新する権限を持つかの判定.
+     * Determine whether you have authority to update the target article.
      *
-     * @param int $id 記事のid
+     * @param int $id article id.
      *
-     * @return bool true: 更新可能、 false: 更新不可能
+     * @return bool true: have authority、false: don't have authority
      */
     public function getArticleUpdateAbility(int $id)
     {
@@ -164,11 +154,11 @@ class ArticleService
     }
 
     /**
-     * 記事を削除するメソッド.
+     * Delete a article.
      *
-     * @param int $id 記事id
+     * @param int $id article id.
      *
-     * @return int 削除した数？
+     * @return int number deleted.
      */
     public function destroyArticle(int $id)
     {
@@ -180,28 +170,15 @@ class ArticleService
     }
 
     /**
-     * 対象の記事を削除するする権限を持つかの判定.
+     * Determine whether you have authority to delete the target article.
      *
-     * @param int $id 記事のid
+     * @param int $id article id.
      *
-     * @return bool true: 削除可能、 false: 削除不可能
+     * @return bool true: have authority、 false: don't have authority
      */
     public function getArticleDestroyAbility(int $id)
     {
         return $this->gate->check('destroy', $this->getArticle($id));
-    }
-
-    /**
-     * 指定の記事のタグ削除.
-     *
-     * @param [type] $article_id [description]
-     * @param [type] $tag_name   [description]
-     *
-     * @return [type] [description]
-     */
-    public function destroyTag($article_id, $tag_name)
-    {
-        return $this->tag->destroy($article_id, $tag_name);
     }
 
     /**

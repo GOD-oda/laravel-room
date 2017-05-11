@@ -39,4 +39,9 @@ class Article extends Model
 
         return $query;
     }
+
+    public function tags()
+    {
+        return $this->belongsToMany('App\DataAccess\Eloquent\Tag');
+    }
 }

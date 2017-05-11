@@ -84,7 +84,7 @@ class ArticleRepository implements ArticleRepositoryInterface
         );
     }
 
-    public function byTag($tag_name, $page = 1, $limit = 20, $isAdmin = false)
+    public function byTag($tag_id, $page = 1, $limit = 20, $isAdmin = false)
     {
         $key = "article_page_with_tag:{$page}:{$limit}";
         if ($this->cache->has($key)) {
@@ -92,8 +92,8 @@ class ArticleRepository implements ArticleRepositoryInterface
         }
 
         $articles = $this->eloquent
-            ->join('tags', 'articles.id', '=', 'tags.article_id')
-            ->where('tag_name', '=', $tag_name)
+            ->join('article_tag', 'articles.id', '=', 'article_tag.article_id')
+            ->where('article_tag.tag_id', '=', $tag_id)
             ->published($isAdmin)
             ->skip($limit * ($page - 1))
             ->take($limit)
@@ -105,8 +105,23 @@ class ArticleRepository implements ArticleRepositoryInterface
         );
     }
 
+    /**
+     * TODO: 削除予定。使い道ない。
+     * @param  [type] $request [description]
+     * @return [type]          [description]
+     */
     public function search($request)
     {
         dd($request);
+    }
+
+    /**
+     * Get tag collections for a specific article.
+     * @param  int    $article_id article id.
+     * @return collection
+     */
+    public function getTags(int $article_id)
+    {
+        return $this->eloquent->find($article_id)->tags;
     }
 }

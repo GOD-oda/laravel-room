@@ -26,7 +26,7 @@ class ArticlesController extends Controller
             ->getPage($request->get('page', 1), 20)
             ->setPath($request->getBasePath());
 
-        $tag_name_list = $this->tag->getTagNameList();
+        $tags = $this->tag->getAll();
 
         /**
          * スマホとそれ以外（タブレット以上の横幅）だと
@@ -37,7 +37,7 @@ class ArticlesController extends Controller
             return view('articles.index-sp', compact('articles'));
         }
 
-        return view('articles.index', compact('articles', 'tag_name_list'));
+        return view('articles.index', compact('articles', 'tags'));
     }
 
     public function show($entry)
@@ -50,15 +50,17 @@ class ArticlesController extends Controller
     public function tag($tag_name, Request $request)
     {
         $tag_name_list = $this->tag->getTagNameList();
-        if (!in_array($tag_name, $tag_name_list, true)) {
+        if (!$tag_name_list->contains($tag_name)) {
             abort(404);
         }
+
+        $tags = $this->tag->getAll();
 
         $articles = $this->article
             ->getArticleByTag($tag_name, $request->get('page', 1))
             ->setPath($request->getBasePath());
 
-        return view('articles.index', compact('articles', 'tag_name_list'));
+        return view('articles.index', compact('articles', 'tags'));
     }
 
     public function beginner()

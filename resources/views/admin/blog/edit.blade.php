@@ -23,7 +23,7 @@
   {!! Form::model($article, ['method' => 'PATCH', 'action' => ['Admin\BlogController@update', $article->id], 'files' => true]) !!}
     {!! Form::hidden('id', $article->id, ['class' => 'input-field']) !!}
 
-    @include('admin.blog.elements.form', ['submitButtonName' => '更新', 'icon' => 'update'])
+    @include('admin.blog.elements.form', ['submitButtonName' => '更新', 'icon' => 'update', 'tags' => $article->tags])
   {!! Form::close() !!}
 </div>
 @endsection

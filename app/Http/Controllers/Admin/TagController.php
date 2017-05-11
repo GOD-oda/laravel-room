@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Services\TagService;
+use Illuminate\Http\Request;
 
 class TagController extends Controller
 {
@@ -14,12 +15,19 @@ class TagController extends Controller
         $this->tagService = $tagService;
     }
 
-    public function index()
+    public function store(Request $request)
     {
-        dd($this->tagService->getTagNameList());
+        $credentials = $request->only('tag_name', 'article_id');
+        $result = $this->tagService->save($credentials);
+
+        return response()->json(['result' => $result]);
     }
 
-    public function update()
+    public function destroy(Request $request)
     {
+        $credentials = $request->only('article_id', 'tag_id');
+        $result = $this->tagService->destroy($credentials);
+
+        return response()->json(['result' => $result]);
     }
 }

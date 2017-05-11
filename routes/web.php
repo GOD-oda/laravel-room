@@ -10,10 +10,9 @@ Route::group(['middleware' => 'web'], function () {
 
         Route::group(['middleware' => 'auth'], function () {
             Route::post('blog/search', 'Admin\BlogController@search');
-            Route::post('blog/delete-tag', 'Admin\BlogController@deleteTag');
+            Route::delete('tag', 'Admin\TagController@destroy');
+            Route::post('tag', 'Admin\TagController@store');
             Route::resource('blog', 'Admin\BlogController');
-            Route::post('payment/search', 'PaymentController@search');
-            Route::resource('payment', 'PaymentController');
             Route::get('/', function () {
                 return redirect('admin/blog');
             });
