@@ -35,7 +35,7 @@
 </head>
 <body class="blue-grey lighten-5">
 
-  @include('elements.header')
+  @include('layouts.header')
 
   <main>
 

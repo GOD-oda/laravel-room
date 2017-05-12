@@ -37,7 +37,7 @@ class BlogController extends Controller
 
     public function show($entry)
     {
-        $article = $this->article->getArticle($entry);
+        $article = $this->article->getArticleById($entry);
 
         return view('admin.blog.show', compact('article'));
     }
