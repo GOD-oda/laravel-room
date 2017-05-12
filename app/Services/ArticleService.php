@@ -71,7 +71,8 @@ class ArticleService
             $content_image_file = $request->file('content_images');
             foreach ($content_image_file as $image) {
                 if ($image->isValid()) {
-                    $image->move($image_path, $image_path.'/'.$image->getClientOriginalName());
+                    $target_path = public_path('img/article/'.$article['id'].'/'.$image->getClientOriginalName());
+                    $image->move($image_path, $target_path);
                 }
             }
         }
