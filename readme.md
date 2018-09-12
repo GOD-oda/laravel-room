@@ -1,4 +1,4 @@
-# 弊社中
+# 閉鎖中
 
 # Laravel Room
 
